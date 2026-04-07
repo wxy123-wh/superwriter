@@ -1,0 +1,10 @@
+{
+  "include": [
+    "apps",
+    "core",
+    "tests"
+  ],
+  "extraPaths": [
+    "."
+  ]
+}

@@ -1,0 +1,7 @@
+# Superwriter - Novel Creation System
+
+# AI Provider
+openai>=1.0.0
+
+# Web Server (for local development)
+python-multipart>=0.0.6

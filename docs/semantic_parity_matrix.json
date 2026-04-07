@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "feature_key": "webnovel_project_state_import",
+      "donor_source": ".webnovel/state.json",
+      "donor_owner": "implementation-donor:webnovel-writer",
+      "target_owner": "structured-object-truth",
+      "touched_families": ["project", "novel", "scene", "chapter_artifact", "import_record"],
+      "must_match_behavior": "A validated donor project root can be ingested into canonical project/novel/scene objects and optional chapter_artifact snapshots while preserving donor provenance for every imported object.",
+      "acceptable_delta": "Superwriter may normalize donor IDs into new canonical object IDs and may ignore donor runtime services or databases after import completes.",
+      "provenance_requirements": ["source_kind", "source_ref", "ingest_run_id", "import_record"],
+      "verification_check": "Tests import a synthetic .webnovel/state.json fixture and assert canonical rows, derived rows, and import record metadata.",
+      "sunset_criteria": "Sunset this row when a stable official interchange format replaces direct donor state import for project bootstrap."
+    },
+    {
+      "feature_key": "fanbianyi_character_export_import",
+      "donor_source": "characters.json",
+      "donor_owner": "concept-donor:restored-decompiled-artifacts",
+      "target_owner": "structured-object-truth",
+      "touched_families": ["character", "import_record"],
+      "must_match_behavior": "Offline donor character exports can be revalidated and imported into canonical character objects linked to an existing novel context.",
+      "acceptable_delta": "Superwriter may drop donor-local storage shape, reuse no donor runtime code, and assign fresh canonical object IDs instead of donor IDs.",
+      "provenance_requirements": ["source_kind", "source_ref", "ingest_run_id", "import_record"],
+      "verification_check": "Tests import a synthetic characters.json fixture and assert canonical character provenance plus an import record with low-trust metadata.",
+      "sunset_criteria": "Sunset this row when low-trust decompiled exports are replaced by implementation-donor exports or a first-party interchange contract."
+    },
+    {
+      "feature_key": "fanbianyi_runtime_side_effects_are_not_parity_targets",
+      "donor_source": "decompiled characterRepository runtime",
+      "donor_owner": "concept-donor:restored-decompiled-artifacts",
+      "target_owner": "structured-object-truth",
+      "touched_families": ["import_record"],
+      "must_match_behavior": "Importer must remain input-only and must not depend on embeddings, vector writes, panel refresh callbacks, or workspace-local storage after import.",
+      "acceptable_delta": "All donor runtime side effects are explicitly rejected and recorded as non-goals rather than parity gaps.",
+      "provenance_requirements": ["source_ref", "ingest_run_id", "import_record"],
+      "verification_check": "Tests assert the lower-trust importer contract and parity matrix both encode forbidden runtime dependencies and explicit non-goals.",
+      "sunset_criteria": "Sunset this row when no migration path needs the decompiled donor as a concept or data source."
+    }
+  ]
+}

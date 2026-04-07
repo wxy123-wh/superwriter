@@ -1,0 +1,227 @@
+{
+  "schema_version": 1,
+  "product_shape": {
+    "primary_shell": "web_command_center",
+    "object_truth_model": "structured_objects_over_raw_text",
+    "migration_policy": {
+      "implementation_base_donor": "webnovel-writer",
+      "concept_donor_only": "restored-decompiled-artifacts"
+    }
+  },
+  "global_policy": {
+    "required_top_level_paths": [
+      "apps/web",
+      "core/objects",
+      "core/runtime",
+      "core/review",
+      "core/skills",
+      "core/retrieval",
+      "core/importers",
+      "core/export",
+      "tests"
+    ],
+    "forbidden_top_level_paths": [
+      "dashboard",
+      "scripts",
+      "vscode-extension",
+      "src/extension.ts"
+    ],
+    "forbidden_legacy_patterns": [
+      "vscode_activation",
+      "command_registration_as_runtime_backbone",
+      "webview_provider_shell",
+      "workspace_folder_required_runtime",
+      "novel_assistant_workspace_storage",
+      "temp_dir_runtime_fallback",
+      "vector_db_as_truth",
+      "direct_bottom_text_editing",
+      "single_universal_chatbox",
+      "all_in_one_platform_sprawl"
+    ]
+  },
+  "subsystems": {
+    "apps/web": {
+      "owner": "web-command-center",
+      "allowed_dependencies": [
+        "core/runtime",
+        "core/review",
+        "core/skills",
+        "core/retrieval",
+        "core/export",
+        "core/importers"
+      ],
+      "donor_reference_policy": {
+        "allowed_donors": [
+          "webnovel-writer"
+        ],
+        "reference_mode": "implementation_base",
+        "notes": "May borrow web-first shell, workspace routing, and local command-center seams from the donor architecture. Must not import dashboard, CLI, or extension-host product framing into the new tree."
+      },
+      "forbidden_legacy_patterns": [
+        "dashboard_as_primary_product",
+        "editor_plugin_shell",
+        "webview_provider_shell",
+        "single_universal_chatbox"
+      ]
+    },
+    "core/objects": {
+      "owner": "structured-object-truth",
+      "allowed_dependencies": [
+        "core/skills"
+      ],
+      "donor_reference_policy": {
+        "allowed_donors": [
+          "webnovel-writer"
+        ],
+        "reference_mode": "implementation_base",
+        "notes": "May reference project-state and pipeline seam naming, but must stay object-first and never treat generated chapter text or retrieval output as the source of truth."
+      },
+      "forbidden_legacy_patterns": [
+        "vector_db_as_truth",
+        "raw_markdown_as_primary_state",
+        "workspace_folder_required_runtime"
+      ]
+    },
+    "core/runtime": {
+      "owner": "conversation-orchestration",
+      "allowed_dependencies": [
+        "core/objects",
+        "core/skills",
+        "core/retrieval",
+        "core/review"
+      ],
+      "donor_reference_policy": {
+        "allowed_donors": [
+          "webnovel-writer"
+        ],
+        "reference_mode": "implementation_base",
+        "notes": "May reference chat/runtime, pipeline, project-state, and SQLite-backed local persistence seams from the implementation-base donor."
+      },
+      "forbidden_legacy_patterns": [
+        "vscode_activation",
+        "command_registration_as_runtime_backbone",
+        "workspace_folder_required_runtime",
+        "temp_dir_runtime_fallback"
+      ]
+    },
+    "core/review": {
+      "owner": "human-approval-boundary",
+      "allowed_dependencies": [
+        "core/objects",
+        "core/runtime",
+        "core/skills"
+      ],
+      "donor_reference_policy": {
+        "allowed_donors": [
+          "webnovel-writer"
+        ],
+        "reference_mode": "implementation_base",
+        "notes": "May reference approval and comparison seam naming from the web-first donor, but review must stay approval-centric, not a fallback rich-text editor."
+      },
+      "forbidden_legacy_patterns": [
+        "direct_bottom_text_editing",
+        "editor_plugin_shell",
+        "workspace_folder_required_runtime"
+      ]
+    },
+    "core/skills": {
+      "owner": "author-control-layer",
+      "allowed_dependencies": [
+        "core/objects"
+      ],
+      "donor_reference_policy": {
+        "allowed_donors": [
+          "webnovel-writer"
+        ],
+        "reference_mode": "implementation_base",
+        "notes": "May reference skill system naming and session attachment seams from the implementation-base donor. Skills remain bounded creative controls, not a general script platform."
+      },
+      "forbidden_legacy_patterns": [
+        "arbitrary_plugin_runtime",
+        "unbounded_script_platform",
+        "command_registration_as_runtime_backbone"
+      ]
+    },
+    "core/retrieval": {
+      "owner": "context-recall-and-verification",
+      "allowed_dependencies": [
+        "core/objects"
+      ],
+      "donor_reference_policy": {
+        "allowed_donors": [
+          "webnovel-writer"
+        ],
+        "reference_mode": "implementation_base",
+        "notes": "May reference RAG and verification seam naming from the implementation-base donor. Retrieval is recall support only and never becomes canonical world truth."
+      },
+      "forbidden_legacy_patterns": [
+        "vector_db_as_truth",
+        "single_source_recall_memory",
+        "workspace_folder_required_runtime"
+      ]
+    },
+    "core/importers": {
+      "owner": "structured-ingest-boundary",
+      "allowed_dependencies": [
+        "core/objects",
+        "core/skills"
+      ],
+      "donor_reference_policy": {
+        "allowed_donors": [
+          "webnovel-writer"
+        ],
+        "reference_mode": "implementation_base",
+        "notes": "May reference importer seam naming from the implementation-base donor for controlled ingest into structured objects."
+      },
+      "forbidden_legacy_patterns": [
+        "workspace_folder_required_runtime",
+        "novel_assistant_workspace_storage",
+        "temp_dir_runtime_fallback"
+      ]
+    },
+    "core/export": {
+      "owner": "delivery-boundary",
+      "allowed_dependencies": [
+        "core/objects",
+        "core/review"
+      ],
+      "donor_reference_policy": {
+        "allowed_donors": [
+          "webnovel-writer"
+        ],
+        "reference_mode": "implementation_base",
+        "notes": "May reference local persistence and publish seam naming from the implementation-base donor, but export remains downstream of approved structured state."
+      },
+      "forbidden_legacy_patterns": [
+        "export_as_source_of_truth",
+        "direct_bottom_text_editing",
+        "workspace_folder_required_runtime"
+      ]
+    },
+    "tests": {
+      "owner": "repo-boundary-enforcement",
+      "allowed_dependencies": [
+        "apps/web",
+        "core/objects",
+        "core/runtime",
+        "core/review",
+        "core/skills",
+        "core/retrieval",
+        "core/importers",
+        "core/export"
+      ],
+      "donor_reference_policy": {
+        "allowed_donors": [
+          "webnovel-writer",
+          "restored-decompiled-artifacts"
+        ],
+        "reference_mode": "policy_and_naming_only",
+        "notes": "Tests may reference the implementation-base donor for seam names and the concept donor only for naming forbidden extension-host carryovers."
+      },
+      "forbidden_legacy_patterns": [
+        "allowing_forbidden_top_level_paths",
+        "allowing_forbidden_legacy_patterns"
+      ]
+    }
+  }
+}
