@@ -1,0 +1,254 @@
+{
+  "available": true,
+  "total_files": 61,
+  "high_complexity_functions": [
+    {
+      "file": "core\\runtime\\application_services.py",
+      "function": "_generate_event_to_scene_workbench_legacy",
+      "line": 1228,
+      "complexity": 32,
+      "rank": "E",
+      "type": "cyclomatic",
+      "severity": "high"
+    },
+    {
+      "file": "core\\runtime\\services\\payload_builder_service.py",
+      "function": "build_scene_to_chapter_payload",
+      "line": 38,
+      "complexity": 32,
+      "rank": "E",
+      "type": "cyclomatic",
+      "severity": "high"
+    },
+    {
+      "file": "core\\runtime\\services\\chat_service.py",
+      "function": "process_chat_turn",
+      "line": 159,
+      "complexity": 30,
+      "rank": "D",
+      "type": "cyclomatic",
+      "severity": "high"
+    },
+    {
+      "file": "core\\runtime\\services\\chat_service.py",
+      "function": "generate_downstream_content_from_chat",
+      "line": 398,
+      "complexity": 28,
+      "rank": "D",
+      "type": "cyclomatic",
+      "severity": "high"
+    },
+    {
+      "file": "apps\\server\\pipeline_api.py",
+      "function": "handle",
+      "line": 321,
+      "complexity": 28,
+      "rank": "D",
+      "type": "cyclomatic",
+      "severity": "high"
+    },
+    {
+      "file": "core\\runtime\\application_services.py",
+      "function": "_generate_scene_to_chapter_workbench_legacy",
+      "line": 639,
+      "complexity": 26,
+      "rank": "D",
+      "type": "cyclomatic",
+      "severity": "high"
+    },
+    {
+      "file": "core\\runtime\\application_services.py",
+      "function": "_generate_outline_to_plot_workbench_legacy",
+      "line": 780,
+      "complexity": 26,
+      "rank": "D",
+      "type": "cyclomatic",
+      "severity": "high"
+    },
+    {
+      "file": "core\\runtime\\application_services.py",
+      "function": "_generate_plot_to_event_workbench_legacy",
+      "line": 1004,
+      "complexity": 26,
+      "rank": "D",
+      "type": "cyclomatic",
+      "severity": "high"
+    },
+    {
+      "file": "tests\\test_retrieval_support_only.py",
+      "function": "test_retrieval_rebuild_stays_support_only_and_replaces_current_scope_markers",
+      "line": 23,
+      "complexity": 21,
+      "rank": "D",
+      "type": "cyclomatic",
+      "severity": "high"
+    },
+    {
+      "file": "tests\\test_skill_workshop.py",
+      "function": "test_skill_workshop_versions_compare_and_rollback_stay_in_one_unified_skill_model",
+      "line": 27,
+      "complexity": 20,
+      "rank": "C",
+      "type": "cyclomatic",
+      "severity": "medium"
+    },
+    {
+      "file": "core\\ai\\dialogue.py",
+      "function": "_classify_intent",
+      "line": 229,
+      "complexity": 19,
+      "rank": "C",
+      "type": "cyclomatic",
+      "severity": "medium"
+    },
+    {
+      "file": "core\\skills\\workshop.py",
+      "function": "adapt_donor_payload",
+      "line": 242,
+      "complexity": 19,
+      "rank": "C",
+      "type": "cyclomatic",
+      "severity": "medium"
+    },
+    {
+      "file": "apps\\server\\api_server.py",
+      "function": "_build_next_actions",
+      "line": 809,
+      "complexity": 19,
+      "rank": "C",
+      "type": "cyclomatic",
+      "severity": "medium"
+    },
+    {
+      "file": "apps\\server\\api_server.py",
+      "function": "build_snapshot",
+      "line": 360,
+      "complexity": 18,
+      "rank": "C",
+      "type": "cyclomatic",
+      "severity": "medium"
+    },
+    {
+      "file": "core\\runtime\\services\\import_export_service.py",
+      "function": "publish_export",
+      "line": 335,
+      "complexity": 17,
+      "rank": "C",
+      "type": "cyclomatic",
+      "severity": "medium"
+    },
+    {
+      "file": "tests\\test_ai_provider.py",
+      "function": "test_provider_config_storage_roundtrip",
+      "line": 57,
+      "complexity": 16,
+      "rank": "C",
+      "type": "cyclomatic",
+      "severity": "medium"
+    },
+    {
+      "file": "core\\runtime\\services\\chat_service.py",
+      "function": "apply_chat_edit",
+      "line": 322,
+      "complexity": 16,
+      "rank": "C",
+      "type": "cyclomatic",
+      "severity": "medium"
+    },
+    {
+      "file": "core\\runtime\\services\\retrieval_service.py",
+      "function": "search_retrieval_support",
+      "line": 156,
+      "complexity": 16,
+      "rank": "C",
+      "type": "cyclomatic",
+      "severity": "medium"
+    },
+    {
+      "file": "apps\\server\\api_server.py",
+      "function": "_serve_asset",
+      "line": 1060,
+      "complexity": 15,
+      "rank": "C",
+      "type": "cyclomatic",
+      "severity": "medium"
+    },
+    {
+      "file": "apps\\server\\api_server.py",
+      "function": "_parse_body",
+      "line": 1085,
+      "complexity": 15,
+      "rank": "C",
+      "type": "cyclomatic",
+      "severity": "medium"
+    }
+  ],
+  "low_maintainability_files": [
+    {
+      "file": "apps\\server\\api_server.py",
+      "mi_score": 0.0,
+      "rank": "C",
+      "severity": "high"
+    },
+    {
+      "file": "core\\runtime\\application_services.py",
+      "mi_score": 2.39,
+      "rank": "C",
+      "severity": "high"
+    },
+    {
+      "file": "apps\\server\\pipeline_api.py",
+      "mi_score": 17.52,
+      "rank": "B",
+      "severity": "high"
+    },
+    {
+      "file": "core\\runtime\\services\\import_export_service.py",
+      "mi_score": 21.68,
+      "rank": "A",
+      "severity": "high"
+    },
+    {
+      "file": "core\\runtime\\services\\retrieval_service.py",
+      "mi_score": 25.25,
+      "rank": "A",
+      "severity": "high"
+    },
+    {
+      "file": "core\\runtime\\services\\chat_service.py",
+      "mi_score": 25.71,
+      "rank": "A",
+      "severity": "high"
+    },
+    {
+      "file": "core\\runtime\\services\\skill_service.py",
+      "mi_score": 26.52,
+      "rank": "A",
+      "severity": "high"
+    },
+    {
+      "file": "core\\skills\\workshop.py",
+      "mi_score": 28.18,
+      "rank": "A",
+      "severity": "high"
+    },
+    {
+      "file": "tests\\test_skill_types.py",
+      "mi_score": 31.45,
+      "rank": "A",
+      "severity": "high"
+    },
+    {
+      "file": "core\\runtime\\types\\skill_types.py",
+      "mi_score": 32.47,
+      "rank": "A",
+      "severity": "high"
+    }
+  ],
+  "summary": {
+    "high_complexity_count": 9,
+    "medium_complexity_count": 26,
+    "low_maintainability_count": 45
+  },
+  "error": null
+}

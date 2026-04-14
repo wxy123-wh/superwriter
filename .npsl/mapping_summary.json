@@ -1,0 +1,132 @@
+{
+  "feature_count": 405,
+  "layer_distribution": {
+    "frontend": 54,
+    "backend": 351,
+    "data": 0,
+    "infra": 0
+  },
+  "top_features": [
+    {
+      "name": "Read",
+      "function_count": 5,
+      "class_count": 0,
+      "file_count": 5
+    },
+    {
+      "name": "Write",
+      "function_count": 4,
+      "class_count": 0,
+      "file_count": 4
+    },
+    {
+      "name": "Exists",
+      "function_count": 4,
+      "class_count": 0,
+      "file_count": 4
+    },
+    {
+      "name": "Delete",
+      "function_count": 4,
+      "class_count": 0,
+      "file_count": 4
+    },
+    {
+      "name": "List Children",
+      "function_count": 3,
+      "class_count": 0,
+      "file_count": 3
+    },
+    {
+      "name": "List Layer",
+      "function_count": 3,
+      "class_count": 0,
+      "file_count": 3
+    },
+    {
+      "name": "Next Coord",
+      "function_count": 3,
+      "class_count": 0,
+      "file_count": 3
+    },
+    {
+      "name": "List Provider Configs",
+      "function_count": 3,
+      "class_count": 0,
+      "file_count": 3
+    },
+    {
+      "name": "Save Provider Config",
+      "function_count": 3,
+      "class_count": 0,
+      "file_count": 3
+    },
+    {
+      "name": "Active Provider",
+      "function_count": 3,
+      "class_count": 0,
+      "file_count": 3
+    },
+    {
+      "name": "Delete Provider Config",
+      "function_count": 3,
+      "class_count": 0,
+      "file_count": 3
+    },
+    {
+      "name": "Provider Config",
+      "function_count": 3,
+      "class_count": 0,
+      "file_count": 3
+    },
+    {
+      "name": "Chat Session",
+      "function_count": 3,
+      "class_count": 0,
+      "file_count": 3
+    },
+    {
+      "name": "Constructor",
+      "function_count": 2,
+      "class_count": 0,
+      "file_count": 1
+    },
+    {
+      "name": "Parse",
+      "function_count": 2,
+      "class_count": 0,
+      "file_count": 2
+    },
+    {
+      "name": "Diagnose Project",
+      "function_count": 2,
+      "class_count": 0,
+      "file_count": 2
+    },
+    {
+      "name": "Retrieval Status",
+      "function_count": 2,
+      "class_count": 0,
+      "file_count": 2
+    },
+    {
+      "name": "Rebuild Retrieval Support",
+      "function_count": 2,
+      "class_count": 0,
+      "file_count": 2
+    },
+    {
+      "name": "Search Retrieval Support",
+      "function_count": 2,
+      "class_count": 0,
+      "file_count": 2
+    },
+    {
+      "name": "Skill Workshop",
+      "function_count": 2,
+      "class_count": 0,
+      "file_count": 2
+    }
+  ],
+  "generated_at": "2026-04-15T01:00:23.654055"
+}

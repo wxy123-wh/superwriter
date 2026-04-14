@@ -1,0 +1,763 @@
+{
+  "Read Route Search": {
+    "files": [
+      "apps\\frontend\\src\\app\\AppShell.tsx"
+    ],
+    "functions": [
+      {
+        "name": "readRouteSearch",
+        "file_index": 0,
+        "location": "L43"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Build Product Route Href": {
+    "files": [
+      "apps\\frontend\\src\\app\\AppShell.tsx"
+    ],
+    "functions": [
+      {
+        "name": "buildProductRouteHref",
+        "file_index": 0,
+        "location": "L51"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "App Query Client": {
+    "files": [
+      "apps\\frontend\\src\\app\\queryClient.ts"
+    ],
+    "functions": [
+      {
+        "name": "createAppQueryClient",
+        "file_index": 0,
+        "location": "L3"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Require Project Id": {
+    "files": [
+      "apps\\frontend\\src\\app\\router.tsx"
+    ],
+    "functions": [
+      {
+        "name": "requireProjectId",
+        "file_index": 0,
+        "location": "L13"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Require Novel Id": {
+    "files": [
+      "apps\\frontend\\src\\app\\router.tsx"
+    ],
+    "functions": [
+      {
+        "name": "requireNovelId",
+        "file_index": 0,
+        "location": "L20"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Context From Url": {
+    "files": [
+      "apps\\frontend\\src\\app\\router.tsx"
+    ],
+    "functions": [
+      {
+        "name": "contextFromUrl",
+        "file_index": 0,
+        "location": "L27"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Skills Options": {
+    "files": [
+      "apps\\frontend\\src\\app\\router.tsx"
+    ],
+    "functions": [
+      {
+        "name": "skillsOptions",
+        "file_index": 0,
+        "location": "L31"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Settings Options": {
+    "files": [
+      "apps\\frontend\\src\\app\\router.tsx"
+    ],
+    "functions": [
+      {
+        "name": "settingsOptions",
+        "file_index": 0,
+        "location": "L41"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Startup Options": {
+    "files": [
+      "apps\\frontend\\src\\app\\router.tsx"
+    ],
+    "functions": [
+      {
+        "name": "startupOptions",
+        "file_index": 0,
+        "location": "L47"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Scoped Loader": {
+    "files": [
+      "apps\\frontend\\src\\app\\router.tsx"
+    ],
+    "functions": [
+      {
+        "name": "scopedLoader",
+        "file_index": 0,
+        "location": "L53"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "App Routes": {
+    "files": [
+      "apps\\frontend\\src\\app\\router.tsx"
+    ],
+    "functions": [
+      {
+        "name": "appRoutes",
+        "file_index": 0,
+        "location": "L60"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "File Tree": {
+    "files": [
+      "apps\\frontend\\src\\components\\FileTree.tsx"
+    ],
+    "functions": [
+      {
+        "name": "FileTree",
+        "file_index": 0,
+        "location": "L12"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Handle Click": {
+    "files": [
+      "apps\\frontend\\src\\components\\FileTreeNode.tsx"
+    ],
+    "functions": [
+      {
+        "name": "handleClick",
+        "file_index": 0,
+        "location": "L13"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Handle Mount": {
+    "files": [
+      "apps\\frontend\\src\\components\\MonacoEditor.tsx"
+    ],
+    "functions": [
+      {
+        "name": "handleMount",
+        "file_index": 0,
+        "location": "L22"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Handle Change": {
+    "files": [
+      "apps\\frontend\\src\\components\\MonacoEditor.tsx"
+    ],
+    "functions": [
+      {
+        "name": "handleChange",
+        "file_index": 0,
+        "location": "L27"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Api Contract Error": {
+    "files": [
+      "apps\\frontend\\src\\lib\\api\\client.ts"
+    ],
+    "functions": [],
+    "classes": [
+      {
+        "name": "ApiContractError",
+        "file_index": 0,
+        "location": "L122"
+      }
+    ],
+    "depends_on": []
+  },
+  "Constructor": {
+    "files": [
+      "apps\\frontend\\src\\lib\\api\\client.ts"
+    ],
+    "functions": [
+      {
+        "name": ".constructor",
+        "file_index": 0,
+        "location": "L123"
+      },
+      {
+        "name": ".constructor",
+        "file_index": 0,
+        "location": "L134"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Api Response Error": {
+    "files": [
+      "apps\\frontend\\src\\lib\\api\\client.ts"
+    ],
+    "functions": [],
+    "classes": [
+      {
+        "name": "ApiResponseError",
+        "file_index": 0,
+        "location": "L133"
+      }
+    ],
+    "depends_on": []
+  },
+  "Assert Record": {
+    "files": [
+      "apps\\frontend\\src\\lib\\api\\client.ts"
+    ],
+    "functions": [
+      {
+        "name": "assertRecord",
+        "file_index": 0,
+        "location": "L146"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Expect String": {
+    "files": [
+      "apps\\frontend\\src\\lib\\api\\client.ts"
+    ],
+    "functions": [
+      {
+        "name": "expectString",
+        "file_index": 0,
+        "location": "L152"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Expect Nullable String": {
+    "files": [
+      "apps\\frontend\\src\\lib\\api\\client.ts"
+    ],
+    "functions": [
+      {
+        "name": "expectNullableString",
+        "file_index": 0,
+        "location": "L159"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Expect Boolean": {
+    "files": [
+      "apps\\frontend\\src\\lib\\api\\client.ts"
+    ],
+    "functions": [
+      {
+        "name": "expectBoolean",
+        "file_index": 0,
+        "location": "L166"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Expect Number": {
+    "files": [
+      "apps\\frontend\\src\\lib\\api\\client.ts"
+    ],
+    "functions": [
+      {
+        "name": "expectNumber",
+        "file_index": 0,
+        "location": "L173"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Expect Json Object": {
+    "files": [
+      "apps\\frontend\\src\\lib\\api\\client.ts"
+    ],
+    "functions": [
+      {
+        "name": "expectJsonObject",
+        "file_index": 0,
+        "location": "L180"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Expect Array": {
+    "files": [
+      "apps\\frontend\\src\\lib\\api\\client.ts"
+    ],
+    "functions": [
+      {
+        "name": "expectArray",
+        "file_index": 0,
+        "location": "L185"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Parse Workspace Context": {
+    "files": [
+      "apps\\frontend\\src\\lib\\api\\client.ts"
+    ],
+    "functions": [
+      {
+        "name": "parseWorkspaceContext",
+        "file_index": 0,
+        "location": "L192"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Parse Skill Workshop Skill": {
+    "files": [
+      "apps\\frontend\\src\\lib\\api\\client.ts"
+    ],
+    "functions": [
+      {
+        "name": "parseSkillWorkshopSkill",
+        "file_index": 0,
+        "location": "L202"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Parse Skill Workshop Version": {
+    "files": [
+      "apps\\frontend\\src\\lib\\api\\client.ts"
+    ],
+    "functions": [
+      {
+        "name": "parseSkillWorkshopVersion",
+        "file_index": 0,
+        "location": "L219"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Parse Skill Workshop Comparison": {
+    "files": [
+      "apps\\frontend\\src\\lib\\api\\client.ts"
+    ],
+    "functions": [
+      {
+        "name": "parseSkillWorkshopComparison",
+        "file_index": 0,
+        "location": "L233"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Parse Startup Snapshot": {
+    "files": [
+      "apps\\frontend\\src\\lib\\api\\client.ts"
+    ],
+    "functions": [
+      {
+        "name": "parseStartupSnapshot",
+        "file_index": 0,
+        "location": "L246"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Parse Skill Workshop Snapshot": {
+    "files": [
+      "apps\\frontend\\src\\lib\\api\\client.ts"
+    ],
+    "functions": [
+      {
+        "name": "parseSkillWorkshopSnapshot",
+        "file_index": 0,
+        "location": "L254"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Parse Provider Settings Snapshot": {
+    "files": [
+      "apps\\frontend\\src\\lib\\api\\client.ts"
+    ],
+    "functions": [
+      {
+        "name": "parseProviderSettingsSnapshot",
+        "file_index": 0,
+        "location": "L266"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Parse Api Error": {
+    "files": [
+      "apps\\frontend\\src\\lib\\api\\client.ts"
+    ],
+    "functions": [
+      {
+        "name": "parseApiError",
+        "file_index": 0,
+        "location": "L274"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Build Url": {
+    "files": [
+      "apps\\frontend\\src\\lib\\api\\client.ts"
+    ],
+    "functions": [
+      {
+        "name": "buildUrl",
+        "file_index": 0,
+        "location": "L287"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Parse Envelope": {
+    "files": [
+      "apps\\frontend\\src\\lib\\api\\client.ts"
+    ],
+    "functions": [
+      {
+        "name": "parseEnvelope",
+        "file_index": 0,
+        "location": "L300"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Request": {
+    "files": [
+      "apps\\frontend\\src\\lib\\api\\client.ts"
+    ],
+    "functions": [
+      {
+        "name": "request",
+        "file_index": 0,
+        "location": "L342"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Mutate": {
+    "files": [
+      "apps\\frontend\\src\\lib\\api\\client.ts"
+    ],
+    "functions": [
+      {
+        "name": "mutate",
+        "file_index": 0,
+        "location": "L359"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Parse File Tree Node": {
+    "files": [
+      "apps\\frontend\\src\\lib\\api\\client.ts"
+    ],
+    "functions": [
+      {
+        "name": "parseFileTreeNode",
+        "file_index": 0,
+        "location": "L635"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Electron": {
+    "files": [
+      "apps\\frontend\\src\\lib\\api\\electron-client.ts"
+    ],
+    "functions": [
+      {
+        "name": "isElectron",
+        "file_index": 0,
+        "location": "L20"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Unified Client": {
+    "files": [
+      "apps\\frontend\\src\\lib\\api\\index.ts"
+    ],
+    "functions": [
+      {
+        "name": "createUnifiedClient",
+        "file_index": 0,
+        "location": "L14"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Use Upsert Skill": {
+    "files": [
+      "apps\\frontend\\src\\lib\\api\\mutations.ts"
+    ],
+    "functions": [
+      {
+        "name": "useUpsertSkill",
+        "file_index": 0,
+        "location": "L4"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Use Import Skill": {
+    "files": [
+      "apps\\frontend\\src\\lib\\api\\mutations.ts"
+    ],
+    "functions": [
+      {
+        "name": "useImportSkill",
+        "file_index": 0,
+        "location": "L20"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Use Rollback Skill": {
+    "files": [
+      "apps\\frontend\\src\\lib\\api\\mutations.ts"
+    ],
+    "functions": [
+      {
+        "name": "useRollbackSkill",
+        "file_index": 0,
+        "location": "L31"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Use Save Provider": {
+    "files": [
+      "apps\\frontend\\src\\lib\\api\\mutations.ts"
+    ],
+    "functions": [
+      {
+        "name": "useSaveProvider",
+        "file_index": 0,
+        "location": "L47"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Use Activate Provider": {
+    "files": [
+      "apps\\frontend\\src\\lib\\api\\mutations.ts"
+    ],
+    "functions": [
+      {
+        "name": "useActivateProvider",
+        "file_index": 0,
+        "location": "L58"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Use Delete Provider": {
+    "files": [
+      "apps\\frontend\\src\\lib\\api\\mutations.ts"
+    ],
+    "functions": [
+      {
+        "name": "useDeleteProvider",
+        "file_index": 0,
+        "location": "L69"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Use Provider": {
+    "files": [
+      "apps\\frontend\\src\\lib\\api\\mutations.ts"
+    ],
+    "functions": [
+      {
+        "name": "useTestProvider",
+        "file_index": 0,
+        "location": "L80"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "App Providers": {
+    "files": [
+      "apps\\frontend\\src\\providers\\AppProviders.tsx"
+    ],
+    "functions": [
+      {
+        "name": "AppProviders",
+        "file_index": 0,
+        "location": "L11"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Clear Status": {
+    "files": [
+      "apps\\frontend\\src\\views\\SettingsView.tsx"
+    ],
+    "functions": [
+      {
+        "name": "clearStatus",
+        "file_index": 0,
+        "location": "L26"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Handle Delete Provider": {
+    "files": [
+      "apps\\frontend\\src\\views\\SettingsView.tsx"
+    ],
+    "functions": [
+      {
+        "name": "handleDeleteProvider",
+        "file_index": 0,
+        "location": "L31"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Skills View": {
+    "files": [
+      "apps\\frontend\\src\\views\\SkillsView.tsx"
+    ],
+    "functions": [
+      {
+        "name": "SkillsView",
+        "file_index": 0,
+        "location": "L9"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Startup View": {
+    "files": [
+      "apps\\frontend\\src\\views\\StartupView.tsx"
+    ],
+    "functions": [
+      {
+        "name": "StartupView",
+        "file_index": 0,
+        "location": "L1"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Pipeline Snapshot": {
+    "files": [
+      "apps\\frontend\\tests\\e2e\\delete-node.spec.ts"
+    ],
+    "functions": [
+      {
+        "name": "pipelineSnapshot",
+        "file_index": 0,
+        "location": "L30"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Setup Api Mocks": {
+    "files": [
+      "apps\\frontend\\tests\\e2e\\delete-node.spec.ts"
+    ],
+    "functions": [
+      {
+        "name": "setupApiMocks",
+        "file_index": 0,
+        "location": "L52"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  }
+}

@@ -1,0 +1,1 @@
+{"nodes": [{"id": "worker_d", "label": "worker.d.ts", "file_type": "code", "source_file": "apps\\electron\\node_modules\\@electron\\rebuild\\lib\\module-type\\node-gyp\\worker.d.ts", "source_location": "L1"}], "edges": []}

@@ -1,0 +1,1 @@
+{"nodes": [{"id": "wasm_gc", "label": "wasm-gc.js", "file_type": "code", "source_file": "apps\\frontend\\node_modules\\caniuse-lite\\data\\features\\wasm-gc.js", "source_location": "L1"}], "edges": []}

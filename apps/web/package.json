@@ -1,8 +1,0 @@
-{
-  "name": "superwriter-web-shell-tests",
-  "private": true,
-  "version": "0.0.0",
-  "scripts": {
-    "test": "node run-tests.js"
-  }
-}

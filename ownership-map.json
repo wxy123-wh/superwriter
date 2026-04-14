@@ -10,7 +10,6 @@
   },
   "global_policy": {
     "required_top_level_paths": [
-      "apps/web",
       "core/objects",
       "core/runtime",
       "core/review",
@@ -40,30 +39,6 @@
     ]
   },
   "subsystems": {
-    "apps/web": {
-      "owner": "web-command-center",
-      "allowed_dependencies": [
-        "core/runtime",
-        "core/review",
-        "core/skills",
-        "core/retrieval",
-        "core/export",
-        "core/importers"
-      ],
-      "donor_reference_policy": {
-        "allowed_donors": [
-          "webnovel-writer"
-        ],
-        "reference_mode": "implementation_base",
-        "notes": "May borrow web-first shell, workspace routing, and local command-center seams from the donor architecture. Must not import dashboard, CLI, or extension-host product framing into the new tree."
-      },
-      "forbidden_legacy_patterns": [
-        "dashboard_as_primary_product",
-        "editor_plugin_shell",
-        "webview_provider_shell",
-        "single_universal_chatbox"
-      ]
-    },
     "core/objects": {
       "owner": "structured-object-truth",
       "allowed_dependencies": [
@@ -201,7 +176,6 @@
     "tests": {
       "owner": "repo-boundary-enforcement",
       "allowed_dependencies": [
-        "apps/web",
         "core/objects",
         "core/runtime",
         "core/review",

@@ -1,10 +1,8 @@
 from __future__ import annotations
 
-import io
 import sys
 from pathlib import Path
 from typing import cast
-from urllib.parse import urlencode
 
 import pytest
 
@@ -12,7 +10,6 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from apps.web import BookCommandCenter, BookCommandCenterWSGIApp  # noqa: E402
 from core.runtime import (  # noqa: E402
     JSONValue,
     ReadObjectRequest,
@@ -196,69 +193,6 @@ def test_skill_workshop_imports_prompt_templates_custom_agents_and_ai_roles_thro
     assert ai_role.object_id.startswith("skl_")
 
 
-def test_skill_workshop_route_uses_shared_services_for_create_update_and_rollback(tmp_path: Path) -> None:
-    service, project_id, novel_id = _seed_workspace(tmp_path)
-    app = BookCommandCenterWSGIApp(service)
-
-    create = _invoke_post(
-        app,
-        path="/skills",
-        query=f"project_id={project_id}&novel_id={novel_id}",
-        form={
-            "action": "create",
-            "name": "Workshop-created skill",
-            "description": "Thin web route test",
-            "instruction": "Keep the diction taut and the image count low.",
-            "style_scope": "scene_to_chapter",
-            "is_active": "true",
-        },
-    )
-    assert create[0] == "200 OK"
-    assert "Created constrained skill" in create[2]
-    assert "Forbidden fields are rejected explicitly" in create[2]
-
-    workshop = service.get_skill_workshop(SkillWorkshopRequest(project_id=project_id, novel_id=novel_id))
-    selected = workshop.skills[0]
-
-    update = _invoke_post(
-        app,
-        path="/skills",
-        query=f"project_id={project_id}&novel_id={novel_id}",
-        form={
-            "action": "update",
-            "skill_object_id": selected.object_id,
-            "base_revision_id": selected.revision_id,
-            "name": selected.name,
-            "description": selected.description,
-            "instruction": "Keep the diction taut, the image count low, and the reveal on the last beat.",
-            "style_scope": "chapter_revision",
-        },
-    )
-    assert update[0] == "200 OK"
-    assert "Updated constrained skill" in update[2]
-
-    refreshed = service.get_skill_workshop(
-        SkillWorkshopRequest(project_id=project_id, novel_id=novel_id, selected_skill_id=selected.object_id)
-    )
-    rolled = _invoke_post(
-        app,
-        path="/skills",
-        query=f"project_id={project_id}&novel_id={novel_id}",
-        form={
-            "action": "rollback",
-            "skill_object_id": selected.object_id,
-            "target_revision_id": refreshed.versions[-1].revision_id,
-        },
-    )
-    assert rolled[0] == "200 OK"
-    assert "Rolled back skill" in rolled[2]
-
-    page = BookCommandCenter(service).render_route("/skills", project_id=project_id, novel_id=novel_id)
-    assert page.status_code == 200
-    assert "Import donor concepts" in page.body
-    assert "Compare revisions" in page.body
-
-
 def _seed_workspace(tmp_path: Path) -> tuple[SuperwriterApplicationService, str, str]:
     db_path = tmp_path / "canonical.sqlite3"
     storage = CanonicalStorage(db_path)
@@ -287,36 +221,3 @@ def _seed_workspace(tmp_path: Path) -> tuple[SuperwriterApplicationService, str,
         )
     )
     return SuperwriterApplicationService.for_sqlite(db_path), project.object_id, novel.object_id
-
-
-def _invoke_post(
-    app: BookCommandCenterWSGIApp,
-    *,
-    path: str,
-    query: str,
-    form: dict[str, str],
-) -> tuple[str, list[tuple[str, str]], str]:
-    captured: dict[str, str | list[tuple[str, str]]] = {}
-    payload = urlencode(form).encode("utf-8")
-
-    def start_response(status: str, headers: list[tuple[str, str]]) -> None:
-        captured["status"] = status
-        captured["headers"] = headers
-
-    body = b"".join(
-        app(
-            {
-                "PATH_INFO": path,
-                "QUERY_STRING": query,
-                "REQUEST_METHOD": "POST",
-                "CONTENT_LENGTH": str(len(payload)),
-                "wsgi.input": io.BytesIO(payload),
-            },
-            start_response,
-        )
-    ).decode("utf-8")
-    return (
-        str(captured["status"]),
-        list(captured["headers"] if isinstance(captured["headers"], list) else []),
-        body,
-    )

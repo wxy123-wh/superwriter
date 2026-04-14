@@ -40,6 +40,9 @@ class DialogueIntent(str, Enum):
     LIST_SKILLS = "list_skills"
     CREATE_SKILL = "create_skill"
 
+    # Edit operations
+    EDIT_CONTENT = "edit_content"
+
     # General
     CHAT = "chat"
     HELP = "help"
@@ -269,6 +272,18 @@ class DialogueProcessor:
                 reasoning="User wants to write chapter from scene",
             )
 
+        if any(kw in message_lower for kw in [
+            "修改", "编辑", "改写", "润色", "更戏剧", "更紧张", "更生动", "更有趣",
+            "make it", "make this", "rewrite", "edit", "revise", "more dramatic",
+            "more vivid", "more tense", "improve", "优化", "调整",
+        ]):
+            return IntentClassification(
+                intent=DialogueIntent.EDIT_CONTENT,
+                confidence=0.8,
+                extracted_params={},
+                reasoning="User wants to modify current node content",
+            )
+
         if any(kw in message_lower for kw in ["审核", "review", "待处理", "提议"]):
             return IntentClassification(
                 intent=DialogueIntent.REVIEW_PROPOSALS,
@@ -421,7 +436,7 @@ Please provide a helpful response."""
             DialogueIntent.LIST_OBJECTS: f"当前工作区有 {context.get('workspace', {}).get('canonical_count', 0)} 个规范对象。",
             DialogueIntent.LIST_SKILLS: "请使用技能工坊查看和管理当前技能。",
             DialogueIntent.HELP: "我可以帮助你:\n- 扩展大纲为剧情\n- 分解剧情为事件\n- 展开事件为场景\n- 写作章节正文\n- 查看审核提议\n\n请告诉我你想要做什么。",
-            DialogueIntent.CHAT: f"你说: {request.user_message}\n\n(注意: AI 提供者未配置，高级对话功能不可用。请先在设置中配置 AI 提供者。)",
+            DialogueIntent.CHAT: f"你说: {request.user_message}\n\n(提示: 配置 AI 提供者后可获得更智能的对话体验。)",
             DialogueIntent.UNKNOWN: "我不太确定你的意图。你可以说'帮助'来查看可用的操作。",
         }
 

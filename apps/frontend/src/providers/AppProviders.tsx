@@ -1,30 +1,12 @@
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { createBrowserRouter } from 'react-router';
-import { RouterProvider } from 'react-router/dom';
+import { QueryClientProvider } from '@tanstack/react-query';
+import { createBrowserRouter, RouterProvider } from 'react-router';
 
-import { FrontendShell } from '../routes/FrontendShell';
+import { createAppQueryClient } from '../app/queryClient';
+import { appRoutes } from '../app/router';
 
-const queryClient = new QueryClient();
+const queryClient = createAppQueryClient();
 
-function detectBasename(pathname: string): string {
-  return pathname === '/app' || pathname.startsWith('/app/') ? '/app' : '/';
-}
-
-const router = createBrowserRouter(
-  [
-    {
-      path: '/',
-      Component: FrontendShell,
-    },
-    {
-      path: '*',
-      Component: FrontendShell,
-    },
-  ],
-  {
-    basename: detectBasename(window.location.pathname),
-  },
-);
+const router = createBrowserRouter(appRoutes(queryClient));
 
 export function AppProviders() {
   return (

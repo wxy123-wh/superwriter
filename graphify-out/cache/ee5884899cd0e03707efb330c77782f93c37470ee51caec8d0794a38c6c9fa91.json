@@ -1,0 +1,1 @@
+{"nodes": [{"id": "native", "label": "native.js", "file_type": "code", "source_file": "apps\\electron\\node_modules\\globalthis\\test\\native.js", "source_location": "L1"}], "edges": []}

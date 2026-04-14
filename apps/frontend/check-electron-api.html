@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Electron API 检查</title>
+  <style>
+    body { font-family: monospace; padding: 20px; background: #1e1e1e; color: #d4d4d4; }
+    .section { margin: 20px 0; padding: 10px; border: 1px solid #444; }
+    .success { color: #4ec9b0; }
+    .error { color: #f48771; }
+    .warning { color: #dcdcaa; }
+    pre { background: #252526; padding: 10px; overflow-x: auto; }
+  </style>
+</head>
+<body>
+  <h1>Electron API 诊断</h1>
+
+  <div class="section">
+    <h2>1. window.electronAPI 检查</h2>
+    <div id="api-check"></div>
+  </div>
+
+  <div class="section">
+    <h2>2. 环境信息</h2>
+    <div id="env-info"></div>
+  </div>
+
+  <div class="section">
+    <h2>3. IPC 测试</h2>
+    <div id="ipc-test"></div>
+  </div>
+
+  <script>
+    // 检查 electronAPI
+    const apiCheck = document.getElementById('api-check');
+    if (typeof window.electronAPI !== 'undefined') {
+      apiCheck.innerHTML = `
+        <p class="success">✓ window.electronAPI 存在</p>
+        <p>可用方法: <pre>${JSON.stringify(Object.keys(window.electronAPI), null, 2)}</pre></p>
+      `;
+    } else {
+      apiCheck.innerHTML = `<p class="error">✗ window.electronAPI 不存在</p>`;
+    }
+
+    // 环境信息
+    const envInfo = document.getElementById('env-info');
+    envInfo.innerHTML = `
+      <p>User Agent: <code>${navigator.userAgent}</code></p>
+      <p>Platform: <code>${navigator.platform}</code></p>
+      <p>当前 URL: <code>${window.location.href}</code></p>
+    `;
+
+    // IPC 测试
+    const ipcTest = document.getElementById('ipc-test');
+    if (window.electronAPI && window.electronAPI.ping) {
+      ipcTest.innerHTML = '<p class="warning">正在测试 ping...</p>';
+      window.electronAPI.ping()
+        .then(result => {
+          ipcTest.innerHTML = `<p class="success">✓ Ping 成功: ${result}</p>`;
+        })
+        .catch(error => {
+          ipcTest.innerHTML = `<p class="error">✗ Ping 失败: ${error.message}</p>`;
+        });
+    } else {
+      ipcTest.innerHTML = '<p class="error">✗ electronAPI.ping 不可用</p>';
+    }
+  </script>
+</body>
+</html>

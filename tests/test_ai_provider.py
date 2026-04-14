@@ -185,18 +185,16 @@ def test_ai_provider_client_mock_generation(monkeypatch):
         model_name="gpt-4o",
     )
 
-    client = AIProviderClient(config)
-
-    # Mock the OpenAI client
+    # Mock the OpenAI client before constructing AIProviderClient
     with patch("core.ai.provider.OpenAI") as mock_openai:
         mock_client = Mock()
         mock_response = Mock()
         mock_response.choices = [Mock()]
         mock_response.choices[0].message.content = "Test response"
-        mock_response.choices[0].message.content = "Test response"
         mock_client.chat.completions.create.return_value = mock_response
         mock_openai.return_value = mock_client
 
+        client = AIProviderClient(config)
         result = client.generate([{"role": "user", "content": "Hello"}])
         assert result == "Test response"
 
