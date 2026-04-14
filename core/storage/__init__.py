@@ -18,19 +18,14 @@ JSONObject: TypeAlias = dict[str, JSONValue]
 
 __all__ = [
     "CanonicalStorage",
-    "CanonicalWriteRequest",
-    "CanonicalWriteResult",
     "ChatMessageLinkInput",
     "ChatMessageLinkRow",
     "ChatSessionInput",
     "ChatSessionRow",
-    "DerivedRecordInput",
-    "ImportRecordInput",
     "JSONValue",
     "JSONObject",
     "MetadataMarkerSnapshot",
     "MetadataMarkerInput",
-    "ProposalRecordInput",
     "CONTENT_KEYS",
     "utc_now_iso",
 ]

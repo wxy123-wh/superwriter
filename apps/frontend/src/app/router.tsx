@@ -6,9 +6,8 @@ import { type LoaderFunctionArgs } from 'react-router';
 import { AppShell, RouteErrorBoundary, readRouteSearch, type RouteSearchContext } from './AppShell';
 import { apiClient } from '../lib/api/client';
 import { SkillsView } from '../views/SkillsView';
-import { SettingsView } from '../views/SettingsView';
-import { StartupView } from '../views/StartupView';
 import { EditorView } from '../views/EditorView';
+import { PipelineView } from '../views/PipelineView';
 
 function requireProjectId(context: RouteSearchContext, routeLabel: string): string {
   if (!context.projectId) {
@@ -38,18 +37,6 @@ export const skillsOptions = (context: RouteSearchContext) =>
       }),
   });
 
-export const settingsOptions = () =>
-  queryOptions({
-    queryKey: ['api', 'settings'],
-    queryFn: () => apiClient.getSettings(),
-  });
-
-export const startupOptions = () =>
-  queryOptions({
-    queryKey: ['api', 'startup'],
-    queryFn: () => apiClient.getStartup(),
-  });
-
 function scopedLoader(queryClient: QueryClient, factory: (context: RouteSearchContext) => unknown) {
   return async ({ request }: LoaderFunctionArgs) => {
     await queryClient.ensureQueryData(factory(contextFromUrl(request.url)) as never);
@@ -65,12 +52,8 @@ export function appRoutes(queryClient: QueryClient): RouteObject[] {
       errorElement: <RouteErrorBoundary />,
       children: [
         {
-          index: true,
-          loader: async () => {
-            await queryClient.ensureQueryData(startupOptions());
-            return null;
-          },
-          Component: StartupView,
+          path: 'editor',
+          Component: EditorView,
         },
         {
           path: 'skills',
@@ -78,16 +61,8 @@ export function appRoutes(queryClient: QueryClient): RouteObject[] {
           Component: SkillsView,
         },
         {
-          path: 'settings',
-          loader: async () => {
-            await queryClient.ensureQueryData(settingsOptions());
-            return null;
-          },
-          Component: SettingsView,
-        },
-        {
-          path: 'editor',
-          Component: EditorView,
+          path: 'chat',
+          Component: PipelineView,
         },
       ],
     },

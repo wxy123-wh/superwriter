@@ -1,4 +1,4 @@
-"""Service layer for runtime components — simplified to 4 retained features."""
+"""Service layer for runtime components — simplified to 4 core features."""
 
 from core.runtime.services.ai_config_service import AIConfigService
 from core.runtime.services.retrieval_service import RetrievalService

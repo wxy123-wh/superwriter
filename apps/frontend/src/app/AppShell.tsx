@@ -32,11 +32,11 @@ export const productRoutes: ProductRouteDefinition[] = [
     requiresNovel: true,
   },
   {
-    id: 'settings',
-    path: '/settings',
-    label: '设置',
-    requiresProject: false,
-    requiresNovel: false,
+    id: 'chat',
+    path: '/chat',
+    label: '对话台',
+    requiresProject: true,
+    requiresNovel: true,
   },
 ];
 
