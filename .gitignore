@@ -23,3 +23,18 @@ dist/
 Thumbs.db
 Desktop.ini
 .DS_Store
+# Added by code-review-graph
+.code-review-graph/
+
+# Database
+*.db
+*.sqlite
+
+# Build output
+release/
+
+# Tool configs (local only)
+.claude/
+.mcp.json
+.npmrc
+.npmrc.json

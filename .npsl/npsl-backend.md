@@ -3,155 +3,199 @@
 ## 架构分层
 
 ```
-apps/
-  server/
-    api_server.py        # WSGI 应用入口，路由分发 + 静态文件服务
-    pipeline_api.py      # 文件系统闭环 Pipeline API（大纲→章节五层）
-core/
-  ai/
-    provider.py          # OpenAI 兼容 AI 客户端封装
-    dialogue.py          # 自然语言对话处理器（意图分类 + 状态机）
-    prompts.py           # AI 提示词构建（当前为 stub）
-    dialogue_context.py  # 对话上下文管理
-  runtime/
-    application_services.py  # 服务层 God Object，聚合所有业务逻辑
-    storage.py               # 存储层 re-export
-    mutation_policy.py       # 变更审批策略引擎（当前为 stub）
-    services/                # 拆分出的子服务模块
-  storage/
-    engine.py            # SQLite 连接管理 + schema 初始化
-    _schema.py           # DDL 定义（chat_sessions, ai_provider_config, metadata_markers）
-    _chat.py             # 聊天存储 mixin
-    _providers.py        # AI 提供者配置存储 mixin
-    _metadata.py         # 元数据标记存储 mixin
-    _canonical.py        # 规范对象 CRUD
-    _derived.py          # 派生制品 CRUD
-  skills/
-    workshop.py          # 技能校验、适配、diff
-  retrieval/             # 检索支持（文档索引 + 一致性检查）
-  export/                # 导出投影（文件系统写入计划）
-  importers/             # 外部数据导入（fanbianyi、webnovel-writer）
-features/
-  workspace/service.py   # 工作区管理子服务
-  pipeline/service.py    # 流水线生成子服务
-```
+apps/server/src/
+├── main.ts              # Electron 主进程入口 + 30 个 IPC handler（649 行，职责过多）
+├── db.ts                # SQLite 数据库管理（单例 + schema 初始化，7 张表）
+├── preload.ts           # Electron preload 脚本（死文件，当前未被正确引用）
+├── repositories/
+│   ├── manifest-repository.ts    # 小说世界观 JSON 文件读写（245 行，19 个导出）
+│   ├── foreshadow-repository.ts  # 伏笔 JSON 文件读写（内存缓存 + 文件持久化）
+│   └── snapshot-repository.ts    # 章节快照 JSON 文件读写（按章节号分文件存储）
+└── services/
+    └── content-extractor.ts      # 章节内容正则提取器（角色名、地点、时间标记、物品）
 
-**每层职责**:
-- `apps/server`: 网络层，解析 HTTP 请求、序列化 JSON 响应、服务 SPA 静态文件
-- `core/runtime`: 业务逻辑层，编排工作台流程、管理修订和变更策略
-- `core/storage`: 持久化层，SQLite CRUD 操作，Mixin 模式组合功能
-- `core/ai`: AI 集成层，封装 OpenAI SDK 调用，处理意图分类和对话状态
-- `core/skills`: 领域规则层，技能数据校验和格式适配
-- `features/`: 按功能域拆分的子服务
+packages/shared/src/
+├── api-contract.ts      # API 响应信封：apiOk() / apiErr()
+├── index.ts             # 统一导出
+└── types/
+    ├── json.ts           # JSON 基础类型（JSONObject / JSONValue）
+    ├── chat.types.ts     # 聊天相关类型
+    ├── skill.types.ts    # 技能工坊请求/响应/结果类型（132 行完整定义）
+    └── workbench.types.ts # 工作台类型
+```
 
 ## 功能详解
 
-### WSGI 应用（api_server.py）
-**做什么**: 接收 HTTP 请求，分发到 API 处理器或返回 SPA 静态文件
-**怎么触发**: `waitress` 或其他 WSGI 容器加载 `SuperwriterWSGIApp`
-**技术决策**: 使用原生 WSGI 而非 Flask/FastAPI（零框架依赖，但手动解析请求参数、手动构造响应）
-**错误处理**:
-- `ValueError` → 400/405/409（根据错误消息关键词自动分类：method not allowed → 405, stale/drift → 409）
-- `KeyError` → 404
-- `sqlite3.Error` → 502（打印 traceback 后返回 dependency_failure）
-- 所有异常 → 500（兜底）
+### 数据库管理（db.ts）
 
-### 五层流水线 Pipeline API（pipeline_api.py）
-**做什么**: 基于文件系统管理大纲→剧情→事件→场景→章节的五层节点树
-**怎么触发**: HTTP 请求到 `/api/pipeline/*` 路径
-**技术决策**: 节点用 `{layer}-{coord1}-{coord2}.txt` 命名存储在文件系统上（直观可调试，但 rename/move 需要级联更新所有子节点文件名）
-**节点地址**: `NodeAddress` 对象封装层级名和坐标元组，如 `plot-1-2` 表示第 1 个大纲下的第 2 个剧情节点
-**AI 扩写**: `expand_node()` 调用 AI `generate_structured()` 返回 JSON 数组，每个元素是一个子节点的文本内容
-**SSE 推送**: 使用 `watchdog` 库监听 `nodes/` 目录变化，通过 `queue.Queue` 广播到所有 SSE 订阅者（慢消费者丢弃事件）
-**RAG 索引**: 基于关键词的简单全文搜索，扫描前四层 txt 文件建立内存索引并持久化到 `rag_index.json`
+**做什么**: 提供全局 SQLite 数据库实例，首次调用时自动创建所有表
+**怎么触发**: 任何需要数据库的 IPC handler 调用 `getDb()`
+**技术决策**:
+- 使用 better-sqlite3 同步 API（比 node-sqlite3 快，不需要回调，但阻塞事件循环）
+- 数据库文件路径硬编码为 `__dirname/../../../superwriter.db`（相对于编译输出目录，生产环境路径可能不对）
+- 7 张表在一个函数里全部 `CREATE TABLE IF NOT EXISTS`（无版本号、无迁移系统）
+- 3 个索引自动创建：`novels.project_id`、`skill_objects.(project_id, novel_id)`、`skill_revisions.object_id`
+**错误处理**: 数据库打开失败会抛异常中断启动，无重试
 
-### 规范对象工作台（application_services.py）
-**做什么**: 编排从大纲到章节的 AI 生成流程，管理对象的修订链和变更审批
-**怎么触发**: API 路由调用 `SuperwriterApplicationService` 上的方法
-**技术决策**: 采用 God Object + 内部委托模式，12 个子服务通过回调函数注入互相引用（避免循环依赖，但回调链复杂难追踪）
-**修订漂移检查**: 更新操作必须携带 `base_revision_id`/`expected_parent_revision_id`，与当前 head 不匹配则拒绝（乐观并发控制）
-**生成流程**: 每个工作台（outline_to_plot/plot_to_event/event_to_scene/scene_to_chapter）遵循相同模式:
-1. 读取并校验上游对象
-2. 收集上下文（小说信息、技能、角色、场景设定）
-3. 调用 AI 生成结构化 JSON
-4. AI 失败时降级为简单字段复制
-5. 创建路径 → 直接写入新对象；更新路径 → 经过变更策略引擎
+### 工作区管理
 
-### AI 提供者管理
-**做什么**: CRUD AI 提供者配置（base_url、api_key、model_name 等），支持多个提供者、激活切换、连接测试
-**怎么触发**: `/api/providers` 或 `/api/settings` 路由的 GET/POST
-**技术决策**: 使用 OpenAI Python SDK 的 `OpenAI(base_url=...)` 方式对接所有兼容 API（一套代码兼容多家，但不支持非 OpenAI 格式的 AI 服务如 Anthropic 原生 API）
-**连接测试**: 发送 "Respond with exactly: OK" 测试消息，检查响应是否包含 "OK"，记录延迟毫秒数
+**做什么**: 管理用户的小说项目和工作目录
+**怎么触发**: 应用启动时 `getStartup`，用户创建/打开工作区时
+**技术决策**:
+- 工作区根目录 `workspaceRoot` 存在 IPC handler 闭包内的局部变量中（非持久化，重启应用后丢失）
+- 项目/小说 ID 使用 `uuid` 生成并截断为 8 位（`proj_xxxxxxxx`、`nov_xxxxxxxx`），碰撞概率极低但非零
+- `getStartup` 通过 JOIN projects + novels 返回所有 workspace 上下文
+**错误处理**: `workspaceRoot` 为空时返回空数组或错误消息，不抛异常
 
-### 对话处理器（dialogue.py）
-**做什么**: 解析用户自然语言消息，分类意图，路由到对应工作台操作
-**怎么触发**: 聊天 API 接收用户消息后调用 `DialogueProcessor.process_turn()`
-**技术决策**: 双模式意图分类——有 AI 时调用模型分类，无 AI 时使用中英文关键词匹配（保证无 AI 也能基本工作）
-**状态机**: `DialogueStateMachine` 管理会话状态流转：IDLE → AWAITING_CONTEXT → PROCESSING → COMPLETED → IDLE
-**支持的意图**: 工作台操作（4 种层级转换）、审核操作、查询操作、技能操作、内容编辑、通用聊天、帮助
+### 文件系统操作
 
-### 技能工坊（workshop.py）
-**做什么**: 校验、适配、比对作者控制技能的 payload
-**怎么触发**: 创建/更新/导入技能时调用
-**技术决策**: 受约束技能模型——白名单字段 + 黑名单字段 + 类型特定校验（严格控制技能能做什么，防止注入 generation_params/tool_permissions 等危险字段）
-**支持的技能类型**: style_rule（风格规则）、character_voice（角色语音）、narrative_mode（叙事模式）、pacing_rule（节奏规则）、dialogue_style（对话风格）
-**导入适配器**: 支持 3 种外部格式：prompt_template、custom_agent、ai_role，自动映射字段到受约束技能格式
+**做什么**: 读写用户本地文件系统上的文件和目录
+**怎么触发**: 前端文件树展开/选择文件/保存文件
+**技术决策**:
+- 提供两套文件 API：
+  - `readDirectory`/`readFile`：基于 `novels/{novelId}/` 目录（userData 内的受管目录，使用 `safeJoin` 防护）
+  - `readLocalDirectory`/`readLocalFile`/`saveLocalFile`/`createLocalFile`：基于用户选择的任意本地目录（**未做 safeJoin 路径检查**）
+- 隐藏文件自动过滤（`.` 开头的文件/目录不显示）
+- 目录排序：目录在前、文件在后，字母序
+- 文件内容统一使用 `utf-8` 编码读写（不支持二进制文件）
+**错误处理**: `ENOENT` 返回空内容/空列表，其他错误向上抛
 
-### SQLite 存储引擎（engine.py + _schema.py）
-**做什么**: 管理数据库连接、初始化表结构
-**技术决策**: 使用 Mixin 模式组合 `_ChatMixin` + `_ProvidersMixin` + `_MetadataMixin` 到 `CanonicalStorage`（复用灵活，但多继承 MRO 可能产生意外行为）
-**Schema**: 4 张核心表——chat_sessions、chat_message_links、ai_provider_config、metadata_markers（另有 canonical_objects/canonical_revisions/derived_records 等表在其他 mixin 中定义）
-**外键约束**: `PRAGMA foreign_keys = ON`（每次连接时设置，确保引用完整性）
+### 小说世界观（manifest-repository.ts）
 
-## API 端点
+**做什么**: 管理角色、地点、时间线事件、追踪物品的 CRUD 操作
+**怎么触发**: 前端 ManifestView 中的添加/编辑/删除操作 → IPC `loadNovelManifest`/`saveNovelManifest`
+**技术决策**:
+- 数据存储为 `.superwriter/manifest.json` 单个 JSON 文件（全量读写，每次操作都 load → modify → save）
+- 角色关系（`CharacterRelationship`）支持 7 种关系类型（family/friend/enemy/lover/mentor/rival/stranger）和 3 种强度等级（strong/medium/weak）
+- 删除角色时级联删除其他角色对该角色的关系引用
+- 类型定义在 server 端重复定义了一份（注释 "to avoid cross-module imports"），与前端 `types/novel-manifest.ts` 不共享
+- 所有 CRUD 函数都是独立导出的（非 class），但通过 `import *` 使用
+**错误处理**: 文件不存在时返回空 manifest（`createEmptyManifest()`），其他 IO 错误向上抛
 
-| 路径 | 方法 | 用途 |
-|------|------|------|
-| `/api/startup` | GET | 获取所有工作区上下文列表（项目+小说） |
-| `/api/create-novel` | POST | 创建新项目+小说，在本地文件夹生成 `.superwriter/workspace.json` |
-| `/api/skills` | GET | 获取技能工坊快照（技能列表、选中技能、版本历史、diff） |
-| `/api/skills` | POST | 技能 CRUD（action: create/update/toggle/rollback/import） |
-| `/api/providers` `/api/settings` | GET | 获取 AI 提供者配置列表 |
-| `/api/providers` `/api/settings` | POST | 提供者 CRUD（action: save/activate/delete/test） |
-| `/api/pipeline/nodes` | GET | 列出指定层级的文件系统节点 |
-| `/api/pipeline/nodes/{addr}` | GET/PUT/DELETE | 读取/写入/删除单个文件节点 |
-| `/api/pipeline/nodes/{addr}/expand` | POST | AI 扩写：从父节点生成子节点 |
-| `/api/pipeline/chat` | POST | 文件节点对话台（基于节点内容的多轮对话） |
-| `/api/pipeline/rag/rebuild` | POST | 重建 RAG 关键词索引 |
-| `/api/pipeline/rag/search` | POST | 关键词搜索节点内容 |
-| `/api/pipeline/events` | GET | SSE 事件流，推送文件变化通知 |
+### 伏笔系统（foreshadow-repository.ts）
+
+**做什么**: 管理伏笔的创建、更新、解决、删除
+**怎么触发**: 前端 ForeshadowView → IPC `loadForeshadows`/`saveForeshadows`
+**技术决策**:
+- 使用 class 实例化（`new ForeshadowRepository()`），内存中维护 `foreshadows[]` 数组
+- 需要显式 `load()`/`save()` 同步到文件（内存操作不会自动持久化）
+- IPC handler 中直接修改 `foreshadowRepo['foreshadows']` 私有属性（绕过了类的封装）
+- 伏笔三状态机：`pending` → `resolved`（指定解决章节）或 `abandoned`
+- 支持按章节查询 `getByChapter()` 和获取所有未解决 `getPending()`
+**错误处理**: 文件不存在时初始化为空数组
+
+### 章节快照（snapshot-repository.ts）
+
+**做什么**: 按章节存储角色状态和世界状态的快照
+**怎么触发**: 前端 ConsistencyView → IPC `loadChapterSnapshot`/`saveChapterSnapshot`/`getAllSnapshots`
+**技术决策**:
+- 每章一个 JSON 文件，文件名格式 `chapter-001.json`（3 位数字零填充）
+- 快照数据结构：`CharacterState[]`（角色位置/情绪/生死/近期事件）+ `WorldState`（时间线/冲突/秘密/谜团数）
+- `getLatest()` 遍历目录找最大章节号（O(n) 文件读取，章节多时慢）
+- `getAll()` 一次性读取所有快照文件并按章节号排序（无分页，章节多时内存占用大）
+**错误处理**: 文件/目录不存在返回 null 或空数组
+
+### 内容提取器（content-extractor.ts）
+
+**做什么**: 从章节文本中用正则提取角色名、地点、时间标记、物品提及
+**怎么触发**: IPC `extractChapterContent`
+**技术决策**:
+- 纯正则/字符串匹配，无 NLP 或 AI 辅助（速度快但准确率低）
+- 中文人名：匹配 2-4 个连续汉字/大写字母（误报率极高）
+- 英文人名：首字母大写的单词组合（最多 3 个词）
+- 地点：30 个中文 + 30 个英文预定义地点词 + "在X"/"来到X" 等动词前缀模式
+- 时间标记：10 组中英文日期/时间/星期正则模式
+- 物品：中英文常见武器/物品关键词 + "took/grabbed" 等动词模式
+**错误处理**: 正则不匹配返回空数组，不会抛异常
+
+### 技能工坊
+
+**做什么**: 管理 AI 写作技能（如"写打斗场景"、"写内心独白"）的版本化 CRUD
+**怎么触发**: 前端 SkillsView → IPC `getSkills`/`upsertSkill`/`rollbackSkill`/`importSkill`
+**技术决策**:
+- 双表设计：`skill_objects`（技能元数据）+ `skill_revisions`（版本历史）
+- 每次更新创建新 revision，不修改旧版本（append-only，支持完整历史回溯）
+- 回滚 = 复制目标 revision 的内容创建一个新 revision（不是指针回退，保留完整审计链）
+- `source_kind` 区分 `manual`（手动创建）和 `imported`（导入）
+- `is_active` 控制技能是否启用
+- `getSkills` 使用 `GROUP BY o.object_id` 获取每个技能的最新 revision（但不带 ORDER BY，可能不总是返回最新）
+**错误处理**: revision 不存在时返回 `{ success: false, error: 'Revision not found' }`
+
+### AI 聊天
+
+**做什么**: 将用户消息发送给 AI 并返回响应
+**怎么触发**: 前端 ChatPanel → IPC `sendChat`
+**技术决策**:
+- 使用原生 `fetch()` 调用 OpenAI 兼容的 `/chat/completions` 端点（不依赖 OpenAI SDK，支持任何兼容服务）
+- 不发送历史消息，每次只发一条 user message（无上下文连续对话）
+- AI 响应同步存入 SQLite `chat_message_links` 表（聊天记录持久化）
+- `chat_sessions` 表 INSERT 语句中 `created_by` 字段出现两次（SQL 错误隐患）
+**错误处理**: API 调用失败返回错误消息字符串（不抛异常），无 provider 时返回提示文案
+
+### AI 提供商管理
+
+**做什么**: 配置和管理 AI 服务提供商（支持多个，但同时只激活一个）
+**怎么触发**: 前端设置界面 → IPC `getSettings`/`saveProvider`/`activateProvider`/`deleteProvider`/`testProvider`
+**技术决策**:
+- 支持 CRUD + 激活切换 + 连通性测试（测试通过访问 `/models` 端点检查 HTTP 状态码）
+- 激活逻辑：先 `UPDATE SET is_active = 0`（全部停用），再 `SET is_active = 1`（激活目标），非原子操作
+- 默认 temperature 0.7、max_tokens 4096
+- `saveProvider` 支持 upsert（检测 provider_id 是否已存在，存在则 UPDATE，不存在则 INSERT）
+**错误处理**: provider 不存在时返回 `{ success: false, error: 'Provider not found' }`
+
+## IPC 端点清单
+
+| 端点名 | 读/写 | 用途 |
+|--------|-------|------|
+| `ping` | 读 | 连通性检查（返回 'pong'） |
+| `openDirectory` | 读 | 打开文件夹选择对话框 |
+| `setWorkspaceRoot` | 写 | 设置工作目录根路径 |
+| `readLocalDirectory` | 读 | 读取本地目录列表 |
+| `readLocalFile` | 读 | 读取本地文件内容 |
+| `saveLocalFile` | 写 | 保存本地文件 |
+| `createLocalFile` | 写 | 创建空文件 |
+| `getStartup` | 读 | 获取启动数据（项目和小说列表） |
+| `createWorkspace` | 写 | 创建新工作区（项目 + 小说） |
+| `readDirectory` | 读 | 读取受管小说目录 |
+| `readFile` | 读 | 读取受管小说文件 |
+| `getSkills` | 读 | 获取技能列表（含最新 revision） |
+| `upsertSkill` | 写 | 创建/更新技能（新建 revision） |
+| `rollbackSkill` | 写 | 回滚技能版本（复制目标 revision） |
+| `importSkill` | 写 | 导入外部技能 |
+| `getSettings` | 读 | 获取 AI 提供商配置列表 |
+| `saveProvider` | 写 | 创建/更新提供商配置 |
+| `activateProvider` | 写 | 激活指定提供商（停用其他） |
+| `deleteProvider` | 写 | 删除提供商 |
+| `testProvider` | 读 | 测试提供商连通性 |
+| `sendChat` | 写 | 发送聊天消息并获取 AI 响应 |
+| `loadForeshadows` | 读 | 加载伏笔列表 |
+| `saveForeshadows` | 写 | 保存伏笔列表 |
+| `ensureManifestDir` | 写 | 确保 .superwriter 目录存在 |
+| `loadNovelManifest` | 读 | 加载小说世界观 |
+| `saveNovelManifest` | 写 | 保存小说世界观 |
+| `loadChapterSnapshot` | 读 | 加载指定章节快照 |
+| `saveChapterSnapshot` | 写 | 保存章节快照 |
+| `getAllSnapshots` | 读 | 获取所有章节快照（按章节号排序） |
+| `extractChapterContent` | 读 | 正则提取章节内容元素 |
 
 ## 数据模型
 
-### canonical_objects（规范对象）
-存储项目中所有结构化对象（project/novel/outline_node/plot_node/event/scene/skill 等），每个对象有 family + object_id 唯一标识。
+### SQLite 表结构
 
-### canonical_revisions（修订历史）
-每次变更创建新 revision，形成链式历史。`parent_revision_id` 指向前一个版本，`snapshot` 存储完整 payload 快照。
+| 表名 | 主键 | 用途 | 关键字段 |
+|------|------|------|----------|
+| `projects` | `project_id` TEXT | 项目 | title, created_at, updated_at |
+| `novels` | `novel_id` TEXT | 小说（FK → projects） | project_id, novel_title |
+| `skill_objects` | `object_id` TEXT | 技能对象 | project_id, novel_id, name, source_kind, donor_kind |
+| `skill_revisions` | `revision_id` TEXT | 技能版本（FK → skill_objects） | object_id, revision_number, instruction, is_active |
+| `ai_provider_config` | `provider_id` TEXT | AI 服务商配置 | base_url, api_key(明文), model_name, temperature, is_active |
+| `chat_sessions` | `session_state_id` TEXT | 聊天会话 | project_id, novel_id, runtime_origin |
+| `chat_message_links` | `message_state_id` TEXT | 聊天消息（FK → chat_sessions） | chat_role, payload_json |
 
-### derived_records（派生制品）
-chapter_artifact 和 export_artifact 存储在此表。与 canonical_objects 不同，派生制品不走修订链，每次生成创建新记录。
+### 文件系统数据
 
-### ai_provider_config
-| 字段 | 类型 | 说明 |
+| 路径 | 格式 | 用途 |
 |------|------|------|
-| provider_id | TEXT PK | UUID |
-| provider_name | TEXT | 提供者标识（openai/azure/local/custom） |
-| base_url | TEXT | API 基础 URL |
-| api_key | TEXT | 明文存储的 API 密钥 |
-| model_name | TEXT | 模型名称 |
-| temperature | REAL | 0-2，默认 0.7 |
-| max_tokens | INTEGER | >0，默认 4096 |
-| is_active | INTEGER | 0 或 1，同时只能有一个激活 |
-
-### 文件系统节点（Pipeline）
-```
-.superwriter/nodes/
-  outline-1.txt          # 第 1 个大纲
-  plot-1-1.txt           # 大纲 1 的第 1 个剧情
-  plot-1-2.txt           # 大纲 1 的第 2 个剧情
-  event-1-1-1.txt        # 剧情 1-1 的第 1 个事件
-  scene-1-1-1-1.txt      # 事件 1-1-1 的第 1 个场景
-  chapters/
-    chapter-1-1-1-1-1.txt  # 场景的章节正文
-```
+| `{workspace}/.superwriter/manifest.json` | JSON | 小说世界观（角色、地点、时间线、物品） |
+| `{workspace}/.superwriter/foreshadows.json` | JSON | 伏笔列表 |
+| `{workspace}/.superwriter/state-snapshots/chapter-NNN.json` | JSON | 章节状态快照（每章一文件） |

@@ -1,2168 +1,269 @@
 {
-  "node_count": 759,
-  "edge_count": 1126,
-  "file_count": 86,
+  "communities": [
+    {
+      "id": 0,
+      "label": "AppShell.tsx",
+      "size": 33,
+      "members": [
+        "activitybar",
+        "activitybar_activitybar",
+        "appshell",
+        "appshell_buildproductroutehref",
+        "appshell_getfilelanguage",
+        "appshell_readroutesearch",
+        "appshell_updatetreenodes",
+        "chatpanel",
+        "chatpanel_scrolltobottom",
+        "editortabs"
+      ]
+    },
+    {
+      "id": 1,
+      "label": "client.ts",
+      "size": 28,
+      "members": [
+        "client",
+        "client_apicontracterror",
+        "client_apicontracterror_constructor",
+        "client_apiresponseerror",
+        "client_apiresponseerror_constructor",
+        "client_assertrecord",
+        "client_buildurl",
+        "client_expectarray",
+        "client_expectboolean",
+        "client_expectjsonobject"
+      ]
+    },
+    {
+      "id": 2,
+      "label": "manifest-repository.ts",
+      "size": 19,
+      "members": [
+        "manifest_repository",
+        "manifest_repository_addcharacter",
+        "manifest_repository_addlocation",
+        "manifest_repository_addtimelineevent",
+        "manifest_repository_createemptymanifest",
+        "manifest_repository_deletecharacter",
+        "manifest_repository_deletelocation",
+        "manifest_repository_deletetimelineevent",
+        "manifest_repository_deletetrackedobject",
+        "manifest_repository_ensuremanifestdir"
+      ]
+    },
+    {
+      "id": 3,
+      "label": "ManifestView.tsx",
+      "size": 12,
+      "members": [
+        "manifestview",
+        "manifestview_handleaddcharacter",
+        "manifestview_handleaddlocation",
+        "manifestview_handleaddtimelineevent",
+        "manifestview_handleeditcharacter",
+        "manifestview_handletrackobject",
+        "manifestview_handleupdatecharacter",
+        "novel_manifest",
+        "novel_manifest_createemptymanifest",
+        "novelmanifestcontext"
+      ]
+    },
+    {
+      "id": 4,
+      "label": "ConsistencyView.tsx",
+      "size": 12,
+      "members": [
+        "chapter_snapshot",
+        "consistency_checker",
+        "consistency_checker_checkconsistency",
+        "consistency_checker_comparewithprevious",
+        "consistencyview",
+        "consistencyview_getissuetypelabel",
+        "consistencyview_getseveritybadge",
+        "consistencyview_handleextractandsave",
+        "consistencyview_handlesavesnapshot",
+        "snapshot"
+      ]
+    },
+    {
+      "id": 5,
+      "label": "main.ts",
+      "size": 11,
+      "members": [
+        "appproviders",
+        "appproviders_appproviders",
+        "main",
+        "main_createwindow",
+        "main_getnovelsdir",
+        "main_getprojectdir",
+        "main_now",
+        "main_registeripchandlers",
+        "main_safejoin",
+        "queryclient"
+      ]
+    },
+    {
+      "id": 6,
+      "label": "ForeshadowRepository",
+      "size": 11,
+      "members": [
+        "foreshadow_repository",
+        "foreshadow_repository_foreshadowrepository",
+        "foreshadow_repository_foreshadowrepository_add",
+        "foreshadow_repository_foreshadowrepository_delete",
+        "foreshadow_repository_foreshadowrepository_getbychapter",
+        "foreshadow_repository_foreshadowrepository_getfilepath",
+        "foreshadow_repository_foreshadowrepository_getpending",
+        "foreshadow_repository_foreshadowrepository_load",
+        "foreshadow_repository_foreshadowrepository_resolve",
+        "foreshadow_repository_foreshadowrepository_save"
+      ]
+    },
+    {
+      "id": 7,
+      "label": "mutations.ts",
+      "size": 10,
+      "members": [
+        "mutations",
+        "mutations_test",
+        "mutations_test_createwrapper",
+        "mutations_useactivateprovider",
+        "mutations_usedeleteprovider",
+        "mutations_useimportskill",
+        "mutations_userollbackskill",
+        "mutations_usesaveprovider",
+        "mutations_usetestprovider",
+        "mutations_useupsertskill"
+      ]
+    },
+    {
+      "id": 8,
+      "label": "SnapshotRepository",
+      "size": 9,
+      "members": [
+        "snapshot_repository",
+        "snapshot_repository_getsnapshotfilepath",
+        "snapshot_repository_getsnapshotsdir",
+        "snapshot_repository_snapshotrepository",
+        "snapshot_repository_snapshotrepository_delete",
+        "snapshot_repository_snapshotrepository_getall",
+        "snapshot_repository_snapshotrepository_getlatest",
+        "snapshot_repository_snapshotrepository_load",
+        "snapshot_repository_snapshotrepository_save"
+      ]
+    },
+    {
+      "id": 9,
+      "label": "content-extractor.ts",
+      "size": 6,
+      "members": [
+        "content_extractor",
+        "content_extractor_extractcharacters",
+        "content_extractor_extractcontent",
+        "content_extractor_extractlocations",
+        "content_extractor_extractobjectmentions",
+        "content_extractor_extracttimemarkers"
+      ]
+    },
+    {
+      "id": 10,
+      "label": "FileTree.tsx",
+      "size": 4,
+      "members": [
+        "filetree",
+        "filetree_filetree",
+        "filetreenode",
+        "filetreenode_handleclick"
+      ]
+    },
+    {
+      "id": 11,
+      "label": "db.ts",
+      "size": 4,
+      "members": [
+        "db",
+        "db_closedb",
+        "db_getdb",
+        "db_initializeschema"
+      ]
+    },
+    {
+      "id": 12,
+      "label": "api-contract.ts",
+      "size": 3,
+      "members": [
+        "api_contract",
+        "api_contract_apierr",
+        "api_contract_apiok"
+      ]
+    }
+  ],
   "god_nodes": [
     {
-      "id": "application_services_superwriterapplicationservice",
-      "label": "SuperwriterApplicationService",
-      "edges": 81,
-      "source_file": "core\\runtime\\application_services.py"
-    },
-    {
-      "id": "api_server_superwriterapiapp",
-      "label": "SuperwriterAPIApp",
-      "edges": 27,
-      "source_file": "apps\\server\\api_server.py"
-    },
-    {
-      "id": "test_skill_types_base_payload",
-      "label": "_base_payload()",
-      "edges": 16,
-      "source_file": "tests\\test_skill_types.py"
-    },
-    {
-      "id": "import_export_service_importexportservice",
-      "label": "ImportExportService",
+      "id": "manifest_repository_loadmanifest",
+      "label": "loadManifest()",
       "edges": 15,
-      "source_file": "core\\runtime\\services\\import_export_service.py"
+      "source_file": "D:\\code\\superwriter\\apps\\server\\src\\repositories\\manifest-repository.ts"
     },
     {
-      "id": "unified_file_store_unifiedfilestore",
-      "label": "UnifiedFileStore",
+      "id": "manifest_repository_savemanifest",
+      "label": "saveManifest()",
       "edges": 15,
-      "source_file": "core\\storage\\unified_file_store.py"
-    },
-    {
-      "id": "chat_service_chatservice",
-      "label": "ChatService",
-      "edges": 13,
-      "source_file": "core\\runtime\\services\\chat_service.py"
-    },
-    {
-      "id": "legacy_workbench_service_legacyworkbenchservice",
-      "label": "LegacyWorkbenchService",
-      "edges": 13,
-      "source_file": "core\\runtime\\services\\legacy_workbench_service.py"
+      "source_file": "D:\\code\\superwriter\\apps\\server\\src\\repositories\\manifest-repository.ts"
     },
     {
       "id": "client_assertrecord",
       "label": "assertRecord()",
       "edges": 12,
-      "source_file": "apps\\frontend\\src\\lib\\api\\client.ts"
+      "source_file": "D:\\code\\superwriter\\apps\\frontend\\src\\lib\\api\\client.ts"
     },
     {
-      "id": "pipeline_api_filestore",
-      "label": "FileStore",
-      "edges": 12,
-      "source_file": "apps\\server\\pipeline_api.py"
+      "id": "foreshadow_repository_foreshadowrepository",
+      "label": "ForeshadowRepository",
+      "edges": 10,
+      "source_file": "D:\\code\\superwriter\\apps\\server\\src\\repositories\\foreshadow-repository.ts"
     },
     {
-      "id": "pipeline_api_pipelineapi",
-      "label": "PipelineAPI",
-      "edges": 12,
-      "source_file": "apps\\server\\pipeline_api.py"
+      "id": "client_expectstring",
+      "label": "expectString()",
+      "edges": 9,
+      "source_file": "D:\\code\\superwriter\\apps\\frontend\\src\\lib\\api\\client.ts"
     },
     {
-      "id": "dialogue_dialogueprocessor",
-      "label": "DialogueProcessor",
-      "edges": 12,
-      "source_file": "core\\ai\\dialogue.py"
+      "id": "client_parseskillworkshopskill",
+      "label": "parseSkillWorkshopSkill()",
+      "edges": 8,
+      "source_file": "D:\\code\\superwriter\\apps\\frontend\\src\\lib\\api\\client.ts"
     },
     {
-      "id": "retrieval_service_retrievalservice",
-      "label": "RetrievalService",
-      "edges": 12,
-      "source_file": "core\\runtime\\services\\retrieval_service.py"
+      "id": "client_expectjsonobject",
+      "label": "expectJsonObject()",
+      "edges": 7,
+      "source_file": "D:\\code\\superwriter\\apps\\frontend\\src\\lib\\api\\client.ts"
     },
     {
-      "id": "workbench_workbenchmixin",
-      "label": "_WorkbenchMixin",
-      "edges": 12,
-      "source_file": "core\\storage\\_workbench.py"
+      "id": "client_parseskillworkshopversion",
+      "label": "parseSkillWorkshopVersion()",
+      "edges": 7,
+      "source_file": "D:\\code\\superwriter\\apps\\frontend\\src\\lib\\api\\client.ts"
     },
     {
-      "id": "api_server_superwriterwsgiapp",
-      "label": "SuperwriterWSGIApp",
-      "edges": 11,
-      "source_file": "apps\\server\\api_server.py"
+      "id": "client_parseskillworkshopcomparison",
+      "label": "parseSkillWorkshopComparison()",
+      "edges": 6,
+      "source_file": "D:\\code\\superwriter\\apps\\frontend\\src\\lib\\api\\client.ts"
     },
     {
-      "id": "helper_utils_helperutils",
-      "label": "HelperUtils",
-      "edges": 11,
-      "source_file": "core\\runtime\\services\\helper_utils.py"
+      "id": "client_parseskillworkshopsnapshot",
+      "label": "parseSkillWorkshopSnapshot()",
+      "edges": 6,
+      "source_file": "D:\\code\\superwriter\\apps\\frontend\\src\\lib\\api\\client.ts"
     }
   ],
-  "orphan_count": 85,
-  "communities": [
-    {
-      "id": 0,
-      "size": 84,
-      "cohesion": 0.03,
-      "sample_members": [
-        "application_services.py",
-        "_AppliedReviewMutation",
-        "for_sqlite()",
-        "SuperwriterApplicationService",
-        "._apply_candidate_to_canonical()",
-        "._apply_chat_edit()",
-        ".apply_mutation()",
-        "._build_publish_export_payload()"
-      ]
-    },
-    {
-      "id": 1,
-      "size": 71,
-      "cohesion": 0.05,
-      "sample_members": [
-        "AppProviders.tsx",
-        "AppProviders()",
-        "AppShell.tsx",
-        "buildProductRouteHref()",
-        "readRouteSearch()",
-        "client.ts",
-        "ApiContractError",
-        ".constructor()"
-      ]
-    },
-    {
-      "id": 2,
-      "size": 66,
-      "cohesion": 0.07,
-      "sample_members": [
-        "api_server.py",
-        "ApiResponse",
-        "_bool_from_optional_value()",
-        "_bool_from_value()",
-        "CommandCenterAuditEntry",
-        "CommandCenterRoute",
-        "CommandCenterSignal",
-        "CommandCenterSnapshot"
-      ]
-    },
-    {
-      "id": 3,
-      "size": 47,
-      "cohesion": 0.09,
-      "sample_members": [
-        "pipeline_api.py",
-        "FileStore",
-        ".delete()",
-        "._delete_recursive()",
-        ".exists()",
-        ".__init__()",
-        ".list_children()",
-        ".list_layer()"
-      ]
-    },
-    {
-      "id": 4,
-      "size": 28,
-      "cohesion": 0.12,
-      "sample_members": [
-        "__init__.py",
-        "build_indexed_documents()",
-        "build_search_text()",
-        "build_support_documents()",
-        "_payload_text()",
-        "rank_support_documents()",
-        "_raw_string_value()",
-        "RetrievalBuildReport"
-      ]
-    },
-    {
-      "id": 5,
-      "size": 28,
-      "cohesion": 0.11,
-      "sample_members": [
-        "test_skill_types.py",
-        "_base_payload()",
-        "TestBackwardCompatibility",
-        ".test_existing_style_rule_payload_still_works()",
-        "TestCharacterVoiceValidation",
-        ".test_character_voice_without_character_id()",
-        ".test_valid_character_voice()",
-        "TestDialogueStyleValidation"
-      ]
-    },
-    {
-      "id": 6,
-      "size": 24,
-      "cohesion": 0.15,
-      "sample_members": [
-        "dialogue.py",
-        "DialogueIntent",
-        "DialogueProcessor",
-        "._build_dialogue_context()",
-        "._build_system_prompt()",
-        "._build_user_prompt()",
-        "._classify_intent()",
-        "._classify_intent_with_ai()"
-      ]
-    },
-    {
-      "id": 7,
-      "size": 20,
-      "cohesion": 0.15,
-      "sample_members": [
-        "dialogue_context.py",
-        "active_object_ids()",
-        "ContextScope",
-        "ContextUpdate",
-        "DialogueContext",
-        ".recent_turns()",
-        "DialogueContextManager",
-        ".add_turn()"
-      ]
-    },
-    {
-      "id": 8,
-      "size": 20,
-      "cohesion": 0.21,
-      "sample_members": [
-        "unified_file_store.py",
-        "NodeAddress",
-        ".__str__()",
-        "parent_coords()",
-        "parse()",
-        "UnifiedFileStore",
-        "._content_path()",
-        ".delete()"
-      ]
-    },
-    {
-      "id": 9,
-      "size": 17,
-      "cohesion": 0.25,
-      "sample_members": [
-        "import_export_service.py",
-        "_import_object_result()",
-        "ImportExportService",
-        "._create_derived_artifact()",
-        ".create_export_artifact()",
-        "._derived_artifact_by_revision()",
-        ".import_character_export()",
-        ".import_from_donor()"
-      ]
-    },
-    {
-      "id": 10,
-      "size": 16,
-      "cohesion": 0.23,
-      "sample_members": [
-        "file_store.py",
-        "file_name()",
-        "FileStore",
-        ".delete()",
-        ".exists()",
-        ".__init__()",
-        ".list_children()",
-        ".list_layer()"
-      ]
-    },
-    {
-      "id": 11,
-      "size": 15,
-      "cohesion": 0.13,
-      "sample_members": [
-        "workspace_types.py",
-        "CreateWorkspaceRequest",
-        "CreateWorkspaceResult",
-        "ImportOutlineRequest",
-        "ImportOutlineResult",
-        "ReadObjectRequest",
-        "ReadObjectResult",
-        "ReviewProposalSnapshot"
-      ]
-    },
-    {
-      "id": 12,
-      "size": 14,
-      "cohesion": 0.2,
-      "sample_members": [
-        "provider.py",
-        "AIProviderClient",
-        ".generate()",
-        ".generate_structured()",
-        ".__init__()",
-        ".test_connection()",
-        "AIProviderConfig",
-        ".for_storage()"
-      ]
-    },
-    {
-      "id": 13,
-      "size": 14,
-      "cohesion": 0.24,
-      "sample_members": [
-        "chat_service.py",
-        "ChatService",
-        ".apply_chat_edit()",
-        "._build_open_chat_session_request()",
-        "._build_service_mutation_request()",
-        ".classify_chat_intent()",
-        ".generate_downstream_content_from_chat()",
-        "._get_active_ai_provider()"
-      ]
-    },
-    {
-      "id": 14,
-      "size": 14,
-      "cohesion": 0.32,
-      "sample_members": [
-        "legacy_workbench_service.py",
-        "LegacyWorkbenchService",
-        "._create_candidates_from_items()",
-        "._event_to_scene_candidates()",
-        "._gather_novel_context()",
-        "._gather_workspace_objects()",
-        "._gather_workspace_skills()",
-        "._generate_events_with_ai()"
-      ]
-    },
-    {
-      "id": 15,
-      "size": 13,
-      "cohesion": 0.38,
-      "sample_members": [
-        "retrieval_service.py",
-        "RetrievalService",
-        ".get_retrieval_status()",
-        ".__init__()",
-        "._latest_retrieval_status_marker()",
-        "._payload_int_value()",
-        "._payload_text_value()",
-        ".rebuild_retrieval_support()"
-      ]
-    },
-    {
-      "id": 16,
-      "size": 13,
-      "cohesion": 0.15,
-      "sample_members": [
-        "skill_types.py",
-        "SkillExecutionRequest",
-        "SkillExecutionResult",
-        "SkillWorkshopCompareRequest",
-        "SkillWorkshopComparison",
-        "SkillWorkshopImportRequest",
-        "SkillWorkshopMutationResult",
-        "SkillWorkshopRequest"
-      ]
-    },
-    {
-      "id": 17,
-      "size": 13,
-      "cohesion": 0.15,
-      "sample_members": [
-        "_workbench.py",
-        "_WorkbenchMixin",
-        ".create_candidate_draft()",
-        ".create_workbench_feedback()",
-        ".create_workbench_session()",
-        ".get_candidate_draft()",
-        ".get_workbench_session()",
-        ".increment_workbench_iteration()"
-      ]
-    },
-    {
-      "id": 18,
-      "size": 12,
-      "cohesion": 0.18,
-      "sample_members": [
-        "helper_utils.py",
-        "HelperUtils",
-        ".derived_artifact_by_revision()",
-        ".__init__()",
-        ".latest_artifact_for_object_id()",
-        ".latest_import_source()",
-        ".latest_scene_chapter_artifact()",
-        ".payload_int_value()"
-      ]
-    },
-    {
-      "id": 19,
-      "size": 12,
-      "cohesion": 0.23,
-      "sample_members": [
-        "skill_service.py",
-        "SkillService",
-        ".compare_skill_versions()",
-        "._default_skill_revision_reason()",
-        ".execute_skill()",
-        ".get_skill_workshop()",
-        ".import_skill_workshop_skill()",
-        ".__init__()"
-      ]
-    },
-    {
-      "id": 20,
-      "size": 11,
-      "cohesion": 0.18,
-      "sample_members": [
-        "_utils.py",
-        "_decode_json_object()",
-        "_encode_json()",
-        "_fetchall()",
-        "_fetchone()",
-        "_generate_id()",
-        "_normalize_payload()",
-        "_row_int()"
-      ]
-    },
-    {
-      "id": 21,
-      "size": 10,
-      "cohesion": 0.2,
-      "sample_members": [
-        "workbench_service.py",
-        "WorkbenchService",
-        ".generate_event_to_scene_workbench()",
-        "._generate_events_with_ai()",
-        ".generate_outline_to_plot_workbench()",
-        "._generate_plot_nodes_with_ai()",
-        ".generate_plot_to_event_workbench()",
-        ".generate_scene_to_chapter_workbench()"
-      ]
-    },
-    {
-      "id": 22,
-      "size": 10,
-      "cohesion": 0.2,
-      "sample_members": [
-        "import_export_types.py",
-        "ExportArtifactRequest",
-        "ExportArtifactResult",
-        "ImportObjectResult",
-        "ImportRequest",
-        "ImportResult",
-        "PublishExportArtifactRequest",
-        "PublishExportArtifactResult"
-      ]
-    },
-    {
-      "id": 23,
-      "size": 9,
-      "cohesion": 0.22,
-      "sample_members": [
-        "ai_config_service.py",
-        "AIConfigService",
-        ".delete_provider_config()",
-        ".get_active_ai_provider()",
-        ".__init__()",
-        ".list_provider_configs()",
-        ".save_provider_config()",
-        ".set_active_provider()"
-      ]
-    },
-    {
-      "id": 24,
-      "size": 9,
-      "cohesion": 0.22,
-      "sample_members": [
-        "chat_types.py",
-        "ChatMessageRequest",
-        "ChatMessageSnapshot",
-        "ChatSessionSnapshot",
-        "ChatTurnRequest",
-        "ChatTurnResult",
-        "GetChatSessionRequest",
-        "OpenChatSessionRequest"
-      ]
-    },
-    {
-      "id": 25,
-      "size": 9,
-      "cohesion": 0.22,
-      "sample_members": [
-        "workbench_types.py",
-        "EventToSceneWorkbenchRequest",
-        "EventToSceneWorkbenchResult",
-        "OutlineToPlotWorkbenchRequest",
-        "OutlineToPlotWorkbenchResult",
-        "PlotToEventWorkbenchRequest",
-        "PlotToEventWorkbenchResult",
-        "SceneToChapterWorkbenchRequest"
-      ]
-    },
-    {
-      "id": 26,
-      "size": 9,
-      "cohesion": 0.22,
-      "sample_members": [
-        "_canonical.py",
-        "_CanonicalMixin",
-        ".delete_canonical_object()",
-        ".fetch_all_canonical_rows()",
-        ".fetch_canonical_head()",
-        ".fetch_canonical_revisions()",
-        ".fetch_mutation_records()",
-        ".fetch_workspace_canonical_rows()"
-      ]
-    },
-    {
-      "id": 27,
-      "size": 9,
-      "cohesion": 0.25,
-      "sample_members": [
-        "metadata_store.py",
-        "MetadataStore",
-        ".delete()",
-        ".exists()",
-        ".__init__()",
-        "._init_schema()",
-        ".list_family()",
-        ".read()"
-      ]
-    },
-    {
-      "id": 28,
-      "size": 9,
-      "cohesion": 0.22,
-      "sample_members": [
-        "test_ai_provider.py",
-        "test_active_provider_selection()",
-        "test_ai_provider_client_initialization()",
-        "test_ai_provider_client_mock_generation()",
-        "test_diagnosis_basic_analysis()",
-        "test_dialogue_intent_classification()",
-        "test_prompt_template_structure()",
-        "test_provider_config_storage_roundtrip()"
-      ]
-    },
-    {
-      "id": 29,
-      "size": 8,
-      "cohesion": 0.25,
-      "sample_members": [
-        "iteration_service.py",
-        "IterationService",
-        ".generate_iteration_candidates()",
-        ".generate_revision_candidates()",
-        ".__init__()",
-        ".select_workbench_candidate()",
-        ".start_workbench_iteration()",
-        ".submit_workbench_feedback()"
-      ]
-    },
-    {
-      "id": 30,
-      "size": 8,
-      "cohesion": 0.32,
-      "sample_members": [
-        "payload_builder_service.py",
-        "PayloadBuilderService",
-        ".build_publish_export_payload()",
-        ".build_scene_to_chapter_payload()",
-        ".__init__()",
-        "scene_body_seed()",
-        "scene_chapter_title()",
-        "skill_matches_scene_to_chapter_scope()"
-      ]
-    },
-    {
-      "id": 31,
-      "size": 8,
-      "cohesion": 0.36,
-      "sample_members": [
-        "review_helpers.py",
-        "decision_reason()",
-        "drift_summary()",
-        "prose_payload_text()",
-        "render_prose_diff()",
-        "review_state_detail()",
-        "review_target_title()",
-        "ReviewHelpers"
-      ]
-    },
-    {
-      "id": 32,
-      "size": 8,
-      "cohesion": 0.25,
-      "sample_members": [
-        "iteration_types.py",
-        "CandidateDraftSnapshot",
-        "CandidateSelectionRequest",
-        "CandidateSelectionResult",
-        "WorkbenchFeedbackRequest",
-        "WorkbenchFeedbackResult",
-        "WorkbenchIterationRequest",
-        "WorkbenchIterationResult"
-      ]
-    },
-    {
-      "id": 33,
-      "size": 8,
-      "cohesion": 0.25,
-      "sample_members": [
-        "_providers.py",
-        "_ProvidersMixin",
-        ".delete_provider_config()",
-        ".get_active_provider_config()",
-        ".get_provider_config()",
-        ".list_provider_configs()",
-        ".save_provider_config()",
-        ".set_active_provider()"
-      ]
-    },
-    {
-      "id": 34,
-      "size": 8,
-      "cohesion": 0.43,
-      "sample_members": [
-        "engine.py",
-        "CanonicalStorage",
-        ".connect()",
-        ".__init__()",
-        ".initialize()",
-        ".list_tables()",
-        "._schema_sql()",
-        "_connection()"
-      ]
-    },
-    {
-      "id": 35,
-      "size": 8,
-      "cohesion": 0.43,
-      "sample_members": [
-        "version_store.py",
-        "VersionStore",
-        ".__init__()",
-        ".list_revisions()",
-        ".read_revision()",
-        ".restore_revision()",
-        "._revisions_dir()",
-        ".save_revision()"
-      ]
-    },
-    {
-      "id": 36,
-      "size": 7,
-      "cohesion": 0.29,
-      "sample_members": [
-        "retrieval_types.py",
-        "RetrievalMatchSnapshot",
-        "RetrievalRebuildRequest",
-        "RetrievalRebuildResult",
-        "RetrievalSearchRequest",
-        "RetrievalSearchResult",
-        "RetrievalStatusSnapshot"
-      ]
-    },
-    {
-      "id": 37,
-      "size": 7,
-      "cohesion": 0.29,
-      "sample_members": [
-        "_types.py",
-        "ChatMessageLinkInput",
-        "ChatMessageLinkRow",
-        "ChatSessionInput",
-        "ChatSessionRow",
-        "MetadataMarkerInput",
-        "MetadataMarkerSnapshot"
-      ]
-    },
-    {
-      "id": 38,
-      "size": 7,
-      "cohesion": 0.57,
-      "sample_members": [
-        "test_retrieval_support_only.py",
-        "_count_rows()",
-        "_scope_document_markers()",
-        "_seed_retrieval_workspace()",
-        "test_retrieval_conflicts_become_warnings_and_review_hints_not_canonical_writes()",
-        "test_retrieval_degradation_warns_but_does_not_block_authoring_flows()",
-        "test_retrieval_rebuild_stays_support_only_and_replaces_current_scope_markers()"
-      ]
-    },
-    {
-      "id": 39,
-      "size": 6,
-      "cohesion": 0.33,
-      "sample_members": [
-        "common_types.py",
-        "CanonicalObjectSnapshot",
-        "CanonicalRevisionSnapshot",
-        "DerivedArtifactSnapshot",
-        "MutationRecordSnapshot",
-        "SupportedDonor"
-      ]
-    },
-    {
-      "id": 40,
-      "size": 6,
-      "cohesion": 0.33,
-      "sample_members": [
-        "_chat.py",
-        "_ChatMixin",
-        ".create_chat_message_link()",
-        ".create_chat_session()",
-        ".fetch_chat_message_link_rows()",
-        ".fetch_chat_session_row()"
-      ]
-    },
-    {
-      "id": 41,
-      "size": 5,
-      "cohesion": 0.4,
-      "sample_members": [
-        "mutation_policy.py",
-        "ChapterMutationSignals",
-        "MutationPolicyEngine",
-        ".__init__()",
-        "MutationRequest"
-      ]
-    },
-    {
-      "id": 42,
-      "size": 5,
-      "cohesion": 0.5,
-      "sample_members": [
-        "diagnosis_service.py",
-        "DiagnosisService",
-        "._basic_diagnosis()",
-        ".diagnose_project()",
-        ".__init__()"
-      ]
-    },
-    {
-      "id": 43,
-      "size": 5,
-      "cohesion": 0.4,
-      "sample_members": [
-        "_derived.py",
-        "_DerivedMixin",
-        ".create_derived_record()",
-        ".delete_derived_object()",
-        ".fetch_derived_records()"
-      ]
-    },
-    {
-      "id": 44,
-      "size": 5,
-      "cohesion": 0.4,
-      "sample_members": [
-        "_metadata.py",
-        "_MetadataMixin",
-        ".create_metadata_marker()",
-        ".delete_metadata_markers()",
-        ".fetch_metadata_markers()"
-      ]
-    },
-    {
-      "id": 45,
-      "size": 5,
-      "cohesion": 0.7,
-      "sample_members": [
-        "test_skill_workshop.py",
-        "_seed_workspace()",
-        "test_skill_workshop_imports_prompt_templates_custom_agents_and_ai_roles_through_adapters()",
-        "test_skill_workshop_rejects_forbidden_fields_explicitly()",
-        "test_skill_workshop_versions_compare_and_rollback_stay_in_one_unified_skill_model()"
-      ]
-    },
-    {
-      "id": 46,
-      "size": 4,
-      "cohesion": 0.5,
-      "sample_members": [
-        "_imports.py",
-        "_ImportsMixin",
-        ".create_import_record()",
-        ".fetch_import_records()"
-      ]
-    },
-    {
-      "id": 47,
-      "size": 3,
-      "cohesion": 0.67,
-      "sample_members": [
-        "delete-node.spec.ts",
-        "pipelineSnapshot()",
-        "setupApiMocks()"
-      ]
-    },
-    {
-      "id": 48,
-      "size": 2,
-      "cohesion": 1.0,
-      "sample_members": [
-        "prompts.py",
-        "build_partial_revision_prompt()"
-      ]
-    },
-    {
-      "id": 49,
-      "size": 2,
-      "cohesion": 1.0,
-      "sample_members": [
-        "_proposals.py",
-        "_ProposalsMixin"
-      ]
-    },
-    {
-      "id": 50,
-      "size": 1,
-      "cohesion": 1.0,
-      "sample_members": [
-        "eslint.config.js"
-      ]
-    },
-    {
-      "id": 51,
-      "size": 1,
-      "cohesion": 1.0,
-      "sample_members": [
-        "playwright.config.ts"
-      ]
-    },
-    {
-      "id": 52,
-      "size": 1,
-      "cohesion": 1.0,
-      "sample_members": [
-        "vite-env.d.ts"
-      ]
-    },
-    {
-      "id": 53,
-      "size": 1,
-      "cohesion": 1.0,
-      "sample_members": [
-        "smoke.spec.ts"
-      ]
-    },
-    {
-      "id": 54,
-      "size": 1,
-      "cohesion": 1.0,
-      "sample_members": [
-        "vite.config.ts"
-      ]
-    },
-    {
-      "id": 55,
-      "size": 1,
-      "cohesion": 1.0,
-      "sample_members": [
-        "vitest.config.ts"
-      ]
-    },
-    {
-      "id": 56,
-      "size": 1,
-      "cohesion": 1.0,
-      "sample_members": [
-        "storage.py"
-      ]
-    },
-    {
-      "id": 57,
-      "size": 1,
-      "cohesion": 1.0,
-      "sample_members": [
-        "_schema.py"
-      ]
-    }
-  ],
-  "community_labels": {
-    "0": "SuperwriterApplicationService",
-    "1": "client.ts",
-    "2": "api_server.py",
-    "3": "FileStore",
-    "4": "__init__.py",
-    "5": "_base_payload()",
-    "6": "DialogueProcessor",
-    "7": "DialogueContextManager",
-    "8": "UnifiedFileStore",
-    "9": "ImportExportService",
-    "10": "FileStore",
-    "11": "workspace_types.py",
-    "12": "provider.py",
-    "13": "ChatService",
-    "14": "LegacyWorkbenchService",
-    "15": "RetrievalService",
-    "16": "skill_types.py",
-    "17": "_WorkbenchMixin",
-    "18": "HelperUtils",
-    "19": "SkillService",
-    "20": "_utils.py",
-    "21": "WorkbenchService",
-    "22": "import_export_types.py",
-    "23": "AIConfigService",
-    "24": "chat_types.py",
-    "25": "workbench_types.py",
-    "26": "_CanonicalMixin",
-    "27": "MetadataStore",
-    "28": "test_ai_provider.py",
-    "29": "IterationService",
-    "30": "payload_builder_service.py",
-    "31": "review_helpers.py",
-    "32": "iteration_types.py",
-    "33": "_ProvidersMixin",
-    "34": "CanonicalStorage",
-    "35": "VersionStore",
-    "36": "retrieval_types.py",
-    "37": "_types.py",
-    "38": "test_retrieval_support_only.py",
-    "39": "common_types.py",
-    "40": "_ChatMixin",
-    "41": "mutation_policy.py",
-    "42": "DiagnosisService",
-    "43": "_DerivedMixin",
-    "44": "_MetadataMixin",
-    "45": "test_skill_workshop.py",
-    "46": "_ImportsMixin",
-    "47": "delete-node.spec.ts",
-    "48": "prompts.py",
-    "49": "_proposals.py",
-    "50": "eslint.config.js",
-    "51": "playwright.config.ts",
-    "52": "vite-env.d.ts",
-    "53": "smoke.spec.ts",
-    "54": "vite.config.ts",
-    "55": "vitest.config.ts",
-    "56": "storage.py",
-    "57": "_schema.py"
-  },
-  "layer_classification": {
-    "frontend": [
-      {
-        "file": "apps\\frontend\\eslint.config.js",
-        "confidence": 0.4,
-        "signals": [
-          "path:frontend/"
-        ]
-      },
-      {
-        "file": "apps\\frontend\\playwright.config.ts",
-        "confidence": 0.4,
-        "signals": [
-          "path:frontend/"
-        ]
-      },
-      {
-        "file": "apps\\frontend\\src\\app\\AppShell.tsx",
-        "confidence": 0.5,
-        "signals": [
-          "path:frontend/",
-          "ext:jsx"
-        ]
-      },
-      {
-        "file": "apps\\frontend\\src\\app\\queryClient.ts",
-        "confidence": 0.4,
-        "signals": [
-          "path:frontend/"
-        ]
-      },
-      {
-        "file": "apps\\frontend\\src\\app\\router.tsx",
-        "confidence": 0.5,
-        "signals": [
-          "path:frontend/",
-          "ext:jsx"
-        ]
-      },
-      {
-        "file": "apps\\frontend\\src\\components\\FileTree.tsx",
-        "confidence": 0.5,
-        "signals": [
-          "path:frontend/",
-          "ext:jsx"
-        ]
-      },
-      {
-        "file": "apps\\frontend\\src\\components\\FileTreeNode.tsx",
-        "confidence": 0.5,
-        "signals": [
-          "path:frontend/",
-          "ext:jsx"
-        ]
-      },
-      {
-        "file": "apps\\frontend\\src\\components\\MonacoEditor.tsx",
-        "confidence": 0.5,
-        "signals": [
-          "path:frontend/",
-          "ext:jsx"
-        ]
-      },
-      {
-        "file": "apps\\frontend\\src\\components\\SkillVersionList.tsx",
-        "confidence": 0.5,
-        "signals": [
-          "path:frontend/",
-          "ext:jsx"
-        ]
-      },
-      {
-        "file": "apps\\frontend\\src\\lib\\api\\client.ts",
-        "confidence": 0.4,
-        "signals": [
-          "path:frontend/",
-          "path:api/"
-        ]
-      },
-      {
-        "file": "apps\\frontend\\src\\lib\\api\\electron-client.ts",
-        "confidence": 0.4,
-        "signals": [
-          "path:frontend/",
-          "path:api/"
-        ]
-      },
-      {
-        "file": "apps\\frontend\\src\\lib\\api\\index.ts",
-        "confidence": 0.4,
-        "signals": [
-          "path:frontend/",
-          "path:api/"
-        ]
-      },
-      {
-        "file": "apps\\frontend\\src\\lib\\api\\mutations.ts",
-        "confidence": 0.4,
-        "signals": [
-          "path:frontend/",
-          "path:api/"
-        ]
-      },
-      {
-        "file": "apps\\frontend\\src\\main.tsx",
-        "confidence": 0.5,
-        "signals": [
-          "path:frontend/",
-          "ext:jsx"
-        ]
-      },
-      {
-        "file": "apps\\frontend\\src\\providers\\AppProviders.tsx",
-        "confidence": 0.5,
-        "signals": [
-          "path:frontend/",
-          "ext:jsx"
-        ]
-      },
-      {
-        "file": "apps\\frontend\\src\\views\\EditorView.tsx",
-        "confidence": 0.5,
-        "signals": [
-          "path:frontend/",
-          "ext:jsx"
-        ]
-      },
-      {
-        "file": "apps\\frontend\\src\\views\\PipelineView.tsx",
-        "confidence": 0.5,
-        "signals": [
-          "path:frontend/",
-          "ext:jsx"
-        ]
-      },
-      {
-        "file": "apps\\frontend\\src\\views\\SettingsView.tsx",
-        "confidence": 0.5,
-        "signals": [
-          "path:frontend/",
-          "ext:jsx"
-        ]
-      },
-      {
-        "file": "apps\\frontend\\src\\views\\SkillsView.tsx",
-        "confidence": 0.5,
-        "signals": [
-          "path:frontend/",
-          "ext:jsx"
-        ]
-      },
-      {
-        "file": "apps\\frontend\\src\\views\\StartupView.tsx",
-        "confidence": 0.5,
-        "signals": [
-          "path:frontend/",
-          "ext:jsx"
-        ]
-      },
-      {
-        "file": "apps\\frontend\\src\\vite-env.d.ts",
-        "confidence": 0.4,
-        "signals": [
-          "path:frontend/"
-        ]
-      },
-      {
-        "file": "apps\\frontend\\tests\\e2e\\delete-node.spec.ts",
-        "confidence": 0.4,
-        "signals": [
-          "path:frontend/"
-        ]
-      },
-      {
-        "file": "apps\\frontend\\tests\\e2e\\smoke.spec.ts",
-        "confidence": 0.4,
-        "signals": [
-          "path:frontend/"
-        ]
-      },
-      {
-        "file": "apps\\frontend\\vite.config.ts",
-        "confidence": 0.4,
-        "signals": [
-          "path:frontend/"
-        ]
-      },
-      {
-        "file": "apps\\frontend\\vitest.config.ts",
-        "confidence": 0.4,
-        "signals": [
-          "path:frontend/"
-        ]
-      }
-    ],
-    "backend": [
-      {
-        "file": "apps\\__init__.py",
-        "confidence": 0.1,
-        "signals": [
-          "default:no-signals"
-        ]
-      },
-      {
-        "file": "apps\\server\\__init__.py",
-        "confidence": 0.4,
-        "signals": [
-          "path:server/"
-        ]
-      },
-      {
-        "file": "apps\\server\\api_server.py",
-        "confidence": 0.4,
-        "signals": [
-          "path:server/"
-        ]
-      },
-      {
-        "file": "apps\\server\\pipeline_api.py",
-        "confidence": 0.4,
-        "signals": [
-          "path:server/"
-        ]
-      },
-      {
-        "file": "core\\__init__.py",
-        "confidence": 0.1,
-        "signals": [
-          "default:no-signals"
-        ]
-      },
-      {
-        "file": "core\\ai\\__init__.py",
-        "confidence": 0.1,
-        "signals": [
-          "default:no-signals"
-        ]
-      },
-      {
-        "file": "core\\ai\\dialogue.py",
-        "confidence": 0.1,
-        "signals": [
-          "default:no-signals"
-        ]
-      },
-      {
-        "file": "core\\ai\\dialogue_context.py",
-        "confidence": 0.1,
-        "signals": [
-          "default:no-signals"
-        ]
-      },
-      {
-        "file": "core\\ai\\prompts.py",
-        "confidence": 0.1,
-        "signals": [
-          "default:no-signals"
-        ]
-      },
-      {
-        "file": "core\\ai\\provider.py",
-        "confidence": 0.1,
-        "signals": [
-          "default:no-signals"
-        ]
-      },
-      {
-        "file": "core\\retrieval\\__init__.py",
-        "confidence": 0.1,
-        "signals": [
-          "default:no-signals"
-        ]
-      },
-      {
-        "file": "core\\runtime\\__init__.py",
-        "confidence": 0.1,
-        "signals": [
-          "default:no-signals"
-        ]
-      },
-      {
-        "file": "core\\runtime\\application_services.py",
-        "confidence": 0.1,
-        "signals": [
-          "default:no-signals"
-        ]
-      },
-      {
-        "file": "core\\runtime\\mutation_policy.py",
-        "confidence": 0.1,
-        "signals": [
-          "default:no-signals"
-        ]
-      },
-      {
-        "file": "core\\runtime\\services\\__init__.py",
-        "confidence": 0.4,
-        "signals": [
-          "path:services/"
-        ]
-      },
-      {
-        "file": "core\\runtime\\services\\ai_config_service.py",
-        "confidence": 0.4,
-        "signals": [
-          "path:services/"
-        ]
-      },
-      {
-        "file": "core\\runtime\\services\\chat_service.py",
-        "confidence": 0.4,
-        "signals": [
-          "path:services/"
-        ]
-      },
-      {
-        "file": "core\\runtime\\services\\diagnosis_service.py",
-        "confidence": 0.4,
-        "signals": [
-          "path:services/"
-        ]
-      },
-      {
-        "file": "core\\runtime\\services\\helper_utils.py",
-        "confidence": 0.4,
-        "signals": [
-          "path:services/"
-        ]
-      },
-      {
-        "file": "core\\runtime\\services\\import_export_service.py",
-        "confidence": 0.4,
-        "signals": [
-          "path:services/"
-        ]
-      },
-      {
-        "file": "core\\runtime\\services\\iteration_service.py",
-        "confidence": 0.4,
-        "signals": [
-          "path:services/"
-        ]
-      },
-      {
-        "file": "core\\runtime\\services\\legacy_workbench_service.py",
-        "confidence": 0.4,
-        "signals": [
-          "path:services/"
-        ]
-      },
-      {
-        "file": "core\\runtime\\services\\payload_builder_service.py",
-        "confidence": 0.4,
-        "signals": [
-          "path:services/"
-        ]
-      },
-      {
-        "file": "core\\runtime\\services\\retrieval_service.py",
-        "confidence": 0.4,
-        "signals": [
-          "path:services/"
-        ]
-      },
-      {
-        "file": "core\\runtime\\services\\review_helpers.py",
-        "confidence": 0.4,
-        "signals": [
-          "path:services/"
-        ]
-      },
-      {
-        "file": "core\\runtime\\services\\skill_service.py",
-        "confidence": 0.4,
-        "signals": [
-          "path:services/"
-        ]
-      },
-      {
-        "file": "core\\runtime\\services\\workbench_service.py",
-        "confidence": 0.4,
-        "signals": [
-          "path:services/"
-        ]
-      },
-      {
-        "file": "core\\runtime\\storage.py",
-        "confidence": 0.1,
-        "signals": [
-          "default:no-signals"
-        ]
-      },
-      {
-        "file": "core\\runtime\\types\\__init__.py",
-        "confidence": 0.1,
-        "signals": [
-          "default:no-signals"
-        ]
-      },
-      {
-        "file": "core\\runtime\\types\\chat_types.py",
-        "confidence": 0.1,
-        "signals": [
-          "default:no-signals"
-        ]
-      },
-      {
-        "file": "core\\runtime\\types\\common_types.py",
-        "confidence": 0.1,
-        "signals": [
-          "default:no-signals"
-        ]
-      },
-      {
-        "file": "core\\runtime\\types\\import_export_types.py",
-        "confidence": 0.1,
-        "signals": [
-          "default:no-signals"
-        ]
-      },
-      {
-        "file": "core\\runtime\\types\\iteration_types.py",
-        "confidence": 0.1,
-        "signals": [
-          "default:no-signals"
-        ]
-      },
-      {
-        "file": "core\\runtime\\types\\retrieval_types.py",
-        "confidence": 0.1,
-        "signals": [
-          "default:no-signals"
-        ]
-      },
-      {
-        "file": "core\\runtime\\types\\skill_types.py",
-        "confidence": 0.1,
-        "signals": [
-          "default:no-signals"
-        ]
-      },
-      {
-        "file": "core\\runtime\\types\\workbench_types.py",
-        "confidence": 0.1,
-        "signals": [
-          "default:no-signals"
-        ]
-      },
-      {
-        "file": "core\\runtime\\types\\workspace_types.py",
-        "confidence": 0.1,
-        "signals": [
-          "default:no-signals"
-        ]
-      },
-      {
-        "file": "core\\runtime\\utils\\__init__.py",
-        "confidence": 0.1,
-        "signals": [
-          "default:no-signals"
-        ]
-      },
-      {
-        "file": "core\\skills\\__init__.py",
-        "confidence": 0.1,
-        "signals": [
-          "default:no-signals"
-        ]
-      },
-      {
-        "file": "core\\skills\\workshop.py",
-        "confidence": 0.1,
-        "signals": [
-          "default:no-signals"
-        ]
-      },
-      {
-        "file": "core\\storage\\__init__.py",
-        "confidence": 0.1,
-        "signals": [
-          "default:no-signals"
-        ]
-      },
-      {
-        "file": "core\\storage\\_canonical.py",
-        "confidence": 0.1,
-        "signals": [
-          "default:no-signals"
-        ]
-      },
-      {
-        "file": "core\\storage\\_chat.py",
-        "confidence": 0.1,
-        "signals": [
-          "default:no-signals"
-        ]
-      },
-      {
-        "file": "core\\storage\\_derived.py",
-        "confidence": 0.1,
-        "signals": [
-          "default:no-signals"
-        ]
-      },
-      {
-        "file": "core\\storage\\_imports.py",
-        "confidence": 0.1,
-        "signals": [
-          "default:no-signals"
-        ]
-      },
-      {
-        "file": "core\\storage\\_metadata.py",
-        "confidence": 0.1,
-        "signals": [
-          "default:no-signals"
-        ]
-      },
-      {
-        "file": "core\\storage\\_proposals.py",
-        "confidence": 0.1,
-        "signals": [
-          "default:no-signals"
-        ]
-      },
-      {
-        "file": "core\\storage\\_providers.py",
-        "confidence": 0.1,
-        "signals": [
-          "default:no-signals"
-        ]
-      },
-      {
-        "file": "core\\storage\\_schema.py",
-        "confidence": 0.1,
-        "signals": [
-          "default:no-signals"
-        ]
-      },
-      {
-        "file": "core\\storage\\_types.py",
-        "confidence": 0.1,
-        "signals": [
-          "default:no-signals"
-        ]
-      },
-      {
-        "file": "core\\storage\\_utils.py",
-        "confidence": 0.1,
-        "signals": [
-          "default:no-signals"
-        ]
-      },
-      {
-        "file": "core\\storage\\_workbench.py",
-        "confidence": 0.1,
-        "signals": [
-          "default:no-signals"
-        ]
-      },
-      {
-        "file": "core\\storage\\engine.py",
-        "confidence": 0.1,
-        "signals": [
-          "default:no-signals"
-        ]
-      },
-      {
-        "file": "core\\storage\\file_store.py",
-        "confidence": 0.1,
-        "signals": [
-          "default:no-signals"
-        ]
-      },
-      {
-        "file": "core\\storage\\metadata_store.py",
-        "confidence": 0.1,
-        "signals": [
-          "default:no-signals"
-        ]
-      },
-      {
-        "file": "core\\storage\\unified_file_store.py",
-        "confidence": 0.1,
-        "signals": [
-          "default:no-signals"
-        ]
-      },
-      {
-        "file": "core\\storage\\version_store.py",
-        "confidence": 0.1,
-        "signals": [
-          "default:no-signals"
-        ]
-      },
-      {
-        "file": "tests\\test_ai_provider.py",
-        "confidence": 0.1,
-        "signals": [
-          "default:no-signals"
-        ]
-      },
-      {
-        "file": "tests\\test_retrieval_support_only.py",
-        "confidence": 0.1,
-        "signals": [
-          "default:no-signals"
-        ]
-      },
-      {
-        "file": "tests\\test_skill_types.py",
-        "confidence": 0.1,
-        "signals": [
-          "default:no-signals"
-        ]
-      },
-      {
-        "file": "tests\\test_skill_workshop.py",
-        "confidence": 0.1,
-        "signals": [
-          "default:no-signals"
-        ]
-      }
-    ],
-    "data": [],
-    "infra": []
-  },
-  "coupling_analysis": {
-    "high_coupling": [
-      {
-        "node": "SuperwriterApplicationService",
-        "file": "core\\runtime\\application_services.py",
-        "dependency_count": 81,
-        "dependencies": [
-          "application_services.py",
-          ".__init__()",
-          "._get_active_ai_provider()",
-          "._get_dialogue_processor()",
-          ".read_object()",
-          ".get_workspace_snapshot()",
-          ".list_workspace_contexts()",
-          ".create_workspace()",
-          ".import_outline()",
-          ".list_provider_configs()"
-        ],
-        "severity": "high"
-      },
-      {
-        "node": "client.ts",
-        "file": "apps\\frontend\\src\\lib\\api\\client.ts",
-        "dependency_count": 33,
-        "dependencies": [
-          "AppShell.tsx",
-          "router.tsx",
-          "FileTree.tsx",
-          "FileTreeNode.tsx",
-          "SkillVersionList.tsx",
-          "ApiContractError",
-          "ApiResponseError",
-          "assertRecord()",
-          "expectString()",
-          "expectNullableString()"
-        ],
-        "severity": "high"
-      },
-      {
-        "node": "api_server.py",
-        "file": "apps\\server\\api_server.py",
-        "dependency_count": 30,
-        "dependencies": [
-          "__init__.py",
-          "CommandCenterRoute",
-          "CommandCenterSignal",
-          "NextAction",
-          "CommandCenterAuditEntry",
-          "CommandCenterSnapshot",
-          "ApiResponse",
-          "FrontendRuntimeConfig",
-          "_RequestBodyReader",
-          "_json_response()"
-        ],
-        "severity": "high"
-      },
-      {
-        "node": "SuperwriterAPIApp",
-        "file": "apps\\server\\api_server.py",
-        "dependency_count": 27,
-        "dependencies": [
-          "api_server.py",
-          ".__init__()",
-          ".handle_request()",
-          ".build_snapshot()",
-          "._handle_create_novel()",
-          "._submit_workbench()",
-          "._submit_skill_workshop()",
-          "._submit_publish()",
-          "._submit_provider()",
-          "._build_startup_snapshot()"
-        ],
-        "severity": "high"
-      },
-      {
-        "node": "__init__.py",
-        "file": "core\\storage\\__init__.py",
-        "dependency_count": 18,
-        "dependencies": [
-          "api_server.py",
-          "provider.py",
-          "RetrievalSourceRecord",
-          "RetrievalSupportDocument",
-          "RetrievalBuildReport",
-          "RetrievalIndexedDocument",
-          "RetrievalRankedDocument",
-          "build_support_documents()",
-          "build_indexed_documents()",
-          "rank_support_documents()"
-        ],
-        "severity": "high"
-      },
-      {
-        "node": ".handle_request()",
-        "file": "apps\\server\\api_server.py",
-        "dependency_count": 16,
-        "dependencies": [
-          "SuperwriterAPIApp",
-          "_require_method()",
-          "_json_ok()",
-          "._build_startup_snapshot()",
-          "._handle_create_novel()",
-          "_require_project_id()",
-          "_require_novel_id()",
-          "_string_or_none()",
-          "_serialize_json()",
-          "._submit_skill_workshop()"
-        ],
-        "severity": "high"
-      },
-      {
-        "node": "_base_payload()",
-        "file": "tests\\test_skill_types.py",
-        "dependency_count": 16,
-        "dependencies": [
-          "test_skill_types.py",
-          ".test_valid_style_rule()",
-          ".test_style_rule_requires_style_scope()",
-          ".test_style_rule_rejects_invalid_scope()",
-          ".test_valid_character_voice()",
-          ".test_character_voice_without_character_id()",
-          ".test_valid_narrative_mode()",
-          ".test_narrative_mode_rejects_invalid_perspective()",
-          ".test_all_valid_perspectives()",
-          ".test_valid_pacing_rule()"
-        ],
-        "severity": "high"
-      },
-      {
-        "node": "router.tsx",
-        "file": "apps\\frontend\\src\\app\\router.tsx",
-        "dependency_count": 15,
-        "dependencies": [
-          "AppShell.tsx",
-          "client.ts",
-          "SkillsView.tsx",
-          "SettingsView.tsx",
-          "StartupView.tsx",
-          "EditorView.tsx",
-          "requireProjectId()",
-          "requireNovelId()",
-          "contextFromUrl()",
-          "skillsOptions()"
-        ],
-        "severity": "medium"
-      },
-      {
-        "node": "ImportExportService",
-        "file": "core\\runtime\\services\\import_export_service.py",
-        "dependency_count": 15,
-        "dependencies": [
-          "import_export_service.py",
-          ".__init__()",
-          ".import_from_donor()",
-          ".import_webnovel_project_root()",
-          ".import_character_export()",
-          ".create_export_artifact()",
-          ".publish_export()",
-          ".publish_export_artifact()",
-          "._create_derived_artifact()",
-          "._derived_artifact_by_revision()"
-        ],
-        "severity": "medium"
-      },
-      {
-        "node": "UnifiedFileStore",
-        "file": "core\\storage\\unified_file_store.py",
-        "dependency_count": 15,
-        "dependencies": [
-          "unified_file_store.py",
-          ".__init__()",
-          ".node_dir()",
-          "._content_path()",
-          ".read()",
-          ".write()",
-          ".exists()",
-          ".delete()",
-          ".list_layer()",
-          ".list_children()"
-        ],
-        "severity": "medium"
-      },
-      {
-        "node": "ChatService",
-        "file": "core\\runtime\\services\\chat_service.py",
-        "dependency_count": 13,
-        "dependencies": [
-          "chat_service.py",
-          ".__init__()",
-          ".set_callbacks()",
-          "._get_active_ai_provider()",
-          "._get_dialogue_processor()",
-          ".open_chat_session()",
-          ".get_chat_session()",
-          ".process_chat_turn()",
-          ".classify_chat_intent()",
-          ".apply_chat_edit()"
-        ],
-        "severity": "medium"
-      },
-      {
-        "node": "LegacyWorkbenchService",
-        "file": "core\\runtime\\services\\legacy_workbench_service.py",
-        "dependency_count": 13,
-        "dependencies": [
-          "legacy_workbench_service.py",
-          ".__init__()",
-          "._generate_plot_nodes_with_ai()",
-          "._generate_events_with_ai()",
-          "._generate_scenes_with_ai()",
-          "._gather_novel_context()",
-          "._gather_workspace_skills()",
-          "._gather_workspace_objects()",
-          "._create_candidates_from_items()",
-          "._outline_to_plot_candidates()"
-        ],
-        "severity": "medium"
-      },
-      {
-        "node": "workspace_types.py",
-        "file": "core\\runtime\\types\\workspace_types.py",
-        "dependency_count": 13,
-        "dependencies": [
-          "ReviewProposalSnapshot",
-          "WorkspaceObjectSummary",
-          "WorkspaceContextSnapshot",
-          "WorkspaceSnapshotRequest",
-          "WorkspaceSnapshotResult",
-          "CreateWorkspaceRequest",
-          "CreateWorkspaceResult",
-          "ImportOutlineRequest",
-          "ImportOutlineResult",
-          "ReadObjectRequest"
-        ],
-        "severity": "medium"
-      },
-      {
-        "node": "assertRecord()",
-        "file": "apps\\frontend\\src\\lib\\api\\client.ts",
-        "dependency_count": 12,
-        "dependencies": [
-          "client.ts",
-          "expectJsonObject()",
-          "parseWorkspaceContext()",
-          "parseSkillWorkshopSkill()",
-          "parseSkillWorkshopVersion()",
-          "parseSkillWorkshopComparison()",
-          "parseStartupSnapshot()",
-          "parseSkillWorkshopSnapshot()",
-          "parseProviderSettingsSnapshot()",
-          "parseApiError()"
-        ],
-        "severity": "medium"
-      },
-      {
-        "node": "FileStore",
-        "file": "apps\\server\\pipeline_api.py",
-        "dependency_count": 12,
-        "dependencies": [
-          "pipeline_api.py",
-          ".__init__()",
-          ".node_path()",
-          ".read()",
-          ".write()",
-          ".exists()",
-          ".delete()",
-          "._delete_recursive()",
-          ".list_children()",
-          ".list_layer()"
-        ],
-        "severity": "medium"
-      },
-      {
-        "node": "PipelineAPI",
-        "file": "apps\\server\\pipeline_api.py",
-        "dependency_count": 12,
-        "dependencies": [
-          "pipeline_api.py",
-          ".__init__()",
-          ".handle()",
-          ".list_nodes()",
-          ".read_node()",
-          ".write_node()",
-          ".delete_node()",
-          ".expand_node()",
-          ".chat()",
-          ".rebuild_rag()"
-        ],
-        "severity": "medium"
-      },
-      {
-        "node": "DialogueProcessor",
-        "file": "core\\ai\\dialogue.py",
-        "dependency_count": 12,
-        "dependencies": [
-          "dialogue.py",
-          ".__init__()",
-          ".process_turn()",
-          "._classify_intent()",
-          "._build_dialogue_context()",
-          "._generate_ai_response()",
-          "._build_system_prompt()",
-          "._build_user_prompt()",
-          "._generate_fallback_response()",
-          "._determine_suggested_actions()"
-        ],
-        "severity": "medium"
-      },
-      {
-        "node": "RetrievalService",
-        "file": "core\\runtime\\services\\retrieval_service.py",
-        "dependency_count": 12,
-        "dependencies": [
-          "retrieval_service.py",
-          ".__init__()",
-          ".get_retrieval_status()",
-          ".rebuild_retrieval_support()",
-          ".search_retrieval_support()",
-          ".retrieval_scope()",
-          ".retrieval_sources()",
-          ".retrieval_document_markers()",
-          ".retrieval_status_snapshot()",
-          "._latest_retrieval_status_marker()"
-        ],
-        "severity": "medium"
-      },
-      {
-        "node": "skill_types.py",
-        "file": "core\\runtime\\types\\skill_types.py",
-        "dependency_count": 12,
-        "dependencies": [
-          "SkillWorkshopSkillSnapshot",
-          "SkillWorkshopVersionSnapshot",
-          "SkillWorkshopCompareRequest",
-          "SkillWorkshopComparison",
-          "SkillWorkshopUpsertRequest",
-          "SkillWorkshopImportRequest",
-          "SkillWorkshopRollbackRequest",
-          "SkillWorkshopMutationResult",
-          "SkillWorkshopRequest",
-          "SkillWorkshopResult"
-        ],
-        "severity": "medium"
-      },
-      {
-        "node": "workshop.py",
-        "file": "core\\skills\\workshop.py",
-        "dependency_count": 12,
-        "dependencies": [
-          "__init__.py",
-          "SkillType",
-          "_normalize_text()",
-          "_normalize_bool()",
-          "_find_forbidden_fields()",
-          "validate_skill_payload()",
-          "_validate_type_specific_fields()",
-          "SkillAdapterRequest",
-          "AdaptedSkillPayload",
-          "adapt_donor_payload()"
-        ],
-        "severity": "medium"
-      }
-    ],
-    "cross_layer_coupling": []
-  },
-  "cohesion_analysis": {
-    "low_cohesion": [
-      {
-        "file": "core\\runtime\\application_services.py",
-        "line_count": 1834,
-        "export_count": 84,
-        "reason": "职责过多（1834 行，84 个导出）",
-        "severity": "high"
-      },
-      {
-        "file": "apps\\server\\api_server.py",
-        "line_count": 1116,
-        "export_count": 66,
-        "reason": "职责过多（1116 行，66 个导出）",
-        "severity": "high"
-      },
-      {
-        "file": "core\\ai\\dialogue.py",
-        "line_count": 675,
-        "export_count": 24,
-        "reason": "职责过多（675 行，24 个导出）",
-        "severity": "high"
-      },
-      {
-        "file": "apps\\frontend\\src\\lib\\api\\client.ts",
-        "line_count": 645,
-        "export_count": 25,
-        "reason": "职责过多（645 行，25 个导出）",
-        "severity": "high"
-      },
-      {
-        "file": "apps\\server\\pipeline_api.py",
-        "line_count": 592,
-        "export_count": 47,
-        "reason": "职责过多（592 行，47 个导出）",
-        "severity": "high"
-      },
-      {
-        "file": "core\\runtime\\services\\import_export_service.py",
-        "line_count": 585,
-        "export_count": 17,
-        "reason": "职责过多（585 行，17 个导出）",
-        "severity": "high"
-      },
-      {
-        "file": "core\\runtime\\services\\legacy_workbench_service.py",
-        "line_count": 534,
-        "export_count": 14,
-        "reason": "职责过多（534 行，14 个导出）",
-        "severity": "high"
-      },
-      {
-        "file": "core\\runtime\\services\\chat_service.py",
-        "line_count": 514,
-        "export_count": 14,
-        "reason": "职责过多（514 行，14 个导出）",
-        "severity": "high"
-      },
-      {
-        "file": "core\\runtime\\services\\retrieval_service.py",
-        "line_count": 411,
-        "export_count": 13,
-        "reason": "职责过多（411 行，13 个导出）",
-        "severity": "high"
-      },
-      {
-        "file": "core\\ai\\dialogue_context.py",
-        "line_count": 388,
-        "export_count": 20,
-        "reason": "职责过多（388 行，20 个导出）",
-        "severity": "high"
-      },
-      {
-        "file": "core\\skills\\workshop.py",
-        "line_count": 366,
-        "export_count": 12,
-        "reason": "职责过多（366 行，12 个导出）",
-        "severity": "high"
-      },
-      {
-        "file": "core\\runtime\\services\\skill_service.py",
-        "line_count": 356,
-        "export_count": 12,
-        "reason": "职责过多（356 行，12 个导出）",
-        "severity": "high"
-      },
-      {
-        "file": "core\\storage\\_workbench.py",
-        "line_count": 342,
-        "export_count": 13,
-        "reason": "职责过多（342 行，13 个导出）",
-        "severity": "high"
-      },
-      {
-        "file": "core\\storage\\unified_file_store.py",
-        "line_count": 234,
-        "export_count": 20,
-        "reason": "职责过多（234 行，20 个导出）",
-        "severity": "high"
-      },
-      {
-        "file": "core\\retrieval\\__init__.py",
-        "line_count": 276,
-        "export_count": 14,
-        "reason": "职责过多（276 行，14 个导出）",
-        "severity": "medium"
-      }
-    ]
-  },
-  "performance_analysis": {
-    "performance_issues": [
-      {
-        "file": "apps\\frontend\\src\\app\\AppShell.tsx",
-        "issue": "大列表渲染可能无虚拟滚动",
-        "pattern": "使用 .map() 渲染列表，未检测到虚拟滚动库",
-        "impact": "列表项过多时可能卡顿",
-        "severity": "medium"
-      },
-      {
-        "file": "apps\\frontend\\src\\components\\FileTreeNode.tsx",
-        "issue": "大列表渲染可能无虚拟滚动",
-        "pattern": "使用 .map() 渲染列表，未检测到虚拟滚动库",
-        "impact": "列表项过多时可能卡顿",
-        "severity": "medium"
-      },
-      {
-        "file": "apps\\frontend\\src\\components\\MonacoEditor.tsx",
-        "issue": "大型库未按需加载",
-        "pattern": "Monaco Editor 使用同步 import",
-        "impact": "首屏加载时间增加 3-5 秒",
-        "severity": "medium"
-      },
-      {
-        "file": "apps\\frontend\\src\\components\\SkillVersionList.tsx",
-        "issue": "大列表渲染可能无虚拟滚动",
-        "pattern": "使用 .map() 渲染列表，未检测到虚拟滚动库",
-        "impact": "列表项过多时可能卡顿",
-        "severity": "medium"
-      },
-      {
-        "file": "apps\\frontend\\src\\lib\\api\\client.ts",
-        "issue": "大列表渲染可能无虚拟滚动",
-        "pattern": "使用 .map() 渲染列表，未检测到虚拟滚动库",
-        "impact": "列表项过多时可能卡顿",
-        "severity": "medium"
-      },
-      {
-        "file": "apps\\frontend\\src\\views\\EditorView.tsx",
-        "issue": "大列表渲染可能无虚拟滚动",
-        "pattern": "使用 .map() 渲染列表，未检测到虚拟滚动库",
-        "impact": "列表项过多时可能卡顿",
-        "severity": "medium"
-      },
-      {
-        "file": "apps\\frontend\\src\\views\\EditorView.tsx",
-        "issue": "大型库未按需加载",
-        "pattern": "Monaco Editor 使用同步 import",
-        "impact": "首屏加载时间增加 3-5 秒",
-        "severity": "medium"
-      },
-      {
-        "file": "apps\\frontend\\src\\views\\PipelineView.tsx",
-        "issue": "大列表渲染可能无虚拟滚动",
-        "pattern": "使用 .map() 渲染列表，未检测到虚拟滚动库",
-        "impact": "列表项过多时可能卡顿",
-        "severity": "medium"
-      },
-      {
-        "file": "apps\\frontend\\src\\views\\SettingsView.tsx",
-        "issue": "大列表渲染可能无虚拟滚动",
-        "pattern": "使用 .map() 渲染列表，未检测到虚拟滚动库",
-        "impact": "列表项过多时可能卡顿",
-        "severity": "medium"
-      },
-      {
-        "file": "apps\\frontend\\src\\views\\SkillsView.tsx",
-        "issue": "大列表渲染可能无虚拟滚动",
-        "pattern": "使用 .map() 渲染列表，未检测到虚拟滚动库",
-        "impact": "列表项过多时可能卡顿",
-        "severity": "medium"
-      }
-    ]
-  },
-  "surprising_connections": [],
-  "suggested_questions": [
-    {
-      "type": "isolated_nodes",
-      "question": "What connects `DialogueState`, `DialogueRequest`, `ContextScope` to the rest of the system?",
-      "why": "85 weakly-connected nodes found - possible documentation gaps or missing edges."
-    },
-    {
-      "type": "low_cohesion",
-      "question": "Should `SuperwriterApplicationService` be split into smaller, more focused modules?",
-      "why": "Cohesion score 0.03 - nodes in this community are weakly interconnected."
-    },
-    {
-      "type": "low_cohesion",
-      "question": "Should `client.ts` be split into smaller, more focused modules?",
-      "why": "Cohesion score 0.05 - nodes in this community are weakly interconnected."
-    },
-    {
-      "type": "low_cohesion",
-      "question": "Should `api_server.py` be split into smaller, more focused modules?",
-      "why": "Cohesion score 0.07 - nodes in this community are weakly interconnected."
-    },
-    {
-      "type": "low_cohesion",
-      "question": "Should `FileStore` be split into smaller, more focused modules?",
-      "why": "Cohesion score 0.09 - nodes in this community are weakly interconnected."
-    },
-    {
-      "type": "low_cohesion",
-      "question": "Should `__init__.py` be split into smaller, more focused modules?",
-      "why": "Cohesion score 0.12 - nodes in this community are weakly interconnected."
-    },
-    {
-      "type": "low_cohesion",
-      "question": "Should `_base_payload()` be split into smaller, more focused modules?",
-      "why": "Cohesion score 0.11 - nodes in this community are weakly interconnected."
-    }
-  ],
-  "knowledge_gaps": {
-    "isolated_count": 85,
-    "isolated_samples": [
-      "dialogue_dialoguestate",
-      "dialogue_dialoguerequest",
-      "dialogue_context_contextscope",
-      "dialogue_context_contextupdate",
-      "init_retrievalsourcerecord",
-      "application_services_appliedreviewmutation",
-      "mutation_policy_chaptermutationsignals",
-      "mutation_policy_mutationrequest",
-      "review_helpers_reviewhelpers",
-      "chat_types_chatmessagesnapshot"
-    ],
-    "thin_community_count": 10
-  },
-  "ambiguous_edges": [],
-  "data_availability": {
-    "mapping": true,
-    "dead_code": false,
-    "complexity": true,
-    "duplication": true,
-    "semantics": false
+  "tool_availability": {
+    "dependency_cruiser": true,
+    "knip": true,
+    "eslint_complexity": false,
+    "jscpd": true
   }
 }

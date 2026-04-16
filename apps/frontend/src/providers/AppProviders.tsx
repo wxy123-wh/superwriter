@@ -6,12 +6,10 @@ import { appRoutes } from '../app/router';
 
 const queryClient = createAppQueryClient();
 
-const router = createBrowserRouter(appRoutes(queryClient));
-
 export function AppProviders() {
   return (
     <QueryClientProvider client={queryClient}>
-      <RouterProvider router={router} />
+      <RouterProvider router={createBrowserRouter(appRoutes(queryClient))} />
     </QueryClientProvider>
   );
 }

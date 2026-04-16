@@ -12,13 +12,20 @@ import type {
   SkillUpsertParams,
   JsonObject,
   FileTreeNode,
+  SendChatParams,
+  ImportSkillParams,
 } from './client';
 
 /**
- * Check if running in Electron environment
+ * Check if running in Electron environment with proper API bridge
  */
 export function isElectron(): boolean {
-  return typeof window !== 'undefined' && window.electronAPI !== undefined;
+  return (
+    typeof window !== 'undefined' &&
+    typeof window.electronAPI !== 'undefined' &&
+    window.electronAPI !== null &&
+    typeof window.electronAPI.invoke === 'function'
+  );
 }
 
 /**
@@ -47,15 +54,7 @@ export const electronClient = {
   }: {
     projectId: string;
     novelId: string;
-    params: {
-      session_id?: string;
-      project_id: string;
-      novel_id: string;
-      workbench_type: string;
-      user_message: string;
-      source_object_id?: string;
-      source_revision_id?: string;
-    };
+    params: SendChatParams;
   }) {
     const result = await window.electronAPI!.invoke('sendChat', params);
     return result as ChatResponse;
@@ -144,14 +143,7 @@ export const electronClient = {
   }: {
     projectId: string;
     novelId: string;
-    params: {
-      name: string;
-      instruction: string;
-      description?: string;
-      style_scope?: string;
-      is_active?: boolean;
-      donor_kind?: string;
-    };
+    params: ImportSkillParams;
   }) {
     const result = await window.electronAPI!.invoke('importSkill', {
       action: 'import',
@@ -176,5 +168,48 @@ export const electronClient = {
       file_path: filePath,
     });
     return (result as { content: string }).content;
+  },
+
+  async openDirectory() {
+    const result = await window.electronAPI!.invoke('openDirectory', {});
+    return result as { success: boolean; rootPath: string | null };
+  },
+
+  async setWorkspaceRoot({ rootPath }: { rootPath: string }) {
+    const result = await window.electronAPI!.invoke('setWorkspaceRoot', { root_path: rootPath });
+    return result as { success: boolean };
+  },
+
+  async readLocalDirectory({ rootPath, dirPath }: { rootPath: string; dirPath: string }) {
+    const result = await window.electronAPI!.invoke('readLocalDirectory', {
+      root_path: rootPath,
+      dir_path: dirPath,
+    });
+    return { tree: (result as { tree: FileTreeNode[] }).tree };
+  },
+
+  async readLocalFile({ rootPath, filePath }: { rootPath: string; filePath: string }) {
+    const result = await window.electronAPI!.invoke('readLocalFile', {
+      root_path: rootPath,
+      file_path: filePath,
+    });
+    return (result as { content: string }).content;
+  },
+
+  async saveLocalFile({ rootPath, filePath, content }: { rootPath: string; filePath: string; content: string }) {
+    const result = await window.electronAPI!.invoke('saveLocalFile', {
+      root_path: rootPath,
+      file_path: filePath,
+      content,
+    });
+    return result as { success: boolean };
+  },
+
+  async createLocalFile({ rootPath, filePath }: { rootPath: string; filePath: string }) {
+    const result = await window.electronAPI!.invoke('createLocalFile', {
+      root_path: rootPath,
+      file_path: filePath,
+    });
+    return result as { success: boolean; path?: string; error?: string };
   },
 };

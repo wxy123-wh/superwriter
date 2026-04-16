@@ -1,0 +1,2609 @@
+{
+  "statistics": {
+    "detectionDate": "2026-04-15T18:37:31.557Z",
+    "formats": {
+      "json": {
+        "sources": {
+          "apps/frontend/src/lib/api/.omc/state/last-tool-error.json": {
+            "lines": 6,
+            "tokens": 36,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "packages/shared/.omc/state/last-tool-error.json": {
+            "lines": 6,
+            "tokens": 36,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/server/.omc/state/last-tool-error.json": {
+            "lines": 6,
+            "tokens": 36,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/.omc/state/subagent-tracking.json": {
+            "lines": 14,
+            "tokens": 79,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/.omc/state/mission-state.json": {
+            "lines": 44,
+            "tokens": 258,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/.omc/state/last-tool-error.json": {
+            "lines": 6,
+            "tokens": 36,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          ".omc/state/sessions/8290253a-54a4-4b03-9113-0172469d9372/ultrawork-state.json": {
+            "lines": 9,
+            "tokens": 57,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "packages/shared/tsconfig.json": {
+            "lines": 8,
+            "tokens": 47,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "packages/shared/package.json": {
+            "lines": 20,
+            "tokens": 114,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/server/tsconfig.json": {
+            "lines": 17,
+            "tokens": 117,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/server/package.json": {
+            "lines": 23,
+            "tokens": 140,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/tsconfig.node.json": {
+            "lines": 9,
+            "tokens": 65,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/tsconfig.json": {
+            "lines": 6,
+            "tokens": 40,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/tsconfig.app.json": {
+            "lines": 21,
+            "tokens": 151,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/package.json": {
+            "lines": 45,
+            "tokens": 294,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/.prettierrc.json": {
+            "lines": 3,
+            "tokens": 15,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          ".omc/state/mission-state.json": {
+            "lines": 150,
+            "tokens": 898,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          ".omc/sessions/ffcdda33-6b47-413d-b1b1-8dbafb9e34ce.json": {
+            "lines": 7,
+            "tokens": 44,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          ".omc/sessions/fa91851b-96be-4b25-be34-9ae1904c205d.json": {
+            "lines": 7,
+            "tokens": 44,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          ".omc/sessions/f6dbe94a-3d9c-4360-920e-d00c419f5d17.json": {
+            "lines": 7,
+            "tokens": 44,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          ".omc/sessions/ed14d8a5-5b31-4cdf-a1f8-53dc6eff998c.json": {
+            "lines": 7,
+            "tokens": 44,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          ".omc/sessions/ecf72877-dd7b-4234-8173-1a6fa71c6d5b.json": {
+            "lines": 7,
+            "tokens": 44,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          ".omc/sessions/eccbb122-0e38-4d32-a36c-004a89ce1bab.json": {
+            "lines": 7,
+            "tokens": 44,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          ".omc/sessions/e4674c3b-8907-4a21-b1d3-25edad5019b4.json": {
+            "lines": 7,
+            "tokens": 44,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          ".omc/sessions/e2f056be-e76c-4a7a-a5e6-fe6e18274018.json": {
+            "lines": 7,
+            "tokens": 44,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          ".omc/sessions/ce66d5e8-8341-4c23-9e10-821e8d1d20a5.json": {
+            "lines": 7,
+            "tokens": 44,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          ".omc/sessions/c249bb5b-329c-41bf-a718-7e86e11dc688.json": {
+            "lines": 7,
+            "tokens": 44,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          ".omc/sessions/b13271c0-637d-4cdd-ac0c-2081b9f59a11.json": {
+            "lines": 7,
+            "tokens": 44,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          ".omc/sessions/ae30c1d4-edac-4fd8-83ea-a658490e48da.json": {
+            "lines": 7,
+            "tokens": 44,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          ".omc/sessions/aaa5bc5a-6e16-4366-be6b-44659dea1702.json": {
+            "lines": 7,
+            "tokens": 44,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          ".omc/sessions/a7994705-3215-4aa2-95e5-1a6483f393e6.json": {
+            "lines": 7,
+            "tokens": 44,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          ".omc/sessions/9bc6a0cf-c4fe-4827-8f14-66cbc4798483.json": {
+            "lines": 7,
+            "tokens": 44,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          ".omc/sessions/8cdea4b5-a1e9-48d8-9940-898f3eb15b72.json": {
+            "lines": 7,
+            "tokens": 44,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          ".omc/sessions/8c0cf553-2fec-481b-98cc-b28b227213dd.json": {
+            "lines": 7,
+            "tokens": 44,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          ".omc/sessions/7fc714df-085f-461a-a690-068d14d1cdff.json": {
+            "lines": 7,
+            "tokens": 44,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          ".omc/sessions/745338d7-0169-4ef1-9a12-98843c642f72.json": {
+            "lines": 7,
+            "tokens": 44,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          ".omc/sessions/5df7d120-ffe6-4914-903a-5bb0e9588229.json": {
+            "lines": 7,
+            "tokens": 44,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          ".omc/sessions/5d15c6f8-80bc-42fa-b1fa-4644bea34830.json": {
+            "lines": 7,
+            "tokens": 44,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          ".omc/sessions/59316199-c324-48f5-b9ab-02a142b3c5f8.json": {
+            "lines": 7,
+            "tokens": 44,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          ".omc/sessions/461cd5df-833d-4bce-8714-a499f773dbab.json": {
+            "lines": 7,
+            "tokens": 44,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          ".omc/sessions/441b421b-56e0-4865-95dd-6ba82bee4647.json": {
+            "lines": 7,
+            "tokens": 44,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          ".omc/sessions/397a05c5-c69d-45b6-af7c-bcb985fb9dfe.json": {
+            "lines": 7,
+            "tokens": 44,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          ".omc/sessions/3643b8aa-8432-4375-9df2-259a96a81424.json": {
+            "lines": 7,
+            "tokens": 44,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          ".omc/sessions/2d324101-9a43-420c-a123-e772fad57558.json": {
+            "lines": 7,
+            "tokens": 44,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          ".omc/sessions/2aa0ce77-a4f4-48ec-8339-7a15601a3daa.json": {
+            "lines": 7,
+            "tokens": 44,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          ".omc/sessions/24414380-f861-43af-969f-06c1fcd1f60d.json": {
+            "lines": 7,
+            "tokens": 44,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          ".omc/sessions/2254b99e-a802-4e92-aff4-7088e2227969.json": {
+            "lines": 7,
+            "tokens": 44,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          ".omc/sessions/1eb54f4c-5470-45a0-9dd8-41c691fd192f.json": {
+            "lines": 7,
+            "tokens": 44,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          ".omc/sessions/168c9d66-f567-401d-bcbb-7b2ce2ffc1ec.json": {
+            "lines": 7,
+            "tokens": 44,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          ".omc/sessions/1318081c-92ab-460a-b010-ac0324e21b4f.json": {
+            "lines": 7,
+            "tokens": 44,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          ".omc/sessions/0d6ff994-8c09-430a-82eb-0e9c2acf1a6a.json": {
+            "lines": 7,
+            "tokens": 44,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          ".omc/sessions/09ae3aca-2642-4c47-b6d6-d26c7118c958.json": {
+            "lines": 7,
+            "tokens": 44,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          ".omc/sessions/019ff215-24e8-4bab-9e81-682e7668a047.json": {
+            "lines": 7,
+            "tokens": 44,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "graphify-out/manifest.json": {
+            "lines": 147,
+            "tokens": 1170,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "graphify-out/cost.json": {
+            "lines": 29,
+            "tokens": 189,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          ".omc/project-memory.json": {
+            "lines": 396,
+            "tokens": 2245,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          ".claude/settings.local.json": {
+            "lines": 6,
+            "tokens": 23,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "tsconfig.base.json": {
+            "lines": 15,
+            "tokens": 96,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "package.json": {
+            "lines": 33,
+            "tokens": 185,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "electron-builder.json": {
+            "lines": 40,
+            "tokens": 220,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 1311,
+          "tokens": 8131,
+          "sources": 60,
+          "clones": 0,
+          "duplicatedLines": 0,
+          "duplicatedTokens": 0,
+          "percentage": 0,
+          "percentageTokens": 0,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
+      "typescript": {
+        "sources": {
+          "apps/frontend/src/lib/api/snapshot.ts": {
+            "lines": 44,
+            "tokens": 438,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/lib/api/novel-manifest.ts": {
+            "lines": 17,
+            "tokens": 310,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/lib/api/mutations.ts": {
+            "lines": 83,
+            "tokens": 849,
+            "sources": 1,
+            "clones": 2,
+            "duplicatedLines": 22,
+            "duplicatedTokens": 176,
+            "percentage": 26.51,
+            "percentageTokens": 20.73,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/lib/api/index.ts": {
+            "lines": 29,
+            "tokens": 185,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/lib/api/foreshadow.ts": {
+            "lines": 8,
+            "tokens": 147,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/lib/api/electron-client.ts": {
+            "lines": 222,
+            "tokens": 2037,
+            "sources": 1,
+            "clones": 2,
+            "duplicatedLines": 29,
+            "duplicatedTokens": 184,
+            "percentage": 13.06,
+            "percentageTokens": 9.03,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/lib/api/client.ts": {
+            "lines": 610,
+            "tokens": 5944,
+            "sources": 1,
+            "clones": 2,
+            "duplicatedLines": 29,
+            "duplicatedTokens": 184,
+            "percentage": 4.75,
+            "percentageTokens": 3.1,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/lib/api/client.test.ts": {
+            "lines": 95,
+            "tokens": 853,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "packages/shared/src/types/workbench.types.ts": {
+            "lines": 77,
+            "tokens": 521,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "packages/shared/src/types/skill.types.ts": {
+            "lines": 130,
+            "tokens": 805,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "packages/shared/src/types/json.ts": {
+            "lines": 6,
+            "tokens": 67,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "packages/shared/src/types/chat.types.ts": {
+            "lines": 77,
+            "tokens": 507,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/server/src/services/content-extractor.ts": {
+            "lines": 168,
+            "tokens": 1304,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/server/src/repositories/snapshot-repository.ts": {
+            "lines": 148,
+            "tokens": 1255,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 25,
+            "duplicatedTokens": 163,
+            "percentage": 16.89,
+            "percentageTokens": 12.99,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/server/src/repositories/manifest-repository.ts": {
+            "lines": 244,
+            "tokens": 2626,
+            "sources": 1,
+            "clones": 2,
+            "duplicatedLines": 29,
+            "duplicatedTokens": 215,
+            "percentage": 11.89,
+            "percentageTokens": 8.19,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/server/src/repositories/foreshadow-repository.ts": {
+            "lines": 91,
+            "tokens": 943,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 13,
+            "duplicatedTokens": 100,
+            "percentage": 14.29,
+            "percentageTokens": 10.6,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/tests/e2e/smoke.spec.ts": {
+            "lines": 8,
+            "tokens": 118,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/types/novel-manifest.ts": {
+            "lines": 58,
+            "tokens": 443,
+            "sources": 1,
+            "clones": 2,
+            "duplicatedLines": 29,
+            "duplicatedTokens": 215,
+            "percentage": 50,
+            "percentageTokens": 48.53,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/types/foreshadow.ts": {
+            "lines": 14,
+            "tokens": 126,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 13,
+            "duplicatedTokens": 100,
+            "percentage": 92.86,
+            "percentageTokens": 79.37,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/types/chapter-snapshot.ts": {
+            "lines": 58,
+            "tokens": 406,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 25,
+            "duplicatedTokens": 163,
+            "percentage": 43.1,
+            "percentageTokens": 40.15,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/lib/consistency-checker.ts": {
+            "lines": 154,
+            "tokens": 1104,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/hooks/useForeshadows.ts": {
+            "lines": 114,
+            "tokens": 1321,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/hooks/useChapterSnapshot.ts": {
+            "lines": 140,
+            "tokens": 1357,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/app/queryClient.ts": {
+            "lines": 11,
+            "tokens": 73,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "packages/shared/src/index.ts": {
+            "lines": 5,
+            "tokens": 71,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "packages/shared/src/api-contract.ts": {
+            "lines": 26,
+            "tokens": 209,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/server/src/preload.ts": {
+            "lines": 11,
+            "tokens": 281,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/server/src/main.ts": {
+            "lines": 648,
+            "tokens": 7212,
+            "sources": 1,
+            "clones": 10,
+            "duplicatedLines": 86,
+            "duplicatedTokens": 1052,
+            "percentage": 13.27,
+            "percentageTokens": 14.59,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/server/src/db.ts": {
+            "lines": 153,
+            "tokens": 280,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/vite-env.d.ts": {
+            "lines": 11,
+            "tokens": 77,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/vitest.config.ts": {
+            "lines": 11,
+            "tokens": 93,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/vite.config.ts": {
+            "lines": 32,
+            "tokens": 278,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/playwright.config.ts": {
+            "lines": 21,
+            "tokens": 144,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 3524,
+          "tokens": 32384,
+          "sources": 33,
+          "clones": 12,
+          "duplicatedLines": 150,
+          "duplicatedTokens": 1276,
+          "percentage": 4.26,
+          "percentageTokens": 3.94,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
+      "javascript": {
+        "sources": {
+          "apps/frontend/src/lib/api/mutations.test.tsx": {
+            "lines": 0,
+            "tokens": 3,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/views/SkillsView.tsx": {
+            "lines": 45,
+            "tokens": 825,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/views/ManifestView.tsx": {
+            "lines": 379,
+            "tokens": 3941,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/views/ForeshadowView.tsx": {
+            "lines": 194,
+            "tokens": 1743,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/views/EditorView.tsx": {
+            "lines": 42,
+            "tokens": 373,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/views/ConsistencyView.tsx": {
+            "lines": 153,
+            "tokens": 1504,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/providers/AppProviders.tsx": {
+            "lines": 1,
+            "tokens": 15,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/contexts/NovelManifestContext.tsx": {
+            "lines": 0,
+            "tokens": 3,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/components/StatusBar.tsx": {
+            "lines": 0,
+            "tokens": 11,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/components/SkillVersionList.tsx": {
+            "lines": 0,
+            "tokens": 24,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/components/FileTreeNode.tsx": {
+            "lines": 31,
+            "tokens": 316,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/components/FileTree.tsx": {
+            "lines": 7,
+            "tokens": 54,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/components/EditorTabs.tsx": {
+            "lines": 11,
+            "tokens": 117,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/components/ChatPanel.tsx": {
+            "lines": 39,
+            "tokens": 363,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/components/ActivityBar.tsx": {
+            "lines": 15,
+            "tokens": 167,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/app/AppShell.tsx": {
+            "lines": 56,
+            "tokens": 357,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/eslint.config.js": {
+            "lines": 32,
+            "tokens": 249,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 1005,
+          "tokens": 10065,
+          "sources": 17,
+          "clones": 0,
+          "duplicatedLines": 0,
+          "duplicatedTokens": 0,
+          "percentage": 0,
+          "percentageTokens": 0,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
+      "tsx": {
+        "sources": {
+          "apps/frontend/src/lib/api/mutations.test.tsx": {
+            "lines": 130,
+            "tokens": 1473,
+            "sources": 1,
+            "clones": 2,
+            "duplicatedLines": 20,
+            "duplicatedTokens": 146,
+            "percentage": 15.38,
+            "percentageTokens": 9.91,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/views/SkillsView.tsx": {
+            "lines": 185,
+            "tokens": 2472,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/views/ManifestView.tsx": {
+            "lines": 574,
+            "tokens": 5686,
+            "sources": 1,
+            "clones": 6,
+            "duplicatedLines": 60,
+            "duplicatedTokens": 670,
+            "percentage": 10.45,
+            "percentageTokens": 11.78,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/views/ForeshadowView.tsx": {
+            "lines": 304,
+            "tokens": 2808,
+            "sources": 1,
+            "clones": 2,
+            "duplicatedLines": 16,
+            "duplicatedTokens": 152,
+            "percentage": 5.26,
+            "percentageTokens": 5.41,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/views/EditorView.tsx": {
+            "lines": 76,
+            "tokens": 695,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/views/ConsistencyView.tsx": {
+            "lines": 246,
+            "tokens": 2243,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/providers/AppProviders.tsx": {
+            "lines": 16,
+            "tokens": 148,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/contexts/NovelManifestContext.tsx": {
+            "lines": 239,
+            "tokens": 2587,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/components/TitleBar.tsx": {
+            "lines": 20,
+            "tokens": 230,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/components/StatusBar.tsx": {
+            "lines": 28,
+            "tokens": 303,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/components/SkillVersionList.tsx": {
+            "lines": 31,
+            "tokens": 315,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/components/MonacoEditor.tsx": {
+            "lines": 54,
+            "tokens": 419,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/components/FileTreeNode.tsx": {
+            "lines": 66,
+            "tokens": 637,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/components/FileTree.tsx": {
+            "lines": 31,
+            "tokens": 285,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/components/EditorTabs.tsx": {
+            "lines": 41,
+            "tokens": 348,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/components/ChatPanel.tsx": {
+            "lines": 135,
+            "tokens": 1254,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/components/ActivityBar.tsx": {
+            "lines": 33,
+            "tokens": 317,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/app/router.tsx": {
+            "lines": 41,
+            "tokens": 288,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/app/AppShell.tsx": {
+            "lines": 276,
+            "tokens": 2979,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/main.tsx": {
+            "lines": 15,
+            "tokens": 114,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 2541,
+          "tokens": 25601,
+          "sources": 20,
+          "clones": 5,
+          "duplicatedLines": 48,
+          "duplicatedTokens": 484,
+          "percentage": 1.89,
+          "percentageTokens": 1.89,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
+      "css": {
+        "sources": {
+          "apps/frontend/src/styles/vscode-theme.css": {
+            "lines": 180,
+            "tokens": 993,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 51,
+            "duplicatedTokens": 251,
+            "percentage": 28.33,
+            "percentageTokens": 25.28,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/styles/vscode-light-theme.css": {
+            "lines": 146,
+            "tokens": 806,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 51,
+            "duplicatedTokens": 251,
+            "percentage": 34.93,
+            "percentageTokens": 31.14,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/styles/title-bar.css": {
+            "lines": 47,
+            "tokens": 269,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/styles/status-bar.css": {
+            "lines": 34,
+            "tokens": 189,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/styles/sidebar.css": {
+            "lines": 190,
+            "tokens": 1067,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/styles/panel.css": {
+            "lines": 124,
+            "tokens": 745,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/styles/editor-tabs.css": {
+            "lines": 85,
+            "tokens": 494,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/styles/codicon.css": {
+            "lines": 36,
+            "tokens": 197,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/src/styles/activity-bar.css": {
+            "lines": 52,
+            "tokens": 292,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 894,
+          "tokens": 5052,
+          "sources": 9,
+          "clones": 1,
+          "duplicatedLines": 51,
+          "duplicatedTokens": 251,
+          "percentage": 5.7,
+          "percentageTokens": 4.97,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
+      "yaml": {
+        "sources": {
+          "release/win-unpacked/resources/app-update.yml": {
+            "lines": 3,
+            "tokens": 22,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "release/latest.yml": {
+            "lines": 7,
+            "tokens": 49,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "release/builder-debug.yml": {
+            "lines": 233,
+            "tokens": 1390,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 243,
+          "tokens": 1461,
+          "sources": 3,
+          "clones": 0,
+          "duplicatedLines": 0,
+          "duplicatedTokens": 0,
+          "percentage": 0,
+          "percentageTokens": 0,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
+      "markup": {
+        "sources": {
+          "apps/frontend/public/favicon.svg": {
+            "lines": 3,
+            "tokens": 66,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/index.html": {
+            "lines": 363,
+            "tokens": 1822,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "apps/frontend/check-electron-api.html": {
+            "lines": 67,
+            "tokens": 658,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 433,
+          "tokens": 2546,
+          "sources": 3,
+          "clones": 0,
+          "duplicatedLines": 0,
+          "duplicatedTokens": 0,
+          "percentage": 0,
+          "percentageTokens": 0,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
+      "markdown": {
+        "sources": {
+          "release/win-unpacked/LICENSE.electron.txt": {
+            "lines": 20,
+            "tokens": 343,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "graphify-out/memory/query_20260409_130312_当前的项目前端是否适配新修改的后端.md": {
+            "lines": 17,
+            "tokens": 56,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "graphify-out/GRAPH_REPORT.md": {
+            "lines": 434,
+            "tokens": 6575,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          ".sisyphus/ralph-loop.local.md": {
+            "lines": 10,
+            "tokens": 37,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          ".omc/notepad.md": {
+            "lines": 52,
+            "tokens": 389,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "CLAUDE.md": {
+            "lines": 9,
+            "tokens": 115,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 542,
+          "tokens": 7515,
+          "sources": 6,
+          "clones": 0,
+          "duplicatedLines": 0,
+          "duplicatedTokens": 0,
+          "percentage": 0,
+          "percentageTokens": 0,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      }
+    },
+    "total": {
+      "lines": 10493,
+      "tokens": 92755,
+      "sources": 151,
+      "clones": 18,
+      "duplicatedLines": 249,
+      "duplicatedTokens": 2011,
+      "percentage": 2.37,
+      "percentageTokens": 2.17,
+      "newDuplicatedLines": 0,
+      "newClones": 0
+    }
+  },
+  "duplicates": [
+    {
+      "format": "typescript",
+      "lines": 12,
+      "fragment": "({\n        projectId: context.projectId,\n        novelId: context.novelId,\n        params,\n      }),\n    onSuccess: () => {\n      queryClient.invalidateQueries({ queryKey: ['api', 'skills', context.projectId, context.novelId] });\n    },\n  });\n}\n\nexport function useSaveProvider",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\frontend\\src\\lib\\api\\mutations.ts",
+        "start": 36,
+        "end": 47,
+        "startLoc": {
+          "line": 36,
+          "column": 14,
+          "position": 431
+        },
+        "endLoc": {
+          "line": 47,
+          "column": 16,
+          "position": 519
+        }
+      },
+      "secondFile": {
+        "name": "apps\\frontend\\src\\lib\\api\\mutations.ts",
+        "start": 9,
+        "end": 20,
+        "startLoc": {
+          "line": 9,
+          "column": 12,
+          "position": 99
+        },
+        "endLoc": {
+          "line": 20,
+          "column": 15,
+          "position": 187
+        }
+      }
+    },
+    {
+      "format": "tsx",
+      "lines": 11,
+      "fragment": "(), {\n        wrapper: createWrapper(),\n      });\n\n      result.current.mutate('prov_001');\n\n      await waitFor(() => expect(result.current.isSuccess).toBe(true));\n    });\n  });\n\n  describe('useTestProvider'",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\frontend\\src\\lib\\api\\mutations.test.tsx",
+        "start": 108,
+        "end": 118,
+        "startLoc": {
+          "line": 108,
+          "column": 18,
+          "position": 1249
+        },
+        "endLoc": {
+          "line": 118,
+          "column": 18,
+          "position": 1322
+        }
+      },
+      "secondFile": {
+        "name": "apps\\frontend\\src\\lib\\api\\mutations.test.tsx",
+        "start": 94,
+        "end": 104,
+        "startLoc": {
+          "line": 94,
+          "column": 20,
+          "position": 1102
+        },
+        "endLoc": {
+          "line": 104,
+          "column": 20,
+          "position": 1175
+        }
+      }
+    },
+    {
+      "format": "typescript",
+      "lines": 16,
+      "fragment": ",\n    params,\n  }: {\n    projectId: string;\n    novelId: string;\n    params: {\n      session_id?: string;\n      project_id: string;\n      novel_id: string;\n      workbench_type: string;\n      user_message: string;\n      source_object_id?: string;\n      source_revision_id?: string;\n    };\n  }) {\n    if",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\frontend\\src\\lib\\api\\client.ts",
+        "start": 419,
+        "end": 434,
+        "startLoc": {
+          "line": 419,
+          "column": 8,
+          "position": 4001
+        },
+        "endLoc": {
+          "line": 434,
+          "column": 3,
+          "position": 4096
+        }
+      },
+      "secondFile": {
+        "name": "apps\\frontend\\src\\lib\\api\\electron-client.ts",
+        "start": 45,
+        "end": 60,
+        "startLoc": {
+          "line": 45,
+          "column": 9,
+          "position": 287
+        },
+        "endLoc": {
+          "line": 60,
+          "column": 6,
+          "position": 382
+        }
+      }
+    },
+    {
+      "format": "typescript",
+      "lines": 15,
+      "fragment": ",\n    params,\n  }: {\n    projectId: string;\n    novelId: string;\n    params: {\n      name: string;\n      instruction: string;\n      description?: string;\n      style_scope?: string;\n      is_active?: boolean;\n      donor_kind?: string;\n    };\n  }) {\n    return",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\frontend\\src\\lib\\api\\client.ts",
+        "start": 529,
+        "end": 543,
+        "startLoc": {
+          "line": 529,
+          "column": 8,
+          "position": 5060
+        },
+        "endLoc": {
+          "line": 543,
+          "column": 7,
+          "position": 5149
+        }
+      },
+      "secondFile": {
+        "name": "apps\\frontend\\src\\lib\\api\\electron-client.ts",
+        "start": 142,
+        "end": 156,
+        "startLoc": {
+          "line": 142,
+          "column": 9,
+          "position": 1092
+        },
+        "endLoc": {
+          "line": 156,
+          "column": 6,
+          "position": 1181
+        }
+      }
+    },
+    {
+      "format": "tsx",
+      "lines": 9,
+      "fragment": "{\n      name: characterForm.name,\n      role: characterForm.role,\n      aliases: characterForm.aliases ? characterForm.aliases.split(',').map(s => s.trim()) : [],\n      appearance: characterForm.appearance || undefined,\n      personality: characterForm.personality || undefined,\n      background: characterForm.background || undefined,\n      speechPatterns: characterForm.speechPatterns ? characterForm.speechPatterns.split(',').map(s => s.trim()) : [],\n    }",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\frontend\\src\\views\\ManifestView.tsx",
+        "start": 114,
+        "end": 122,
+        "startLoc": {
+          "line": 114,
+          "column": 2,
+          "position": 953
+        },
+        "endLoc": {
+          "line": 122,
+          "column": 2,
+          "position": 1089
+        }
+      },
+      "secondFile": {
+        "name": "apps\\frontend\\src\\views\\ManifestView.tsx",
+        "start": 99,
+        "end": 107,
+        "startLoc": {
+          "line": 99,
+          "column": 2,
+          "position": 758
+        },
+        "endLoc": {
+          "line": 107,
+          "column": 14,
+          "position": 894
+        }
+      }
+    },
+    {
+      "format": "tsx",
+      "lines": 12,
+      "fragment": "\"\n                  />\n                </div>\n                <div className=\"form-actions\">\n                  <button className=\"btn btn-primary\" onClick={handleAddTimelineEvent}>添加</button>\n                  <button className=\"btn\" onClick={() => setShowAddForm(false)}>取消</button>\n                </div>\n              </div>\n            )}\n\n            <div className=\"manifest-list\">\n              {manifest.timeline",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\frontend\\src\\views\\ManifestView.tsx",
+        "start": 473,
+        "end": 484,
+        "startLoc": {
+          "line": 473,
+          "column": 4,
+          "position": 4645
+        },
+        "endLoc": {
+          "line": 484,
+          "column": 9,
+          "position": 4745
+        }
+      },
+      "secondFile": {
+        "name": "apps\\frontend\\src\\views\\ManifestView.tsx",
+        "start": 398,
+        "end": 409,
+        "startLoc": {
+          "line": 398,
+          "column": 9,
+          "position": 3906
+        },
+        "endLoc": {
+          "line": 409,
+          "column": 10,
+          "position": 4006
+        }
+      }
+    },
+    {
+      "format": "tsx",
+      "lines": 12,
+      "fragment": "\n                  />\n                </div>\n                <div className=\"form-actions\">\n                  <button className=\"btn btn-primary\" onClick={handleTrackObject}>添加</button>\n                  <button className=\"btn\" onClick={() => setShowAddForm(false)}>取消</button>\n                </div>\n              </div>\n            )}\n\n            <div className=\"manifest-list\">\n              {manifest.trackedObjects",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\frontend\\src\\views\\ManifestView.tsx",
+        "start": 538,
+        "end": 549,
+        "startLoc": {
+          "line": 538,
+          "column": 2,
+          "position": 5322
+        },
+        "endLoc": {
+          "line": 549,
+          "column": 15,
+          "position": 5421
+        }
+      },
+      "secondFile": {
+        "name": "apps\\frontend\\src\\views\\ManifestView.tsx",
+        "start": 398,
+        "end": 409,
+        "startLoc": {
+          "line": 398,
+          "column": 2,
+          "position": 3907
+        },
+        "endLoc": {
+          "line": 409,
+          "column": 10,
+          "position": 4006
+        }
+      }
+    },
+    {
+      "format": "tsx",
+      "lines": 9,
+      "fragment": "\n                />\n              </div>\n              <div className=\"modal-actions\">\n                <button type=\"button\" className=\"btn\" onClick={() => setResolveId(null)}>\n                  取消\n                </button>\n                <button type=\"submit\" className=\"btn btn-primary\">\n                  确认回收",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\frontend\\src\\views\\ForeshadowView.tsx",
+        "start": 288,
+        "end": 296,
+        "startLoc": {
+          "line": 288,
+          "column": 2,
+          "position": 2692
+        },
+        "endLoc": {
+          "line": 296,
+          "column": 5,
+          "position": 2768
+        }
+      },
+      "secondFile": {
+        "name": "apps\\frontend\\src\\views\\ForeshadowView.tsx",
+        "start": 259,
+        "end": 267,
+        "startLoc": {
+          "line": 259,
+          "column": 2,
+          "position": 2417
+        },
+        "endLoc": {
+          "line": 267,
+          "column": 3,
+          "position": 2493
+        }
+      }
+    },
+    {
+      "format": "typescript",
+      "lines": 15,
+      "fragment": "interface Character {\n  id: string;\n  name: string;\n  aliases?: string[];\n  role: 'protagonist' | 'antagonist' | 'supporting' | 'minor';\n  appearance?: string;\n  personality?: string;\n  background?: string;\n  speechPatterns?: string[];\n  relationships: CharacterRelationship[];\n  createdAt: string;\n  updatedAt: string;\n}\n\nexport",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\frontend\\src\\types\\novel-manifest.ts",
+        "start": 8,
+        "end": 22,
+        "startLoc": {
+          "line": 8,
+          "column": 2,
+          "position": 81
+        },
+        "endLoc": {
+          "line": 22,
+          "column": 7,
+          "position": 190
+        }
+      },
+      "secondFile": {
+        "name": "apps\\server\\src\\repositories\\manifest-repository.ts",
+        "start": 13,
+        "end": 27,
+        "startLoc": {
+          "line": 13,
+          "column": 1,
+          "position": 115
+        },
+        "endLoc": {
+          "line": 27,
+          "column": 10,
+          "position": 224
+        }
+      }
+    },
+    {
+      "format": "typescript",
+      "lines": 16,
+      "fragment": "interface TrackedObject {\n  id: string;\n  name: string;\n  description?: string;\n  lastSeen?: { chapter: number; location: string };\n}\n\nexport interface NovelManifest {\n  version: string;\n  characters: Character[];\n  locations: Location[];\n  timeline: TimelineEvent[];\n  trackedObjects: TrackedObject[];\n}\n\nexport",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\frontend\\src\\types\\novel-manifest.ts",
+        "start": 36,
+        "end": 51,
+        "startLoc": {
+          "line": 36,
+          "column": 2,
+          "position": 276
+        },
+        "endLoc": {
+          "line": 51,
+          "column": 7,
+          "position": 382
+        }
+      },
+      "secondFile": {
+        "name": "apps\\server\\src\\repositories\\manifest-repository.ts",
+        "start": 41,
+        "end": 56,
+        "startLoc": {
+          "line": 41,
+          "column": 1,
+          "position": 304
+        },
+        "endLoc": {
+          "line": 56,
+          "column": 6,
+          "position": 410
+        }
+      }
+    },
+    {
+      "format": "typescript",
+      "lines": 14,
+      "fragment": "export interface Foreshadow {\n  id: string;\n  title: string;\n  description: string;\n  status: \"pending\" | \"resolved\" | \"abandoned\";\n  importance: \"high\" | \"medium\" | \"low\";\n  plantedChapter: number;\n  resolvedChapter?: number;\n  keywords: string[];\n  createdAt: string;\n  updatedAt: string;\n}\n\nexport",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\frontend\\src\\types\\foreshadow.ts",
+        "start": 1,
+        "end": 14,
+        "startLoc": {
+          "line": 1,
+          "column": 1,
+          "position": 0
+        },
+        "endLoc": {
+          "line": 14,
+          "column": 7,
+          "position": 100
+        }
+      },
+      "secondFile": {
+        "name": "apps\\server\\src\\repositories\\foreshadow-repository.ts",
+        "start": 5,
+        "end": 18,
+        "startLoc": {
+          "line": 5,
+          "column": 1,
+          "position": 36
+        },
+        "endLoc": {
+          "line": 18,
+          "column": 5,
+          "position": 136
+        }
+      }
+    },
+    {
+      "format": "typescript",
+      "lines": 26,
+      "fragment": "export interface CharacterState {\n  characterId: string;\n  name: string;\n  location: string;\n  emotionalState: string;\n  status: \"alive\" | \"dead\" | \"unknown\";\n  recentEvents: string[];\n}\n\nexport interface WorldState {\n  currentTimeline: string;\n  activeConflicts: string[];\n  revealedSecrets: string[];\n  pendingMysteries: number;\n}\n\nexport interface ChapterSnapshot {\n  chapterNumber: number;\n  chapterTitle?: string;\n  summary?: string;\n  characterStates: CharacterState[];\n  worldState: WorldState;\n  timestamp: string;\n}\n\nexport",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\frontend\\src\\types\\chapter-snapshot.ts",
+        "start": 1,
+        "end": 26,
+        "startLoc": {
+          "line": 1,
+          "column": 1,
+          "position": 0
+        },
+        "endLoc": {
+          "line": 26,
+          "column": 7,
+          "position": 163
+        }
+      },
+      "secondFile": {
+        "name": "apps\\server\\src\\repositories\\snapshot-repository.ts",
+        "start": 9,
+        "end": 34,
+        "startLoc": {
+          "line": 9,
+          "column": 1,
+          "position": 22
+        },
+        "endLoc": {
+          "line": 34,
+          "column": 9,
+          "position": 185
+        }
+      }
+    },
+    {
+      "format": "css",
+      "lines": 52,
+      "fragment": ";\n\n  /* Layout tokens */\n  --sw-titlebar-height: 22px;\n  --sw-activitybar-width: 48px;\n  --sw-sidebar-width: 240px;\n  --sw-statusbar-height: 22px;\n  --sw-tabbar-height: 35px;\n  --sw-panel-height: 250px;\n}\n\n/* Global resets */\n*, *::before, *::after {\n  box-sizing: border-box;\n}\n\nbody {\n  margin: 0;\n  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;\n  font-size: 13px;\n  color: var(--vscode-editor-foreground);\n  background: var(--vscode-editor-background);\n  overflow: hidden;\n}\n\n/* Scrollbar styling */\n::-webkit-scrollbar {\n  width: 10px;\n  height: 10px;\n}\n\n::-webkit-scrollbar-track {\n  background: var(--vscode-scrollbar-background);\n}\n\n::-webkit-scrollbar-thumb {\n  background: var(--vscode-scrollbarSlider-background);\n  border-radius: 5px;\n}\n\n::-webkit-scrollbar-thumb:hover {\n  background: var(--vscode-scrollbarSlider-hoverBackground);\n}\n\n::-webkit-scrollbar-thumb:active {\n  background: var(--vscode-scrollbarSlider-activeBackground);\n}\n\n/* Selection */\n::selection {\n  background: var(--vscode-editor-selectionBackground);\n}",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\frontend\\src\\styles\\vscode-light-theme.css",
+        "start": 96,
+        "end": 147,
+        "startLoc": {
+          "line": 96,
+          "column": 8,
+          "position": 555
+        },
+        "endLoc": {
+          "line": 147,
+          "column": 2,
+          "position": 806
+        }
+      },
+      "secondFile": {
+        "name": "apps\\frontend\\src\\styles\\vscode-theme.css",
+        "start": 130,
+        "end": 181,
+        "startLoc": {
+          "line": 130,
+          "column": 8,
+          "position": 742
+        },
+        "endLoc": {
+          "line": 181,
+          "column": 2,
+          "position": 993
+        }
+      }
+    },
+    {
+      "format": "typescript",
+      "lines": 8,
+      "fragment": ").run(\n      revisionId, objectId, 1, null,\n      params.name, params.instruction, params.style_scope || '',\n      params.is_active ? 1 : 0, '{}', ts, 'user'\n    );\n\n    return { success: true, object_id: objectId, revision_id: revisionId };\n  })",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\server\\src\\main.ts",
+        "start": 516,
+        "end": 523,
+        "startLoc": {
+          "line": 516,
+          "column": 59,
+          "position": 5768
+        },
+        "endLoc": {
+          "line": 523,
+          "column": 2,
+          "position": 5860
+        }
+      },
+      "secondFile": {
+        "name": "apps\\server\\src\\main.ts",
+        "start": 380,
+        "end": 387,
+        "startLoc": {
+          "line": 380,
+          "column": 61,
+          "position": 4112
+        },
+        "endLoc": {
+          "line": 387,
+          "column": 5,
+          "position": 4205
+        }
+      }
+    },
+    {
+      "format": "typescript",
+      "lines": 7,
+      "fragment": "(baseDir, params.dir_path || '');\n\n      const entries = await fs.readdir(targetPath, { withFileTypes: true });\n      const tree = [];\n\n      for (const entry of entries) {\n        if (entry.name.startsWith('.')) continue; // skip hidden files",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\server\\src\\main.ts",
+        "start": 529,
+        "end": 535,
+        "startLoc": {
+          "line": 529,
+          "column": 9,
+          "position": 5938
+        },
+        "endLoc": {
+          "line": 535,
+          "column": 21,
+          "position": 6024
+        }
+      },
+      "secondFile": {
+        "name": "apps\\server\\src\\main.ts",
+        "start": 116,
+        "end": 123,
+        "startLoc": {
+          "line": 116,
+          "column": 5,
+          "position": 1083
+        },
+        "endLoc": {
+          "line": 123,
+          "column": 6,
+          "position": 1170
+        }
+      }
+    },
+    {
+      "format": "typescript",
+      "lines": 9,
+      "fragment": "const entryPath = path.join(params.dir_path || '', entry.name);\n        if (entry.isDirectory()) {\n          tree.push({ name: entry.name, path: entryPath, kind: 'directory' });\n        } else {\n          tree.push({ name: entry.name, path: entryPath, kind: 'file' });\n        }\n      }\n\n      // Sort: directories first, then files, alphabetically",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\server\\src\\main.ts",
+        "start": 536,
+        "end": 544,
+        "startLoc": {
+          "line": 536,
+          "column": 9,
+          "position": 6027
+        },
+        "endLoc": {
+          "line": 544,
+          "column": 55,
+          "position": 6140
+        }
+      },
+      "secondFile": {
+        "name": "apps\\server\\src\\main.ts",
+        "start": 123,
+        "end": 131,
+        "startLoc": {
+          "line": 123,
+          "column": 9,
+          "position": 1170
+        },
+        "endLoc": {
+          "line": 131,
+          "column": 5,
+          "position": 1283
+        }
+      }
+    },
+    {
+      "format": "typescript",
+      "lines": 13,
+      "fragment": "tree.sort((a, b) => {\n        if (a.kind !== b.kind) return a.kind === 'directory' ? -1 : 1;\n        return a.name.localeCompare(b.name);\n      });\n\n      return { tree };\n    } catch (error: any) {\n      if (error.code === 'ENOENT') return { tree: [] };\n      throw error;\n    }\n  });\n\n  // Read file",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\server\\src\\main.ts",
+        "start": 545,
+        "end": 557,
+        "startLoc": {
+          "line": 545,
+          "column": 7,
+          "position": 6143
+        },
+        "endLoc": {
+          "line": 557,
+          "column": 13,
+          "position": 6280
+        }
+      },
+      "secondFile": {
+        "name": "apps\\server\\src\\main.ts",
+        "start": 131,
+        "end": 143,
+        "startLoc": {
+          "line": 131,
+          "column": 7,
+          "position": 1283
+        },
+        "endLoc": {
+          "line": 143,
+          "column": 19,
+          "position": 1420
+        }
+      }
+    },
+    {
+      "format": "typescript",
+      "lines": 11,
+      "fragment": ", params.file_path);\n    try {\n      const content = await fs.readFile(filePath, 'utf-8');\n      return { content };\n    } catch (error: any) {\n      if (error.code === 'ENOENT') return { content: '' };\n      throw error;\n    }\n  });\n\n  // Send chat message with AI provider",
+      "tokens": 0,
+      "firstFile": {
+        "name": "apps\\server\\src\\main.ts",
+        "start": 560,
+        "end": 570,
+        "startLoc": {
+          "line": 560,
+          "column": 8,
+          "position": 6350
+        },
+        "endLoc": {
+          "line": 570,
+          "column": 38,
+          "position": 6448
+        }
+      },
+      "secondFile": {
+        "name": "apps\\server\\src\\main.ts",
+        "start": 145,
+        "end": 155,
+        "startLoc": {
+          "line": 145,
+          "column": 10,
+          "position": 1473
+        },
+        "endLoc": {
+          "line": 155,
+          "column": 19,
+          "position": 1571
+        }
+      }
+    }
+  ]
+}

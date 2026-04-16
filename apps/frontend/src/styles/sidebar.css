@@ -1,0 +1,200 @@
+/* Sidebar */
+.sidebar {
+  width: var(--sw-sidebar-width);
+  background: var(--vscode-sideBar-background);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-right: 1px solid var(--vscode-panel-border);
+}
+
+/* Sidebar Navigation */
+.sidebar-nav {
+  padding: 4px 8px;
+  border-bottom: 1px solid var(--vscode-panel-border);
+}
+
+.sidebar-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  color: var(--vscode-editor-foreground);
+  text-decoration: none;
+  font-size: 13px;
+  border-radius: 4px;
+  margin-bottom: 2px;
+}
+
+.sidebar-nav-link:hover {
+  background: var(--vscode-tree-hoverBackground);
+}
+
+.sidebar-nav-link-active {
+  background: var(--vscode-tree-selectionBackground);
+  color: var(--vscode-list-activeSelectionForeground);
+  font-weight: 500;
+}
+
+.sidebar-nav-link .codicon {
+  font-size: 16px;
+  color: var(--vscode-activityBar-inactiveForeground);
+}
+
+.sidebar-nav-link:hover .codicon {
+  color: var(--vscode-activityBar-activeForeground);
+}
+
+.sidebar-header {
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--vscode-panel-border);
+}
+
+.sidebar-header h3 {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--vscode-sideBarTitle-foreground);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.sidebar-content {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* File Tree */
+.filetree-header {
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--vscode-panel-border);
+  background: var(--vscode-sideBarSectionHeader-background);
+}
+
+.filetree-header h3 {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--vscode-sideBarTitle-foreground);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.filetree-nav {
+  padding: 4px 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.filetree-root,
+.tree-children {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tree-node-item {
+  position: relative;
+}
+
+.tree-node-row {
+  display: flex;
+  align-items: center;
+  padding-right: 4px;
+}
+
+.tree-node-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+  padding: 4px 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--vscode-editor-foreground);
+  text-align: left;
+  border-radius: 4px;
+  margin: 0 4px;
+}
+
+.tree-node-btn:hover {
+  background: var(--vscode-tree-hoverBackground);
+}
+
+.tree-node-btn-selected {
+  background: var(--vscode-tree-selectionBackground) !important;
+  color: var(--vscode-list-activeSelectionForeground);
+}
+
+.tree-chevron {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 12px;
+  color: var(--vscode-editorLineNumber-foreground);
+}
+
+.tree-icon {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 14px;
+  color: var(--vscode-editor-foreground);
+}
+
+.tree-name {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tree-node-add-btn {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--vscode-activityBar-inactiveForeground);
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.1s;
+}
+
+.tree-node-row:hover .tree-node-add-btn {
+  opacity: 1;
+}
+
+.tree-node-add-btn:hover {
+  background: var(--vscode-tree-hoverBackground);
+  color: var(--vscode-editor-foreground);
+}
+
+/* Tree indent guides */
+.tree-children .tree-node-item::before {
+  content: '';
+  position: absolute;
+  left: 12px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--vscode-tree-indentGuidesStroke);
+  opacity: 0.3;
+}

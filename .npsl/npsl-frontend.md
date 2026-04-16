@@ -2,87 +2,129 @@
 
 ## 技术栈
 
-- React 19 + TypeScript 5.9（使用最新 React 特性，但依赖生态兼容性待验证）
-- Vite 7 构建（开发 HMR 快，但大型项目可能遇到预构建缓慢问题）
-- React Router 7（文件系统路由风格，loader 预取数据）
-- TanStack React Query 5（自动缓存 + 后台刷新，前端不手动管理请求状态）
-- Monaco Editor（与 VS Code 同内核的编辑器组件，功能强大但打包体积大）
-- 无 UI 组件库，使用自定义 CSS 设计系统（`surface-panel`、`product-nav-link` 等语义化类名，一致性依赖开发者自律）
-- 无状态管理库（React Query 管理服务端状态，本地状态用 useState）
+- React 19 + TypeScript 5.9（函数组件 + hooks，无 class 组件）
+- Vite 7 构建（开发时 HMR，生产时打包为静态文件由 Electron loadFile 加载）
+- React Router 7（嵌套路由，所有视图在 AppShell 布局组件内通过 `<Outlet />` 切换）
+- TanStack React Query 5（服务端状态管理 + mutation hooks 封装缓存失效）
+- Monaco Editor `@monaco-editor/react`（同步 import，首屏增加 3-5 秒，未做懒加载）
+- 无 CSS 框架/UI 组件库（纯手写样式）
+- 无全局状态管理库（通过 React Context + Query Client 管理跨组件状态）
 
 ## 页面/路由
 
 | 路径 | 组件 | 用途 |
 |------|------|------|
-| `/` | `StartupView` | 启动页，显示已有工作区列表或创建新项目入口 |
-| `/editor` | `EditorView` | Monaco 代码编辑器 + 文件树，编辑工作区内的文件 |
-| `/skills` | `SkillsView` | 技能工坊，管理作者控制技能（CRUD + 版本历史 + diff） |
-| `/settings` | `SettingsView` | AI 提供者配置管理（添加/激活/测试/删除提供者） |
+| `/` | `EditorView` | 默认视图：Monaco 代码编辑器，编辑选中的文件 |
+| `/skills` | `SkillsView` | AI 写作技能管理：创建/编辑/导入/回滚技能 |
+| `/foreshadows` | `ForeshadowView` | 伏笔管理：追踪已埋设和已解决的伏笔 |
+| `/manifest` | `ManifestView` | 世界观管理：角色/地点/时间线/追踪物品的 CRUD |
+| `/consistency` | `ConsistencyView` | 一致性校验：提取章节内容 → 对比快照 → 发现冲突 |
 
-所有路由嵌套在 `AppShell` 布局组件下，提供侧边栏导航 + 顶部标题栏。
+所有路由嵌套在 `AppShell` 布局组件内，共享 TitleBar + ActivityBar + FileTree 侧边栏 + StatusBar。路由错误由 `RouteErrorBoundary` 捕获。
 
 ## 数据获取
 
-- 使用 React Router 的 `loader` 函数在路由切换前预取数据（通过 `queryClient.ensureQueryData` 桥接到 React Query）
-- API 调用集中在 `apiClient` 对象中，每个方法对应一个后端 API 端点
-- 所有 API 响应经过手写 parser 函数严格校验字段类型（非 `as any` 断言，而是 `assertRecord` + `expectString` 等运行时检查）
-- 支持 Electron IPC 双通道：`isElectron()` 检测环境，Electron 下走 IPC 而非 HTTP（为桌面客户端预留）
-- 错误分类为 `ApiResponseError`（后端返回的业务错误）和 `ApiContractError`（前后端契约不匹配），在 `RouteErrorBoundary` 中分别展示
+### IPC 通信层
+
+前端通过 `electron-client.ts` 封装的 `electronClient` 对象与主进程通信：
+- 所有方法调用 `window.electronAPI!.invoke(channel, params)`（preload 暴露的 bridge）
+- `isElectron()` 检测运行环境（`window.electronAPI !== undefined`）
+- `electronClient` 提供 18 个方法，覆盖所有 IPC 端点的类型安全封装
+
+### HTTP 备用客户端
+
+- `client.ts`（611 行，25 个导出）定义了一套基于 HTTP fetch 的备用客户端
+- 包含完整的运行时类型校验体系（`assertRecord`、`expectString`、`parseEnvelope` 等）
+- 两种自定义错误：`ApiContractError`（响应结构不符预期）和 `ApiResponseError`（服务端返回错误）
+- Electron 环境下不使用 HTTP 客户端，但类型定义被 electron-client 复用
 
 ### 缓存策略
-- 通过 React Query 的 `queryKey` 自动管理缓存
-- Skills 查询 key 包含 `projectId + novelId`（切换小说自动重新拉取）
-- Settings 和 Startup 查询 key 不含项目参数（全局共享）
-- 写操作（mutation）后手动使相关 query 失效以触发刷新
+
+- TanStack React Query 管理请求缓存和 mutation 乐观更新
+- `createAppQueryClient()` 创建全局 QueryClient 实例
+- 9 个 mutation hooks 封装了缓存失效逻辑（`useUpsertSkill`、`useImportSkill`、`useRollbackSkill`、`useSaveProvider`、`useActivateProvider`、`useDeleteProvider`、`useTestProvider`）
+- 无显式缓存过期时间配置（使用 React Query 默认值）
 
 ## 组件架构
 
-### AppShell（布局组件）
-- 左侧边栏：品牌标识 + 产品导航链接列表
-- 导航项根据上下文（projectId/novelId）动态拼接 URL query 参数
-- 需要项目/小说上下文但未提供时，导航项显示为禁用状态（`aria-disabled="true"`）
-- 顶部标题栏：当前路由标签 + 加载状态指示器
-- `RouteErrorBoundary` 区分 4 种错误类型渲染不同提示
+### 布局层
 
-### EditorView（编辑器视图）
-- 左侧文件树（`FileTree` + `FileTreeNode`）+ 右侧 Monaco Editor 的经典 IDE 布局
-- 目录按需加载（点击展开时才请求子目录内容）
-- 文件内容加载后渲染 Monaco Editor（markdown 语法高亮模式）
-- 文件保存功能尚未实现（`handleContentChange` 中标记 TODO）
+| 组件 | 职责 | 特别说明 |
+|------|------|----------|
+| `AppShell` | 全局布局 + 文件管理状态 | 状态最重的组件（12+ 个 useState），管理 localRootPath/fileTree/selectedPath/fileContent/isDirty/fileLanguage/activeView 等 |
+| `TitleBar` | 窗口标题栏 | 显示应用标题 |
+| `ActivityBar` | 左侧活动栏 | 切换 explorer / search / chat 三个侧边面板 |
+| `FileTree` | 文件树容器 | 递归渲染 FileTreeNode，支持目录展开/折叠 |
+| `FileTreeNode` | 文件树节点 | 点击文件触发加载，点击目录触发展开 |
+| `StatusBar` | 底部状态栏 | 显示当前文件路径等信息 |
+| `EditorTabs` | 编辑器标签页 | 多文件标签（当前实现为单文件编辑模式） |
 
-### SkillsView（技能工坊视图）
-- 技能列表 + 创建/编辑表单
-- 版本历史列表（`SkillVersionList`）
-- 版本间 diff 对比查看
-- 支持创建、更新、切换激活状态、回滚、导入 5 种操作
+### 功能视图
 
-### StartupView（启动视图）
-- 已有工作区列表（project + novel 组合）
-- 创建新小说的表单（小说标题 + 项目标题 + 文件夹路径）
-- 创建成功后跳转到编辑器视图
+| 组件 | 职责 | 特别说明 |
+|------|------|----------|
+| `EditorView` | Monaco 编辑器包装 | 接收 AppShell 传递的 EditorContext 渲染编辑器 |
+| `MonacoEditor` | Monaco Editor 封装 | 同步 import `@monaco-editor/react`（未做 `React.lazy` 懒加载） |
+| `ChatPanel` | AI 聊天面板 | 消息列表 + 输入框，`scrollToBottom` 自动滚动到最新消息 |
+| `SkillsView` | 技能管理视图 | 技能列表 + 编辑器 + 创建/保存/导入操作，`parseSkillContent` 解析技能内容格式 |
+| `SkillVersionList` | 技能版本列表 | **死文件**（未被任何组件引用），本应展示版本历史 |
+| `ForeshadowView` | 伏笔管理视图 | 通过 `useForeshadows` hook 获取/操作伏笔数据 |
+| `ManifestView` | 世界观管理视图 | 575 行，职责过多：角色 CRUD + 地点 CRUD + 时间线 CRUD + 物品追踪，全部在一个组件内 |
+| `ConsistencyView` | 一致性校验视图 | 提取章节内容 → 保存快照 → `checkConsistency` + `compareWithPrevious` 校验 |
 
-### SettingsView（设置视图）
-- AI 提供者配置列表
-- 添加/编辑提供者表单（provider_name, base_url, api_key, model_name, temperature, max_tokens）
-- 激活/删除/测试提供者按钮
+### Context 层
 
-## 路由上下文传递
+| Context | 职责 |
+|---------|------|
+| `NovelManifestProvider` / `useNovelManifest` | 全局小说世界观数据访问（manifest CRUD 操作封装为 context 方法，234 行） |
+| `AppProviders` | 顶层 Provider 组装（QueryClientProvider + Router + NovelManifestProvider） |
 
-项目 ID 和小说 ID 通过 URL query 参数（`?project_id=xxx&novel_id=yyy`）在路由间传递，而非 React Context 或全局状态。`readRouteSearch()` 统一解析，`buildProductRouteHref()` 统一拼接。所有需要上下文的 API 调用从 URL 参数中读取。
+### Hooks 层
 
-## API 客户端契约
+| Hook | 文件 | 职责 |
+|------|------|------|
+| `useChapterSnapshot` | `hooks/useChapterSnapshot.ts` | 封装章节快照的 IPC 加载/保存逻辑 |
+| `useForeshadows` | `hooks/useForeshadows.ts` | 封装伏笔列表的 IPC 加载/保存逻辑 |
+| `useUpsertSkill` | `lib/api/mutations.ts` | mutation：创建/更新技能 |
+| `useImportSkill` | `lib/api/mutations.ts` | mutation：导入技能 |
+| `useRollbackSkill` | `lib/api/mutations.ts` | mutation：回滚技能版本 |
+| `useSaveProvider` | `lib/api/mutations.ts` | mutation：保存 AI 提供商 |
+| `useActivateProvider` | `lib/api/mutations.ts` | mutation：激活 AI 提供商 |
+| `useDeleteProvider` | `lib/api/mutations.ts` | mutation：删除 AI 提供商 |
+| `useTestProvider` | `lib/api/mutations.ts` | mutation：测试 AI 提供商连通性 |
 
-前端 `apiClient` 对每个 API 响应执行完整的运行时类型校验：
-- 每个字段用 `expectString`/`expectNumber`/`expectBoolean` 逐一检查
-- 嵌套对象用 `assertRecord`，数组用 `expectArray` + 逐元素 parser
-- 响应信封格式：`{ ok: true, data: {...} }` 或 `{ ok: false, error: { code, message, details } }`
-- 这意味着后端新增字段不会破坏前端，但后端删除/重命名字段会立即触发 `ApiContractError`
+### 业务逻辑层
 
-## 已知限制
+| 模块 | 职责 |
+|------|------|
+| `consistency-checker.ts` | 章节一致性校验：对比 snapshot 与 manifest（检测角色未知状态、谜团数异常），对比前后 snapshot（检测死人复活、秘密遗失） |
 
-- Monaco Editor 打包体积较大（~2MB gzipped），首次加载较慢
-- 文件树仅支持按需加载目录，不支持文件搜索/过滤
-- 无国际化框架，中文硬编码在组件中
-- 无暗色模式切换
-- 未实现工作台（workbench）流水线的前端 UI（路由定义了 `PipelineView` 但未在 router 中挂载）
-- 测试基础设施已配置（Vitest + Testing Library + Playwright）但实际测试覆盖情况未知
+## 前端类型重复问题
+
+前端和后端之间存在类型重复定义：
+- `packages/shared/src/types/skill.types.ts` 定义了技能相关类型（132 行）
+- `apps/frontend/src/lib/api/client.ts` 重新定义了几乎相同的类型（`SkillWorkshopSkillSnapshot` 等）
+- `apps/frontend/src/types/novel-manifest.ts` 定义了前端 manifest 类型
+- `apps/server/src/repositories/manifest-repository.ts` 独立定义了一套 manifest 类型
+- `apps/frontend/src/types/chapter-snapshot.ts` 定义了快照和一致性问题类型
+- `apps/server/src/repositories/snapshot-repository.ts` 独立定义了快照类型
+- 共享包 `packages/shared` 存在但未被充分利用，多处类型手动同步
+
+## 已知质量问题
+
+### 死文件
+- `apps/frontend/src/components/SkillVersionList.tsx`（未被引用）
+- `apps/frontend/src/lib/api/index.ts`（`createUnifiedClient` 未被使用）
+
+### 未使用的导出
+- `client.ts` 中的 `PIPELINE_META`（Pipeline 阶段元数据定义了但未使用）
+- `AppShell.tsx` 中的 `buildProductRouteHref()`（路由构建辅助函数未被使用）
+
+### 未列入依赖
+- `monaco-editor`（被 `@monaco-editor/react` 间接引入，但未在 package.json 声明）
+
+### 性能问题
+- Monaco Editor 同步加载（可改为 `React.lazy()` + `Suspense` 按需加载，减少首屏 3-5 秒）
+- 多个组件使用 `.map()` 渲染列表但无虚拟滚动（FileTree、ChatPanel、ManifestView、ForeshadowView、ConsistencyView、SkillVersionList 等，数据量大时会卡顿）
+- `AppShell` 组件状态过多（12+ 个 useState），任一状态变更触发整个布局重渲染
+- `client.ts` 职责过多（611 行，25 个导出，33 条依赖边），建议按领域拆分

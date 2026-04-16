@@ -1,0 +1,33 @@
+{
+  "name": "superwriter",
+  "private": true,
+  "version": "0.0.0",
+  "workspaces": [
+    "packages/shared",
+    "apps/server",
+    "apps/frontend"
+  ],
+  "scripts": {
+    "dev:server": "pnpm --filter superwriter-server dev",
+    "dev:web": "pnpm --filter superwriter-frontend dev",
+    "build:web": "pnpm --filter superwriter-frontend build",
+    "build:server": "pnpm --filter superwriter-server build",
+    "build:electron": "pnpm build:server && pnpm build:web",
+    "dev:electron": "concurrently \"pnpm dev:web\" \"pnpm --filter superwriter-server start\"",
+    "dist": "pnpm build:electron && electron-builder --config electron-builder.json",
+    "typecheck": "pnpm --filter superwriter-server typecheck && pnpm --filter superwriter-web typecheck"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "electron-builder": "^26.0.12"
+  },
+  "packageManager": "pnpm@10.10.0",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "electron",
+      "better-sqlite3"
+    ],
+    "onlyBuiltDependenciesType": "allowed",
+    "electron_mirror": "https://npmmirror.com/mirrors/electron/"
+  }
+}

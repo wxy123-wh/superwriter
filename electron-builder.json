@@ -1,0 +1,41 @@
+{
+  "$schema": "https://raw.githubusercontent.com/electron-userland/electron-builder/master/packages/app-builder-lib/scheme.json",
+  "appId": "com.superwriter.app",
+  "productName": "SuperWriter",
+  "directories": {
+    "output": "release",
+    "buildResources": "apps/server/build"
+  },
+  "files": [
+    "apps/server/dist/**/*",
+    "apps/frontend/dist/**/*",
+    "!node_modules/**/*",
+    "node_modules/electron/**/*"
+  ],
+  "extraMetadata": {
+    "main": "apps/server/dist/main.js"
+  },
+  "win": {
+    "target": [
+      {
+        "target": "nsis",
+        "arch": ["x64"]
+      }
+    ],
+    "artifactName": "${productName}-${version}-Setup.${ext}"
+  },
+  "nsis": {
+    "oneClick": false,
+    "perMachine": false,
+    "allowToChangeInstallationDirectory": true,
+    "deleteAppDataOnUninstall": false
+  },
+  "mac": {
+    "target": ["dmg"],
+    "artifactName": "${productName}-${version}.${ext}"
+  },
+  "linux": {
+    "target": ["AppImage"],
+    "artifactName": "${productName}-${version}.${ext}"
+  }
+}

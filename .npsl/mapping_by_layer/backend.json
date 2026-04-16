@@ -1,377 +1,235 @@
 {
-  "Command Center Route": {
+  "Db": {
     "files": [
-      "apps\\server\\api_server.py"
+      "apps\\server\\src\\db.ts"
+    ],
+    "functions": [
+      {
+        "name": "getDb",
+        "file_index": 0,
+        "location": "L8"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Initialize Schema": {
+    "files": [
+      "apps\\server\\src\\db.ts"
+    ],
+    "functions": [
+      {
+        "name": "initializeSchema",
+        "file_index": 0,
+        "location": "L17"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Close Db": {
+    "files": [
+      "apps\\server\\src\\db.ts"
+    ],
+    "functions": [
+      {
+        "name": "closeDb",
+        "file_index": 0,
+        "location": "L149"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Novels Dir": {
+    "files": [
+      "apps\\server\\src\\main.ts"
+    ],
+    "functions": [
+      {
+        "name": "getNovelsDir",
+        "file_index": 0,
+        "location": "L12"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Project Dir": {
+    "files": [
+      "apps\\server\\src\\main.ts"
+    ],
+    "functions": [
+      {
+        "name": "getProjectDir",
+        "file_index": 0,
+        "location": "L16"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Safe Join": {
+    "files": [
+      "apps\\server\\src\\main.ts"
+    ],
+    "functions": [
+      {
+        "name": "safeJoin",
+        "file_index": 0,
+        "location": "L20"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Window": {
+    "files": [
+      "apps\\server\\src\\main.ts"
+    ],
+    "functions": [
+      {
+        "name": "createWindow",
+        "file_index": 0,
+        "location": "L30"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Now": {
+    "files": [
+      "apps\\server\\src\\main.ts"
+    ],
+    "functions": [
+      {
+        "name": "now",
+        "file_index": 0,
+        "location": "L79"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Register Ipc Handlers": {
+    "files": [
+      "apps\\server\\src\\main.ts"
+    ],
+    "functions": [
+      {
+        "name": "registerIpcHandlers",
+        "file_index": 0,
+        "location": "L84"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Foreshadow Repository": {
+    "files": [
+      "apps\\server\\src\\repositories\\foreshadow-repository.ts"
     ],
     "functions": [],
     "classes": [
       {
-        "name": "CommandCenterRoute",
+        "name": "ForeshadowRepository",
+        "file_index": 0,
+        "location": "L20"
+      }
+    ],
+    "depends_on": []
+  },
+  "File Path": {
+    "files": [
+      "apps\\server\\src\\repositories\\foreshadow-repository.ts"
+    ],
+    "functions": [
+      {
+        "name": ".getFilePath",
+        "file_index": 0,
+        "location": "L23"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Load": {
+    "files": [
+      "apps\\server\\src\\repositories\\foreshadow-repository.ts",
+      "apps\\server\\src\\repositories\\snapshot-repository.ts"
+    ],
+    "functions": [
+      {
+        "name": ".load",
+        "file_index": 0,
+        "location": "L27"
+      },
+      {
+        "name": ".load",
+        "file_index": 1,
+        "location": "L46"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Save": {
+    "files": [
+      "apps\\server\\src\\repositories\\foreshadow-repository.ts",
+      "apps\\server\\src\\repositories\\snapshot-repository.ts"
+    ],
+    "functions": [
+      {
+        "name": ".save",
+        "file_index": 0,
+        "location": "L42"
+      },
+      {
+        "name": ".save",
+        "file_index": 1,
+        "location": "L62"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Add": {
+    "files": [
+      "apps\\server\\src\\repositories\\foreshadow-repository.ts"
+    ],
+    "functions": [
+      {
+        "name": ".add",
+        "file_index": 0,
+        "location": "L49"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Update": {
+    "files": [
+      "apps\\server\\src\\repositories\\foreshadow-repository.ts"
+    ],
+    "functions": [
+      {
+        "name": ".update",
         "file_index": 0,
         "location": "L61"
       }
     ],
-    "depends_on": []
-  },
-  "Command Center Signal": {
-    "files": [
-      "apps\\server\\api_server.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "CommandCenterSignal",
-        "file_index": 0,
-        "location": "L70"
-      }
-    ],
-    "depends_on": []
-  },
-  "Next Action": {
-    "files": [
-      "apps\\server\\api_server.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "NextAction",
-        "file_index": 0,
-        "location": "L78"
-      }
-    ],
-    "depends_on": []
-  },
-  "Command Center Audit Entry": {
-    "files": [
-      "apps\\server\\api_server.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "CommandCenterAuditEntry",
-        "file_index": 0,
-        "location": "L86"
-      }
-    ],
-    "depends_on": []
-  },
-  "Command Center Snapshot": {
-    "files": [
-      "apps\\server\\api_server.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "CommandCenterSnapshot",
-        "file_index": 0,
-        "location": "L99"
-      }
-    ],
-    "depends_on": []
-  },
-  "Api Response": {
-    "files": [
-      "apps\\server\\api_server.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "ApiResponse",
-        "file_index": 0,
-        "location": "L116"
-      }
-    ],
-    "depends_on": []
-  },
-  "Frontend Runtime Config": {
-    "files": [
-      "apps\\server\\api_server.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "FrontendRuntimeConfig",
-        "file_index": 0,
-        "location": "L123"
-      }
-    ],
-    "depends_on": []
-  },
-  "Read": {
-    "files": [
-      "apps\\server\\api_server.py",
-      "apps\\server\\pipeline_api.py",
-      "core\\storage\\file_store.py",
-      "core\\storage\\metadata_store.py",
-      "core\\storage\\unified_file_store.py"
-    ],
-    "functions": [
-      {
-        "name": ".read",
-        "file_index": 0,
-        "location": "L129"
-      },
-      {
-        "name": ".read",
-        "file_index": 1,
-        "location": "L108"
-      },
-      {
-        "name": ".read",
-        "file_index": 2,
-        "location": "L64"
-      },
-      {
-        "name": ".read",
-        "file_index": 3,
-        "location": "L54"
-      },
-      {
-        "name": ".read",
-        "file_index": 4,
-        "location": "L91"
-      }
-    ],
     "classes": [],
     "depends_on": []
   },
-  "Superwriter A P I App": {
+  "Resolve": {
     "files": [
-      "apps\\server\\api_server.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "SuperwriterAPIApp",
-        "file_index": 0,
-        "location": "L287"
-      }
-    ],
-    "depends_on": []
-  },
-  "Handle Request": {
-    "files": [
-      "apps\\server\\api_server.py"
+      "apps\\server\\src\\repositories\\foreshadow-repository.ts"
     ],
     "functions": [
       {
-        "name": ".handle_request",
-        "file_index": 0,
-        "location": "L296"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Build Snapshot": {
-    "files": [
-      "apps\\server\\api_server.py"
-    ],
-    "functions": [
-      {
-        "name": ".build_snapshot",
-        "file_index": 0,
-        "location": "L360"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Superwriter W S G I App": {
-    "files": [
-      "apps\\server\\api_server.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "SuperwriterWSGIApp",
-        "file_index": 0,
-        "location": "L937"
-      }
-    ],
-    "depends_on": []
-  },
-  "Node Address": {
-    "files": [
-      "apps\\server\\pipeline_api.py",
-      "core\\storage\\file_store.py",
-      "core\\storage\\unified_file_store.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "NodeAddress",
-        "file_index": 0,
-        "location": "L41"
-      },
-      {
-        "name": "NodeAddress",
-        "file_index": 1,
-        "location": "L23"
-      },
-      {
-        "name": "NodeAddress",
-        "file_index": 2,
-        "location": "L21"
-      }
-    ],
-    "depends_on": []
-  },
-  "Parse": {
-    "files": [
-      "apps\\server\\pipeline_api.py",
-      "core\\storage\\unified_file_store.py"
-    ],
-    "functions": [
-      {
-        "name": "parse",
-        "file_index": 0,
-        "location": "L53"
-      },
-      {
-        "name": "parse",
-        "file_index": 1,
-        "location": "L35"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Child Layer": {
-    "files": [
-      "apps\\server\\pipeline_api.py"
-    ],
-    "functions": [
-      {
-        "name": ".child_layer",
-        "file_index": 0,
-        "location": "L69"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Child Addr": {
-    "files": [
-      "apps\\server\\pipeline_api.py"
-    ],
-    "functions": [
-      {
-        "name": ".child_addr",
+        "name": ".resolve",
         "file_index": 0,
         "location": "L74"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Parent Addr": {
-    "files": [
-      "apps\\server\\pipeline_api.py"
-    ],
-    "functions": [
-      {
-        "name": ".parent_addr",
-        "file_index": 0,
-        "location": "L77"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "File Store": {
-    "files": [
-      "apps\\server\\pipeline_api.py",
-      "core\\storage\\file_store.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "FileStore",
-        "file_index": 0,
-        "location": "L89"
-      },
-      {
-        "name": "FileStore",
-        "file_index": 1,
-        "location": "L50"
-      }
-    ],
-    "depends_on": []
-  },
-  "Node Path": {
-    "files": [
-      "apps\\server\\pipeline_api.py"
-    ],
-    "functions": [
-      {
-        "name": ".node_path",
-        "file_index": 0,
-        "location": "L100"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Write": {
-    "files": [
-      "apps\\server\\pipeline_api.py",
-      "core\\storage\\file_store.py",
-      "core\\storage\\metadata_store.py",
-      "core\\storage\\unified_file_store.py"
-    ],
-    "functions": [
-      {
-        "name": ".write",
-        "file_index": 0,
-        "location": "L114"
-      },
-      {
-        "name": ".write",
-        "file_index": 1,
-        "location": "L70"
-      },
-      {
-        "name": ".write",
-        "file_index": 2,
-        "location": "L42"
-      },
-      {
-        "name": ".write",
-        "file_index": 3,
-        "location": "L98"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Exists": {
-    "files": [
-      "apps\\server\\pipeline_api.py",
-      "core\\storage\\file_store.py",
-      "core\\storage\\metadata_store.py",
-      "core\\storage\\unified_file_store.py"
-    ],
-    "functions": [
-      {
-        "name": ".exists",
-        "file_index": 0,
-        "location": "L117"
-      },
-      {
-        "name": ".exists",
-        "file_index": 1,
-        "location": "L73"
-      },
-      {
-        "name": ".exists",
-        "file_index": 2,
-        "location": "L87"
-      },
-      {
-        "name": ".exists",
-        "file_index": 3,
-        "location": "L116"
       }
     ],
     "classes": [],
@@ -379,1969 +237,45 @@
   },
   "Delete": {
     "files": [
-      "apps\\server\\pipeline_api.py",
-      "core\\storage\\file_store.py",
-      "core\\storage\\metadata_store.py",
-      "core\\storage\\unified_file_store.py"
+      "apps\\server\\src\\repositories\\foreshadow-repository.ts",
+      "apps\\server\\src\\repositories\\snapshot-repository.ts"
     ],
     "functions": [
       {
         "name": ".delete",
         "file_index": 0,
-        "location": "L120"
-      },
-      {
-        "name": ".delete",
-        "file_index": 1,
-        "location": "L76"
-      },
-      {
-        "name": ".delete",
-        "file_index": 2,
         "location": "L78"
       },
       {
         "name": ".delete",
-        "file_index": 3,
-        "location": "L120"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "List Children": {
-    "files": [
-      "apps\\server\\pipeline_api.py",
-      "core\\storage\\file_store.py",
-      "core\\storage\\unified_file_store.py"
-    ],
-    "functions": [
-      {
-        "name": ".list_children",
-        "file_index": 0,
+        "file_index": 1,
         "location": "L139"
-      },
-      {
-        "name": ".list_children",
-        "file_index": 1,
-        "location": "L118"
-      },
-      {
-        "name": ".list_children",
-        "file_index": 2,
-        "location": "L180"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "List Layer": {
-    "files": [
-      "apps\\server\\pipeline_api.py",
-      "core\\storage\\file_store.py",
-      "core\\storage\\unified_file_store.py"
-    ],
-    "functions": [
-      {
-        "name": ".list_layer",
-        "file_index": 0,
-        "location": "L159"
-      },
-      {
-        "name": ".list_layer",
-        "file_index": 1,
-        "location": "L100"
-      },
-      {
-        "name": ".list_layer",
-        "file_index": 2,
-        "location": "L155"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Next Coord": {
-    "files": [
-      "apps\\server\\pipeline_api.py",
-      "core\\storage\\file_store.py",
-      "core\\storage\\unified_file_store.py"
-    ],
-    "functions": [
-      {
-        "name": ".next_coord",
-        "file_index": 0,
-        "location": "L181"
-      },
-      {
-        "name": ".next_coord",
-        "file_index": 1,
-        "location": "L126"
-      },
-      {
-        "name": ".next_coord",
-        "file_index": 2,
-        "location": "L188"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Next Root Coord": {
-    "files": [
-      "apps\\server\\pipeline_api.py"
-    ],
-    "functions": [
-      {
-        "name": ".next_root_coord",
-        "file_index": 0,
-        "location": "L188"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Rag Index Path": {
-    "files": [
-      "apps\\server\\pipeline_api.py"
-    ],
-    "functions": [
-      {
-        "name": "rag_index_path",
-        "file_index": 0,
-        "location": "L196"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "On Created": {
-    "files": [
-      "apps\\server\\pipeline_api.py"
-    ],
-    "functions": [
-      {
-        "name": ".on_created",
-        "file_index": 0,
-        "location": "L219"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "On Modified": {
-    "files": [
-      "apps\\server\\pipeline_api.py"
-    ],
-    "functions": [
-      {
-        "name": ".on_modified",
-        "file_index": 0,
-        "location": "L226"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "On Deleted": {
-    "files": [
-      "apps\\server\\pipeline_api.py"
-    ],
-    "functions": [
-      {
-        "name": ".on_deleted",
-        "file_index": 0,
-        "location": "L233"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "On Moved": {
-    "files": [
-      "apps\\server\\pipeline_api.py"
-    ],
-    "functions": [
-      {
-        "name": ".on_moved",
-        "file_index": 0,
-        "location": "L240"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "File Watcher": {
-    "files": [
-      "apps\\server\\pipeline_api.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "FileWatcher",
-        "file_index": 0,
-        "location": "L251"
-      }
-    ],
-    "depends_on": []
-  },
-  "Start": {
-    "files": [
-      "apps\\server\\pipeline_api.py"
-    ],
-    "functions": [
-      {
-        "name": ".start",
-        "file_index": 0,
-        "location": "L260"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Stop": {
-    "files": [
-      "apps\\server\\pipeline_api.py"
-    ],
-    "functions": [
-      {
-        "name": ".stop",
-        "file_index": 0,
-        "location": "L266"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Subscribe": {
-    "files": [
-      "apps\\server\\pipeline_api.py"
-    ],
-    "functions": [
-      {
-        "name": ".subscribe",
-        "file_index": 0,
-        "location": "L271"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Unsubscribe": {
-    "files": [
-      "apps\\server\\pipeline_api.py"
-    ],
-    "functions": [
-      {
-        "name": ".unsubscribe",
-        "file_index": 0,
-        "location": "L277"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Pipeline A P I": {
-    "files": [
-      "apps\\server\\pipeline_api.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "PipelineAPI",
-        "file_index": 0,
-        "location": "L309"
-      }
-    ],
-    "depends_on": []
-  },
-  "Handle": {
-    "files": [
-      "apps\\server\\pipeline_api.py"
-    ],
-    "functions": [
-      {
-        "name": ".handle",
-        "file_index": 0,
-        "location": "L321"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "List Nodes": {
-    "files": [
-      "apps\\server\\pipeline_api.py"
-    ],
-    "functions": [
-      {
-        "name": ".list_nodes",
-        "file_index": 0,
-        "location": "L383"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Read Node": {
-    "files": [
-      "apps\\server\\pipeline_api.py"
-    ],
-    "functions": [
-      {
-        "name": ".read_node",
-        "file_index": 0,
-        "location": "L409"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Write Node": {
-    "files": [
-      "apps\\server\\pipeline_api.py"
-    ],
-    "functions": [
-      {
-        "name": ".write_node",
-        "file_index": 0,
-        "location": "L430"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Delete Node": {
-    "files": [
-      "apps\\server\\pipeline_api.py"
-    ],
-    "functions": [
-      {
-        "name": ".delete_node",
-        "file_index": 0,
-        "location": "L440"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Expand Node": {
-    "files": [
-      "apps\\server\\pipeline_api.py"
-    ],
-    "functions": [
-      {
-        "name": ".expand_node",
-        "file_index": 0,
-        "location": "L452"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Chat": {
-    "files": [
-      "apps\\server\\pipeline_api.py"
-    ],
-    "functions": [
-      {
-        "name": ".chat",
-        "file_index": 0,
-        "location": "L497"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Rebuild Rag": {
-    "files": [
-      "apps\\server\\pipeline_api.py"
-    ],
-    "functions": [
-      {
-        "name": ".rebuild_rag",
-        "file_index": 0,
-        "location": "L534"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Search Rag": {
-    "files": [
-      "apps\\server\\pipeline_api.py"
-    ],
-    "functions": [
-      {
-        "name": ".search_rag",
-        "file_index": 0,
-        "location": "L547"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Sse Events": {
-    "files": [
-      "apps\\server\\pipeline_api.py"
-    ],
-    "functions": [
-      {
-        "name": ".sse_events",
-        "file_index": 0,
-        "location": "L571"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Dialogue Intent": {
-    "files": [
-      "core\\ai\\dialogue.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "DialogueIntent",
-        "file_index": 0,
-        "location": "L20"
-      }
-    ],
-    "depends_on": []
-  },
-  "Dialogue State": {
-    "files": [
-      "core\\ai\\dialogue.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "DialogueState",
-        "file_index": 0,
-        "location": "L55"
-      }
-    ],
-    "depends_on": []
-  },
-  "Dialogue State Machine": {
-    "files": [
-      "core\\ai\\dialogue.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "DialogueStateMachine",
-        "file_index": 0,
-        "location": "L75"
-      }
-    ],
-    "depends_on": []
-  },
-  "State": {
-    "files": [
-      "core\\ai\\dialogue.py"
-    ],
-    "functions": [
-      {
-        "name": ".get_state",
-        "file_index": 0,
-        "location": "L86"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Transition": {
-    "files": [
-      "core\\ai\\dialogue.py"
-    ],
-    "functions": [
-      {
-        "name": ".transition",
-        "file_index": 0,
-        "location": "L90"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Reset": {
-    "files": [
-      "core\\ai\\dialogue.py"
-    ],
-    "functions": [
-      {
-        "name": ".reset",
-        "file_index": 0,
-        "location": "L119"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Idle": {
-    "files": [
-      "core\\ai\\dialogue.py"
-    ],
-    "functions": [
-      {
-        "name": ".is_idle",
-        "file_index": 0,
-        "location": "L124"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Dialogue Request": {
-    "files": [
-      "core\\ai\\dialogue.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "DialogueRequest",
-        "file_index": 0,
-        "location": "L130"
-      }
-    ],
-    "depends_on": []
-  },
-  "Dialogue Response": {
-    "files": [
-      "core\\ai\\dialogue.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "DialogueResponse",
-        "file_index": 0,
-        "location": "L141"
-      }
-    ],
-    "depends_on": []
-  },
-  "Intent Classification": {
-    "files": [
-      "core\\ai\\dialogue.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "IntentClassification",
-        "file_index": 0,
-        "location": "L152"
-      }
-    ],
-    "depends_on": []
-  },
-  "Dialogue Processor": {
-    "files": [
-      "core\\ai\\dialogue.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "DialogueProcessor",
-        "file_index": 0,
-        "location": "L161"
-      }
-    ],
-    "depends_on": []
-  },
-  "Process Turn": {
-    "files": [
-      "core\\ai\\dialogue.py"
-    ],
-    "functions": [
-      {
-        "name": ".process_turn",
-        "file_index": 0,
-        "location": "L175"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Extract Entities": {
-    "files": [
-      "core\\ai\\dialogue.py"
-    ],
-    "functions": [
-      {
-        "name": ".extract_entities",
-        "file_index": 0,
-        "location": "L624"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Context Scope": {
-    "files": [
-      "core\\ai\\dialogue_context.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "ContextScope",
-        "file_index": 0,
-        "location": "L21"
-      }
-    ],
-    "depends_on": []
-  },
-  "Dialogue Turn Record": {
-    "files": [
-      "core\\ai\\dialogue_context.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "DialogueTurnRecord",
-        "file_index": 0,
-        "location": "L30"
-      }
-    ],
-    "depends_on": []
-  },
-  "Intent Enum": {
-    "files": [
-      "core\\ai\\dialogue_context.py"
-    ],
-    "functions": [
-      {
-        "name": "intent_enum",
-        "file_index": 0,
-        "location": "L47"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Dialogue Context": {
-    "files": [
-      "core\\ai\\dialogue_context.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "DialogueContext",
-        "file_index": 0,
-        "location": "L53"
-      }
-    ],
-    "depends_on": []
-  },
-  "Turn Count": {
-    "files": [
-      "core\\ai\\dialogue_context.py"
-    ],
-    "functions": [
-      {
-        "name": "turn_count",
-        "file_index": 0,
-        "location": "L69"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Empty": {
-    "files": [
-      "core\\ai\\dialogue_context.py"
-    ],
-    "functions": [
-      {
-        "name": "is_empty",
-        "file_index": 0,
-        "location": "L73"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Recent Turns": {
-    "files": [
-      "core\\ai\\dialogue_context.py"
-    ],
-    "functions": [
-      {
-        "name": ".recent_turns",
-        "file_index": 0,
-        "location": "L76"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Active Object Ids": {
-    "files": [
-      "core\\ai\\dialogue_context.py"
-    ],
-    "functions": [
-      {
-        "name": "active_object_ids",
-        "file_index": 0,
-        "location": "L81"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Context Update": {
-    "files": [
-      "core\\ai\\dialogue_context.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "ContextUpdate",
-        "file_index": 0,
-        "location": "L87"
-      }
-    ],
-    "depends_on": []
-  },
-  "Dialogue Context Manager": {
-    "files": [
-      "core\\ai\\dialogue_context.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "DialogueContextManager",
-        "file_index": 0,
-        "location": "L96"
-      }
-    ],
-    "depends_on": []
-  },
-  "Context": {
-    "files": [
-      "core\\ai\\dialogue_context.py"
-    ],
-    "functions": [
-      {
-        "name": ".create_context",
-        "file_index": 0,
-        "location": "L114"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Load Context": {
-    "files": [
-      "core\\ai\\dialogue_context.py"
-    ],
-    "functions": [
-      {
-        "name": ".load_context",
-        "file_index": 0,
-        "location": "L154"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Add Turn": {
-    "files": [
-      "core\\ai\\dialogue_context.py"
-    ],
-    "functions": [
-      {
-        "name": ".add_turn",
-        "file_index": 0,
-        "location": "L215"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Build Context Prompt": {
-    "files": [
-      "core\\ai\\dialogue_context.py"
-    ],
-    "functions": [
-      {
-        "name": ".build_context_prompt",
-        "file_index": 0,
-        "location": "L280"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Build Partial Revision Prompt": {
-    "files": [
-      "core\\ai\\prompts.py"
-    ],
-    "functions": [
-      {
-        "name": "build_partial_revision_prompt",
-        "file_index": 0,
-        "location": "L6"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "A I Provider Config": {
-    "files": [
-      "core\\ai\\provider.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "AIProviderConfig",
-        "file_index": 0,
-        "location": "L11"
-      }
-    ],
-    "depends_on": []
-  },
-  "Validate": {
-    "files": [
-      "core\\ai\\provider.py"
-    ],
-    "functions": [
-      {
-        "name": ".validate",
-        "file_index": 0,
-        "location": "L23"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "For Storage": {
-    "files": [
-      "core\\ai\\provider.py"
-    ],
-    "functions": [
-      {
-        "name": ".for_storage",
-        "file_index": 0,
-        "location": "L38"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "From Storage": {
-    "files": [
-      "core\\ai\\provider.py"
-    ],
-    "functions": [
-      {
-        "name": "from_storage",
-        "file_index": 0,
-        "location": "L52"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "A I Provider Result": {
-    "files": [
-      "core\\ai\\provider.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "AIProviderTestResult",
-        "file_index": 0,
-        "location": "L67"
-      }
-    ],
-    "depends_on": []
-  },
-  "Provider Validation Error": {
-    "files": [
-      "core\\ai\\provider.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "ProviderValidationError",
-        "file_index": 0,
-        "location": "L77"
-      }
-    ],
-    "depends_on": []
-  },
-  "A I Provider Client": {
-    "files": [
-      "core\\ai\\provider.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "AIProviderClient",
-        "file_index": 0,
-        "location": "L81"
-      }
-    ],
-    "depends_on": []
-  },
-  "Config": {
-    "files": [
-      "core\\ai\\provider.py"
-    ],
-    "functions": [
-      {
-        "name": "config",
-        "file_index": 0,
-        "location": "L93"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Generate": {
-    "files": [
-      "core\\ai\\provider.py"
-    ],
-    "functions": [
-      {
-        "name": ".generate",
-        "file_index": 0,
-        "location": "L96"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Generate Structured": {
-    "files": [
-      "core\\ai\\provider.py"
-    ],
-    "functions": [
-      {
-        "name": ".generate_structured",
-        "file_index": 0,
-        "location": "L131"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Connection": {
-    "files": [
-      "core\\ai\\provider.py"
-    ],
-    "functions": [
-      {
-        "name": ".test_connection",
-        "file_index": 0,
-        "location": "L181"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "A I Provider Error": {
-    "files": [
-      "core\\ai\\provider.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "AIProviderError",
-        "file_index": 0,
-        "location": "L222"
-      }
-    ],
-    "depends_on": []
-  },
-  "Retrieval Source Record": {
-    "files": [
-      "core\\retrieval\\__init__.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "RetrievalSourceRecord",
-        "file_index": 0,
-        "location": "L29"
-      }
-    ],
-    "depends_on": []
-  },
-  "Retrieval Support Document": {
-    "files": [
-      "core\\retrieval\\__init__.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "RetrievalSupportDocument",
-        "file_index": 0,
-        "location": "L41"
-      }
-    ],
-    "depends_on": []
-  },
-  "Retrieval Build Report": {
-    "files": [
-      "core\\retrieval\\__init__.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "RetrievalBuildReport",
-        "file_index": 0,
-        "location": "L49"
-      }
-    ],
-    "depends_on": []
-  },
-  "Retrieval Indexed Document": {
-    "files": [
-      "core\\retrieval\\__init__.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "RetrievalIndexedDocument",
-        "file_index": 0,
-        "location": "L58"
-      }
-    ],
-    "depends_on": []
-  },
-  "Retrieval Ranked Document": {
-    "files": [
-      "core\\retrieval\\__init__.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "RetrievalRankedDocument",
-        "file_index": 0,
-        "location": "L69"
-      }
-    ],
-    "depends_on": []
-  },
-  "Build Support Documents": {
-    "files": [
-      "core\\retrieval\\__init__.py"
-    ],
-    "functions": [
-      {
-        "name": "build_support_documents",
-        "file_index": 0,
-        "location": "L79"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Build Indexed Documents": {
-    "files": [
-      "core\\retrieval\\__init__.py"
-    ],
-    "functions": [
-      {
-        "name": "build_indexed_documents",
-        "file_index": 0,
-        "location": "L135"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Rank Support Documents": {
-    "files": [
-      "core\\retrieval\\__init__.py"
-    ],
-    "functions": [
-      {
-        "name": "rank_support_documents",
-        "file_index": 0,
-        "location": "L164"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Scope Consistency Stamp": {
-    "files": [
-      "core\\retrieval\\__init__.py"
-    ],
-    "functions": [
-      {
-        "name": "scope_consistency_stamp",
-        "file_index": 0,
-        "location": "L206"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Source Consistency Stamp": {
-    "files": [
-      "core\\retrieval\\__init__.py"
-    ],
-    "functions": [
-      {
-        "name": "source_consistency_stamp",
-        "file_index": 0,
-        "location": "L214"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Summarize Payload": {
-    "files": [
-      "core\\retrieval\\__init__.py"
-    ],
-    "functions": [
-      {
-        "name": "summarize_payload",
-        "file_index": 0,
-        "location": "L218"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Build Search Text": {
-    "files": [
-      "core\\retrieval\\__init__.py"
-    ],
-    "functions": [
-      {
-        "name": "build_search_text",
-        "file_index": 0,
-        "location": "L226"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Superwriter Application Service": {
-    "files": [
-      "core\\runtime\\application_services.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "SuperwriterApplicationService",
-        "file_index": 0,
-        "location": "L170"
-      }
-    ],
-    "depends_on": []
-  },
-  "For Sqlite": {
-    "files": [
-      "core\\runtime\\application_services.py"
-    ],
-    "functions": [
-      {
-        "name": "for_sqlite",
-        "file_index": 0,
-        "location": "L251"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Read Object": {
-    "files": [
-      "core\\runtime\\application_services.py"
-    ],
-    "functions": [
-      {
-        "name": ".read_object",
-        "file_index": 0,
-        "location": "L266"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Workspace Snapshot": {
-    "files": [
-      "core\\runtime\\application_services.py"
-    ],
-    "functions": [
-      {
-        "name": ".get_workspace_snapshot",
-        "file_index": 0,
-        "location": "L308"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "List Workspace Contexts": {
-    "files": [
-      "core\\runtime\\application_services.py"
-    ],
-    "functions": [
-      {
-        "name": ".list_workspace_contexts",
-        "file_index": 0,
-        "location": "L337"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Workspace": {
-    "files": [
-      "core\\runtime\\application_services.py"
-    ],
-    "functions": [
-      {
-        "name": ".create_workspace",
-        "file_index": 0,
-        "location": "L382"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Import Outline": {
-    "files": [
-      "core\\runtime\\application_services.py"
-    ],
-    "functions": [
-      {
-        "name": ".import_outline",
-        "file_index": 0,
-        "location": "L424"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "List Provider Configs": {
-    "files": [
-      "core\\runtime\\application_services.py",
-      "core\\runtime\\services\\ai_config_service.py",
-      "core\\storage\\_providers.py"
-    ],
-    "functions": [
-      {
-        "name": ".list_provider_configs",
-        "file_index": 0,
-        "location": "L456"
-      },
-      {
-        "name": ".list_provider_configs",
-        "file_index": 1,
-        "location": "L22"
-      },
-      {
-        "name": ".list_provider_configs",
-        "file_index": 2,
-        "location": "L92"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Save Provider Config": {
-    "files": [
-      "core\\runtime\\application_services.py",
-      "core\\runtime\\services\\ai_config_service.py",
-      "core\\storage\\_providers.py"
-    ],
-    "functions": [
-      {
-        "name": ".save_provider_config",
-        "file_index": 0,
-        "location": "L460"
-      },
-      {
-        "name": ".save_provider_config",
-        "file_index": 1,
-        "location": "L27"
-      },
-      {
-        "name": ".save_provider_config",
-        "file_index": 2,
-        "location": "L14"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Active Provider": {
-    "files": [
-      "core\\runtime\\application_services.py",
-      "core\\runtime\\services\\ai_config_service.py",
-      "core\\storage\\_providers.py"
-    ],
-    "functions": [
-      {
-        "name": ".set_active_provider",
-        "file_index": 0,
-        "location": "L484"
-      },
-      {
-        "name": ".set_active_provider",
-        "file_index": 1,
-        "location": "L52"
-      },
-      {
-        "name": ".set_active_provider",
-        "file_index": 2,
-        "location": "L160"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Delete Provider Config": {
-    "files": [
-      "core\\runtime\\application_services.py",
-      "core\\runtime\\services\\ai_config_service.py",
-      "core\\storage\\_providers.py"
-    ],
-    "functions": [
-      {
-        "name": ".delete_provider_config",
-        "file_index": 0,
-        "location": "L488"
-      },
-      {
-        "name": ".delete_provider_config",
-        "file_index": 1,
-        "location": "L56"
-      },
-      {
-        "name": ".delete_provider_config",
-        "file_index": 2,
-        "location": "L150"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Provider Config": {
-    "files": [
-      "core\\runtime\\application_services.py",
-      "core\\runtime\\services\\ai_config_service.py",
-      "core\\storage\\_providers.py"
-    ],
-    "functions": [
-      {
-        "name": ".test_provider_config",
-        "file_index": 0,
-        "location": "L492"
-      },
-      {
-        "name": ".test_provider_config",
-        "file_index": 1,
-        "location": "L60"
-      },
-      {
-        "name": ".get_provider_config",
-        "file_index": 2,
-        "location": "L63"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Diagnose Project": {
-    "files": [
-      "core\\runtime\\application_services.py",
-      "core\\runtime\\services\\diagnosis_service.py"
-    ],
-    "functions": [
-      {
-        "name": ".diagnose_project",
-        "file_index": 0,
-        "location": "L496"
-      },
-      {
-        "name": ".diagnose_project",
-        "file_index": 1,
-        "location": "L22"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "List Derived Artifacts": {
-    "files": [
-      "core\\runtime\\application_services.py"
-    ],
-    "functions": [
-      {
-        "name": ".list_derived_artifacts",
-        "file_index": 0,
-        "location": "L504"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Delete Workspace Object": {
-    "files": [
-      "core\\runtime\\application_services.py"
-    ],
-    "functions": [
-      {
-        "name": ".delete_workspace_object",
-        "file_index": 0,
-        "location": "L517"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Retrieval Status": {
-    "files": [
-      "core\\runtime\\application_services.py",
-      "core\\runtime\\services\\retrieval_service.py"
-    ],
-    "functions": [
-      {
-        "name": ".get_retrieval_status",
-        "file_index": 0,
-        "location": "L523"
-      },
-      {
-        "name": ".get_retrieval_status",
-        "file_index": 1,
-        "location": "L40"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Rebuild Retrieval Support": {
-    "files": [
-      "core\\runtime\\application_services.py",
-      "core\\runtime\\services\\retrieval_service.py"
-    ],
-    "functions": [
-      {
-        "name": ".rebuild_retrieval_support",
-        "file_index": 0,
-        "location": "L534"
-      },
-      {
-        "name": ".rebuild_retrieval_support",
-        "file_index": 1,
-        "location": "L73"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Search Retrieval Support": {
-    "files": [
-      "core\\runtime\\application_services.py",
-      "core\\runtime\\services\\retrieval_service.py"
-    ],
-    "functions": [
-      {
-        "name": ".search_retrieval_support",
-        "file_index": 0,
-        "location": "L544"
-      },
-      {
-        "name": ".search_retrieval_support",
-        "file_index": 1,
-        "location": "L156"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Apply Mutation": {
-    "files": [
-      "core\\runtime\\application_services.py"
-    ],
-    "functions": [
-      {
-        "name": ".apply_mutation",
-        "file_index": 0,
-        "location": "L554"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Skill Workshop": {
-    "files": [
-      "core\\runtime\\application_services.py",
-      "core\\runtime\\services\\skill_service.py"
-    ],
-    "functions": [
-      {
-        "name": ".get_skill_workshop",
-        "file_index": 0,
-        "location": "L560"
-      },
-      {
-        "name": ".get_skill_workshop",
-        "file_index": 1,
-        "location": "L48"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Upsert Skill Workshop Skill": {
-    "files": [
-      "core\\runtime\\application_services.py",
-      "core\\runtime\\services\\skill_service.py"
-    ],
-    "functions": [
-      {
-        "name": ".upsert_skill_workshop_skill",
-        "file_index": 0,
-        "location": "L567"
-      },
-      {
-        "name": ".upsert_skill_workshop_skill",
-        "file_index": 1,
-        "location": "L102"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Import Skill Workshop Skill": {
-    "files": [
-      "core\\runtime\\application_services.py",
-      "core\\runtime\\services\\skill_service.py"
-    ],
-    "functions": [
-      {
-        "name": ".import_skill_workshop_skill",
-        "file_index": 0,
-        "location": "L574"
-      },
-      {
-        "name": ".import_skill_workshop_skill",
-        "file_index": 1,
-        "location": "L164"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Rollback Skill Workshop Skill": {
-    "files": [
-      "core\\runtime\\application_services.py",
-      "core\\runtime\\services\\skill_service.py"
-    ],
-    "functions": [
-      {
-        "name": ".rollback_skill_workshop_skill",
-        "file_index": 0,
-        "location": "L580"
-      },
-      {
-        "name": ".rollback_skill_workshop_skill",
-        "file_index": 1,
-        "location": "L201"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Compare Skill Versions": {
-    "files": [
-      "core\\runtime\\application_services.py",
-      "core\\runtime\\services\\skill_service.py"
-    ],
-    "functions": [
-      {
-        "name": ".compare_skill_versions",
-        "file_index": 0,
-        "location": "L587"
-      },
-      {
-        "name": ".compare_skill_versions",
-        "file_index": 1,
-        "location": "L239"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Open Chat Session": {
-    "files": [
-      "core\\runtime\\application_services.py",
-      "core\\runtime\\services\\chat_service.py"
-    ],
-    "functions": [
-      {
-        "name": ".open_chat_session",
-        "file_index": 0,
-        "location": "L590"
-      },
-      {
-        "name": ".open_chat_session",
-        "file_index": 1,
-        "location": "L111"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Chat Session": {
-    "files": [
-      "core\\runtime\\application_services.py",
-      "core\\runtime\\services\\chat_service.py",
-      "core\\storage\\_chat.py"
-    ],
-    "functions": [
-      {
-        "name": ".get_chat_session",
-        "file_index": 0,
-        "location": "L593"
-      },
-      {
-        "name": ".get_chat_session",
-        "file_index": 1,
-        "location": "L132"
-      },
-      {
-        "name": ".create_chat_session",
-        "file_index": 2,
-        "location": "L18"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Process Chat Turn": {
-    "files": [
-      "core\\runtime\\application_services.py",
-      "core\\runtime\\services\\chat_service.py"
-    ],
-    "functions": [
-      {
-        "name": ".process_chat_turn",
-        "file_index": 0,
-        "location": "L596"
-      },
-      {
-        "name": ".process_chat_turn",
-        "file_index": 1,
-        "location": "L159"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Export Artifact": {
-    "files": [
-      "core\\runtime\\application_services.py",
-      "core\\runtime\\services\\import_export_service.py"
-    ],
-    "functions": [
-      {
-        "name": ".create_export_artifact",
-        "file_index": 0,
-        "location": "L620"
-      },
-      {
-        "name": ".create_export_artifact",
-        "file_index": 1,
-        "location": "L302"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Publish Export": {
-    "files": [
-      "core\\runtime\\application_services.py",
-      "core\\runtime\\services\\import_export_service.py"
-    ],
-    "functions": [
-      {
-        "name": ".publish_export",
-        "file_index": 0,
-        "location": "L624"
-      },
-      {
-        "name": ".publish_export",
-        "file_index": 1,
-        "location": "L335"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Publish Export Artifact": {
-    "files": [
-      "core\\runtime\\application_services.py",
-      "core\\runtime\\services\\import_export_service.py"
-    ],
-    "functions": [
-      {
-        "name": ".publish_export_artifact",
-        "file_index": 0,
-        "location": "L630"
-      },
-      {
-        "name": ".publish_export_artifact",
-        "file_index": 1,
-        "location": "L444"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Generate Scene To Chapter Workbench": {
-    "files": [
-      "core\\runtime\\application_services.py",
-      "core\\runtime\\services\\workbench_service.py"
-    ],
-    "functions": [
-      {
-        "name": ".generate_scene_to_chapter_workbench",
-        "file_index": 0,
-        "location": "L633"
-      },
-      {
-        "name": ".generate_scene_to_chapter_workbench",
-        "file_index": 1,
-        "location": "L87"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Generate Outline To Plot Workbench": {
-    "files": [
-      "core\\runtime\\application_services.py",
-      "core\\runtime\\services\\workbench_service.py"
-    ],
-    "functions": [
-      {
-        "name": ".generate_outline_to_plot_workbench",
-        "file_index": 0,
-        "location": "L774"
-      },
-      {
-        "name": ".generate_outline_to_plot_workbench",
-        "file_index": 1,
-        "location": "L61"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Generate Plot To Event Workbench": {
-    "files": [
-      "core\\runtime\\application_services.py",
-      "core\\runtime\\services\\workbench_service.py"
-    ],
-    "functions": [
-      {
-        "name": ".generate_plot_to_event_workbench",
-        "file_index": 0,
-        "location": "L998"
-      },
-      {
-        "name": ".generate_plot_to_event_workbench",
-        "file_index": 1,
-        "location": "L71"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Generate Event To Scene Workbench": {
-    "files": [
-      "core\\runtime\\application_services.py",
-      "core\\runtime\\services\\workbench_service.py"
-    ],
-    "functions": [
-      {
-        "name": ".generate_event_to_scene_workbench",
-        "file_index": 0,
-        "location": "L1222"
-      },
-      {
-        "name": ".generate_event_to_scene_workbench",
-        "file_index": 1,
-        "location": "L79"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Import From Donor": {
-    "files": [
-      "core\\runtime\\application_services.py",
-      "core\\runtime\\services\\import_export_service.py"
-    ],
-    "functions": [
-      {
-        "name": ".import_from_donor",
-        "file_index": 0,
-        "location": "L1458"
-      },
-      {
-        "name": ".import_from_donor",
-        "file_index": 1,
-        "location": "L56"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Execute Skill": {
-    "files": [
-      "core\\runtime\\application_services.py",
-      "core\\runtime\\services\\skill_service.py"
-    ],
-    "functions": [
-      {
-        "name": ".execute_skill",
-        "file_index": 0,
-        "location": "L1461"
-      },
-      {
-        "name": ".execute_skill",
-        "file_index": 1,
-        "location": "L258"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Start Workbench Iteration": {
-    "files": [
-      "core\\runtime\\application_services.py",
-      "core\\runtime\\services\\iteration_service.py"
-    ],
-    "functions": [
-      {
-        "name": ".start_workbench_iteration",
-        "file_index": 0,
-        "location": "L1622"
-      },
-      {
-        "name": ".start_workbench_iteration",
-        "file_index": 1,
-        "location": "L32"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Submit Workbench Feedback": {
-    "files": [
-      "core\\runtime\\application_services.py",
-      "core\\runtime\\services\\iteration_service.py"
-    ],
-    "functions": [
-      {
-        "name": ".submit_workbench_feedback",
-        "file_index": 0,
-        "location": "L1642"
-      },
-      {
-        "name": ".submit_workbench_feedback",
-        "file_index": 1,
-        "location": "L92"
       }
     ],
     "classes": [],
     "depends_on": []
   },
-  "Select Workbench Candidate": {
+  "By Chapter": {
     "files": [
-      "core\\runtime\\application_services.py",
-      "core\\runtime\\services\\iteration_service.py"
+      "apps\\server\\src\\repositories\\foreshadow-repository.ts"
     ],
     "functions": [
       {
-        "name": ".select_workbench_candidate",
+        "name": ".getByChapter",
         "file_index": 0,
-        "location": "L1661"
-      },
-      {
-        "name": ".select_workbench_candidate",
-        "file_index": 1,
-        "location": "L159"
+        "location": "L85"
       }
     ],
     "classes": [],
-    "depends_on": []
-  },
-  "Chapter Mutation Signals": {
-    "files": [
-      "core\\runtime\\mutation_policy.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "ChapterMutationSignals",
-        "file_index": 0,
-        "location": "L12"
-      }
-    ],
-    "depends_on": []
-  },
-  "Mutation Request": {
-    "files": [
-      "core\\runtime\\mutation_policy.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "MutationRequest",
-        "file_index": 0,
-        "location": "L18"
-      }
-    ],
-    "depends_on": []
-  },
-  "Mutation Policy Engine": {
-    "files": [
-      "core\\runtime\\mutation_policy.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "MutationPolicyEngine",
-        "file_index": 0,
-        "location": "L36"
-      }
-    ],
-    "depends_on": []
-  },
-  "A I Config Service": {
-    "files": [
-      "core\\runtime\\services\\ai_config_service.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "AIConfigService",
-        "file_index": 0,
-        "location": "L11"
-      }
-    ],
     "depends_on": []
   },
-  "Active Ai Provider": {
+  "Pending": {
     "files": [
-      "core\\runtime\\services\\ai_config_service.py"
+      "apps\\server\\src\\repositories\\foreshadow-repository.ts"
     ],
     "functions": [
       {
-        "name": ".get_active_ai_provider",
+        "name": ".getPending",
         "file_index": 0,
         "location": "L89"
       }
@@ -2349,173 +283,13 @@
     "classes": [],
     "depends_on": []
   },
-  "Chat Service": {
+  "Manifest Path": {
     "files": [
-      "core\\runtime\\services\\chat_service.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "ChatService",
-        "file_index": 0,
-        "location": "L47"
-      }
-    ],
-    "depends_on": []
-  },
-  "Callbacks": {
-    "files": [
-      "core\\runtime\\services\\chat_service.py"
+      "apps\\server\\src\\repositories\\manifest-repository.ts"
     ],
     "functions": [
       {
-        "name": ".set_callbacks",
-        "file_index": 0,
-        "location": "L76"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Classify Chat Intent": {
-    "files": [
-      "core\\runtime\\services\\chat_service.py"
-    ],
-    "functions": [
-      {
-        "name": ".classify_chat_intent",
-        "file_index": 0,
-        "location": "L301"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Apply Chat Edit": {
-    "files": [
-      "core\\runtime\\services\\chat_service.py"
-    ],
-    "functions": [
-      {
-        "name": ".apply_chat_edit",
-        "file_index": 0,
-        "location": "L322"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Generate Downstream Content From Chat": {
-    "files": [
-      "core\\runtime\\services\\chat_service.py"
-    ],
-    "functions": [
-      {
-        "name": ".generate_downstream_content_from_chat",
-        "file_index": 0,
-        "location": "L398"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Diagnosis Service": {
-    "files": [
-      "core\\runtime\\services\\diagnosis_service.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "DiagnosisService",
-        "file_index": 0,
-        "location": "L15"
-      }
-    ],
-    "depends_on": []
-  },
-  "Helper Utils": {
-    "files": [
-      "core\\runtime\\services\\helper_utils.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "HelperUtils",
-        "file_index": 0,
-        "location": "L19"
-      }
-    ],
-    "depends_on": []
-  },
-  "Payload Text Value": {
-    "files": [
-      "core\\runtime\\services\\helper_utils.py"
-    ],
-    "functions": [
-      {
-        "name": ".payload_text_value",
-        "file_index": 0,
-        "location": "L25"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Payload Int Value": {
-    "files": [
-      "core\\runtime\\services\\helper_utils.py"
-    ],
-    "functions": [
-      {
-        "name": ".payload_int_value",
-        "file_index": 0,
-        "location": "L32"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Prose Payload Text": {
-    "files": [
-      "core\\runtime\\services\\helper_utils.py",
-      "core\\runtime\\services\\review_helpers.py"
-    ],
-    "functions": [
-      {
-        "name": ".prose_payload_text",
-        "file_index": 0,
-        "location": "L43"
-      },
-      {
-        "name": "prose_payload_text",
-        "file_index": 1,
-        "location": "L95"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Workspace Summary Text": {
-    "files": [
-      "core\\runtime\\services\\helper_utils.py"
-    ],
-    "functions": [
-      {
-        "name": ".workspace_summary_text",
-        "file_index": 0,
-        "location": "L51"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Latest Artifact For Object Id": {
-    "files": [
-      "core\\runtime\\services\\helper_utils.py"
-    ],
-    "functions": [
-      {
-        "name": ".latest_artifact_for_object_id",
+        "name": "getManifestPath",
         "file_index": 0,
         "location": "L59"
       }
@@ -2523,2531 +297,41 @@
     "classes": [],
     "depends_on": []
   },
-  "Latest Scene Chapter Artifact": {
+  "Superwriter Dir": {
     "files": [
-      "core\\runtime\\services\\helper_utils.py"
+      "apps\\server\\src\\repositories\\manifest-repository.ts"
     ],
     "functions": [
       {
-        "name": ".latest_scene_chapter_artifact",
+        "name": "getSuperwriterDir",
         "file_index": 0,
-        "location": "L74"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Derived Artifact By Revision": {
-    "files": [
-      "core\\runtime\\services\\helper_utils.py"
-    ],
-    "functions": [
-      {
-        "name": ".derived_artifact_by_revision",
-        "file_index": 0,
-        "location": "L90"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Latest Import Source": {
-    "files": [
-      "core\\runtime\\services\\helper_utils.py"
-    ],
-    "functions": [
-      {
-        "name": ".latest_import_source",
-        "file_index": 0,
-        "location": "L103"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Service Mutation Result": {
-    "files": [
-      "core\\runtime\\services\\helper_utils.py",
-      "core\\runtime\\types\\workspace_types.py"
-    ],
-    "functions": [
-      {
-        "name": ".service_mutation_result",
-        "file_index": 0,
-        "location": "L110"
-      }
-    ],
-    "classes": [
-      {
-        "name": "ServiceMutationResult",
-        "file_index": 1,
-        "location": "L148"
-      }
-    ],
-    "depends_on": []
-  },
-  "Import Export Service": {
-    "files": [
-      "core\\runtime\\services\\import_export_service.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "ImportExportService",
-        "file_index": 0,
-        "location": "L49"
-      }
-    ],
-    "depends_on": []
-  },
-  "Import Webnovel Project Root": {
-    "files": [
-      "core\\runtime\\services\\import_export_service.py"
-    ],
-    "functions": [
-      {
-        "name": ".import_webnovel_project_root",
-        "file_index": 0,
-        "location": "L68"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Import Character Export": {
-    "files": [
-      "core\\runtime\\services\\import_export_service.py"
-    ],
-    "functions": [
-      {
-        "name": ".import_character_export",
-        "file_index": 0,
-        "location": "L226"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Iteration Service": {
-    "files": [
-      "core\\runtime\\services\\iteration_service.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "IterationService",
-        "file_index": 0,
-        "location": "L15"
-      }
-    ],
-    "depends_on": []
-  },
-  "Generate Iteration Candidates": {
-    "files": [
-      "core\\runtime\\services\\iteration_service.py"
-    ],
-    "functions": [
-      {
-        "name": ".generate_iteration_candidates",
-        "file_index": 0,
-        "location": "L218"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Generate Revision Candidates": {
-    "files": [
-      "core\\runtime\\services\\iteration_service.py"
-    ],
-    "functions": [
-      {
-        "name": ".generate_revision_candidates",
-        "file_index": 0,
-        "location": "L259"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Legacy Workbench Service": {
-    "files": [
-      "core\\runtime\\services\\legacy_workbench_service.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "LegacyWorkbenchService",
-        "file_index": 0,
-        "location": "L24"
-      }
-    ],
-    "depends_on": []
-  },
-  "Payload Builder Service": {
-    "files": [
-      "core\\runtime\\services\\payload_builder_service.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "PayloadBuilderService",
-        "file_index": 0,
-        "location": "L21"
-      }
-    ],
-    "depends_on": []
-  },
-  "Build Scene To Chapter Payload": {
-    "files": [
-      "core\\runtime\\services\\payload_builder_service.py"
-    ],
-    "functions": [
-      {
-        "name": ".build_scene_to_chapter_payload",
-        "file_index": 0,
-        "location": "L38"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Build Publish Export Payload": {
-    "files": [
-      "core\\runtime\\services\\payload_builder_service.py"
-    ],
-    "functions": [
-      {
-        "name": ".build_publish_export_payload",
-        "file_index": 0,
-        "location": "L192"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Scene Chapter Title": {
-    "files": [
-      "core\\runtime\\services\\payload_builder_service.py"
-    ],
-    "functions": [
-      {
-        "name": "scene_chapter_title",
-        "file_index": 0,
-        "location": "L261"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Scene Body Seed": {
-    "files": [
-      "core\\runtime\\services\\payload_builder_service.py"
-    ],
-    "functions": [
-      {
-        "name": "scene_body_seed",
-        "file_index": 0,
-        "location": "L269"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Skill Matches Scene To Chapter Scope": {
-    "files": [
-      "core\\runtime\\services\\payload_builder_service.py"
-    ],
-    "functions": [
-      {
-        "name": "skill_matches_scene_to_chapter_scope",
-        "file_index": 0,
-        "location": "L284"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Retrieval Service": {
-    "files": [
-      "core\\runtime\\services\\retrieval_service.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "RetrievalService",
-        "file_index": 0,
-        "location": "L34"
-      }
-    ],
-    "depends_on": []
-  },
-  "Retrieval Scope": {
-    "files": [
-      "core\\runtime\\services\\retrieval_service.py"
-    ],
-    "functions": [
-      {
-        "name": ".retrieval_scope",
-        "file_index": 0,
-        "location": "L290"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Retrieval Sources": {
-    "files": [
-      "core\\runtime\\services\\retrieval_service.py"
-    ],
-    "functions": [
-      {
-        "name": ".retrieval_sources",
-        "file_index": 0,
-        "location": "L296"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Retrieval Document Markers": {
-    "files": [
-      "core\\runtime\\services\\retrieval_service.py"
-    ],
-    "functions": [
-      {
-        "name": ".retrieval_document_markers",
-        "file_index": 0,
-        "location": "L325"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Retrieval Status Snapshot": {
-    "files": [
-      "core\\runtime\\services\\retrieval_service.py",
-      "core\\runtime\\types\\retrieval_types.py"
-    ],
-    "functions": [
-      {
-        "name": ".retrieval_status_snapshot",
-        "file_index": 0,
-        "location": "L343"
-      }
-    ],
-    "classes": [
-      {
-        "name": "RetrievalStatusSnapshot",
-        "file_index": 1,
-        "location": "L12"
-      }
-    ],
-    "depends_on": []
-  },
-  "Review Helpers": {
-    "files": [
-      "core\\runtime\\services\\review_helpers.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "ReviewHelpers",
-        "file_index": 0,
-        "location": "L16"
-      }
-    ],
-    "depends_on": []
-  },
-  "Review Target Title": {
-    "files": [
-      "core\\runtime\\services\\review_helpers.py"
-    ],
-    "functions": [
-      {
-        "name": "review_target_title",
-        "file_index": 0,
-        "location": "L20"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Review State Detail": {
-    "files": [
-      "core\\runtime\\services\\review_helpers.py"
-    ],
-    "functions": [
-      {
-        "name": "review_state_detail",
-        "file_index": 0,
-        "location": "L34"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Decision Reason": {
-    "files": [
-      "core\\runtime\\services\\review_helpers.py"
-    ],
-    "functions": [
-      {
-        "name": "decision_reason",
-        "file_index": 0,
-        "location": "L53"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Drift Summary": {
-    "files": [
-      "core\\runtime\\services\\review_helpers.py"
-    ],
-    "functions": [
-      {
-        "name": "drift_summary",
-        "file_index": 0,
-        "location": "L62"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Render Prose Diff": {
-    "files": [
-      "core\\runtime\\services\\review_helpers.py"
-    ],
-    "functions": [
-      {
-        "name": "render_prose_diff",
-        "file_index": 0,
-        "location": "L75"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Skill Service": {
-    "files": [
-      "core\\runtime\\services\\skill_service.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "SkillService",
-        "file_index": 0,
-        "location": "L41"
-      }
-    ],
-    "depends_on": []
-  },
-  "Workbench Service": {
-    "files": [
-      "core\\runtime\\services\\workbench_service.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "WorkbenchService",
-        "file_index": 0,
-        "location": "L48"
-      }
-    ],
-    "depends_on": []
-  },
-  "Chat Message Snapshot": {
-    "files": [
-      "core\\runtime\\types\\chat_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "ChatMessageSnapshot",
-        "file_index": 0,
-        "location": "L17"
-      }
-    ],
-    "depends_on": []
-  },
-  "Chat Session Snapshot": {
-    "files": [
-      "core\\runtime\\types\\chat_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "ChatSessionSnapshot",
-        "file_index": 0,
-        "location": "L27"
-      }
-    ],
-    "depends_on": []
-  },
-  "Open Chat Session Request": {
-    "files": [
-      "core\\runtime\\types\\chat_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "OpenChatSessionRequest",
-        "file_index": 0,
-        "location": "L38"
-      }
-    ],
-    "depends_on": []
-  },
-  "Open Chat Session Result": {
-    "files": [
-      "core\\runtime\\types\\chat_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "OpenChatSessionResult",
-        "file_index": 0,
-        "location": "L48"
-      }
-    ],
-    "depends_on": []
-  },
-  "Chat Session Request": {
-    "files": [
-      "core\\runtime\\types\\chat_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "GetChatSessionRequest",
-        "file_index": 0,
-        "location": "L57"
-      }
-    ],
-    "depends_on": []
-  },
-  "Chat Message Request": {
-    "files": [
-      "core\\runtime\\types\\chat_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "ChatMessageRequest",
-        "file_index": 0,
-        "location": "L62"
-      }
-    ],
-    "depends_on": []
-  },
-  "Chat Turn Request": {
-    "files": [
-      "core\\runtime\\types\\chat_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "ChatTurnRequest",
-        "file_index": 0,
-        "location": "L69"
-      }
-    ],
-    "depends_on": []
-  },
-  "Chat Turn Result": {
-    "files": [
-      "core\\runtime\\types\\chat_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "ChatTurnResult",
-        "file_index": 0,
-        "location": "L88"
-      }
-    ],
-    "depends_on": []
-  },
-  "Supported Donor": {
-    "files": [
-      "core\\runtime\\types\\common_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "SupportedDonor",
-        "file_index": 0,
-        "location": "L12"
-      }
-    ],
-    "depends_on": []
-  },
-  "Canonical Object Snapshot": {
-    "files": [
-      "core\\runtime\\types\\common_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "CanonicalObjectSnapshot",
-        "file_index": 0,
-        "location": "L18"
-      }
-    ],
-    "depends_on": []
-  },
-  "Canonical Revision Snapshot": {
-    "files": [
-      "core\\runtime\\types\\common_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "CanonicalRevisionSnapshot",
-        "file_index": 0,
-        "location": "L27"
-      }
-    ],
-    "depends_on": []
-  },
-  "Mutation Record Snapshot": {
-    "files": [
-      "core\\runtime\\types\\common_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "MutationRecordSnapshot",
-        "file_index": 0,
-        "location": "L35"
-      }
-    ],
-    "depends_on": []
-  },
-  "Derived Artifact Snapshot": {
-    "files": [
-      "core\\runtime\\types\\common_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "DerivedArtifactSnapshot",
-        "file_index": 0,
-        "location": "L50"
-      }
-    ],
-    "depends_on": []
-  },
-  "Export Artifact Request": {
-    "files": [
-      "core\\runtime\\types\\import_export_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "ExportArtifactRequest",
-        "file_index": 0,
-        "location": "L14"
-      }
-    ],
-    "depends_on": []
-  },
-  "Export Artifact Result": {
-    "files": [
-      "core\\runtime\\types\\import_export_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "ExportArtifactResult",
-        "file_index": 0,
-        "location": "L25"
-      }
-    ],
-    "depends_on": []
-  },
-  "Publish Export Request": {
-    "files": [
-      "core\\runtime\\types\\import_export_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "PublishExportRequest",
-        "file_index": 0,
-        "location": "L33"
-      }
-    ],
-    "depends_on": []
-  },
-  "Publish Export Artifact Request": {
-    "files": [
-      "core\\runtime\\types\\import_export_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "PublishExportArtifactRequest",
-        "file_index": 0,
-        "location": "L51"
-      }
-    ],
-    "depends_on": []
-  },
-  "Publish Export Artifact Result": {
-    "files": [
-      "core\\runtime\\types\\import_export_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "PublishExportArtifactResult",
-        "file_index": 0,
-        "location": "L60"
-      }
-    ],
-    "depends_on": []
-  },
-  "Publish Export Result": {
-    "files": [
-      "core\\runtime\\types\\import_export_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "PublishExportResult",
-        "file_index": 0,
-        "location": "L72"
-      }
-    ],
-    "depends_on": []
-  },
-  "Import Request": {
-    "files": [
-      "core\\runtime\\types\\import_export_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "ImportRequest",
-        "file_index": 0,
-        "location": "L81"
-      }
-    ],
-    "depends_on": []
-  },
-  "Import Object Result": {
-    "files": [
-      "core\\runtime\\types\\import_export_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "ImportObjectResult",
-        "file_index": 0,
-        "location": "L90"
-      }
-    ],
-    "depends_on": []
-  },
-  "Import Result": {
-    "files": [
-      "core\\runtime\\types\\import_export_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "ImportResult",
-        "file_index": 0,
-        "location": "L98"
-      }
-    ],
-    "depends_on": []
-  },
-  "Workbench Iteration Request": {
-    "files": [
-      "core\\runtime\\types\\iteration_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "WorkbenchIterationRequest",
-        "file_index": 0,
-        "location": "L12"
-      }
-    ],
-    "depends_on": []
-  },
-  "Candidate Draft Snapshot": {
-    "files": [
-      "core\\runtime\\types\\iteration_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "CandidateDraftSnapshot",
-        "file_index": 0,
-        "location": "L24"
-      }
-    ],
-    "depends_on": []
-  },
-  "Workbench Iteration Result": {
-    "files": [
-      "core\\runtime\\types\\iteration_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "WorkbenchIterationResult",
-        "file_index": 0,
-        "location": "L36"
-      }
-    ],
-    "depends_on": []
-  },
-  "Workbench Feedback Request": {
-    "files": [
-      "core\\runtime\\types\\iteration_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "WorkbenchFeedbackRequest",
-        "file_index": 0,
-        "location": "L46"
-      }
-    ],
-    "depends_on": []
-  },
-  "Workbench Feedback Result": {
-    "files": [
-      "core\\runtime\\types\\iteration_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "WorkbenchFeedbackResult",
-        "file_index": 0,
-        "location": "L57"
-      }
-    ],
-    "depends_on": []
-  },
-  "Candidate Selection Request": {
-    "files": [
-      "core\\runtime\\types\\iteration_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "CandidateSelectionRequest",
-        "file_index": 0,
-        "location": "L66"
-      }
-    ],
-    "depends_on": []
-  },
-  "Candidate Selection Result": {
-    "files": [
-      "core\\runtime\\types\\iteration_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "CandidateSelectionResult",
-        "file_index": 0,
-        "location": "L75"
-      }
-    ],
-    "depends_on": []
-  },
-  "Retrieval Rebuild Request": {
-    "files": [
-      "core\\runtime\\types\\retrieval_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "RetrievalRebuildRequest",
-        "file_index": 0,
-        "location": "L25"
-      }
-    ],
-    "depends_on": []
-  },
-  "Retrieval Rebuild Result": {
-    "files": [
-      "core\\runtime\\types\\retrieval_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "RetrievalRebuildResult",
-        "file_index": 0,
-        "location": "L32"
-      }
-    ],
-    "depends_on": []
-  },
-  "Retrieval Search Request": {
-    "files": [
-      "core\\runtime\\types\\retrieval_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "RetrievalSearchRequest",
-        "file_index": 0,
-        "location": "L40"
-      }
-    ],
-    "depends_on": []
-  },
-  "Retrieval Match Snapshot": {
-    "files": [
-      "core\\runtime\\types\\retrieval_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "RetrievalMatchSnapshot",
-        "file_index": 0,
-        "location": "L48"
-      }
-    ],
-    "depends_on": []
-  },
-  "Retrieval Search Result": {
-    "files": [
-      "core\\runtime\\types\\retrieval_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "RetrievalSearchResult",
-        "file_index": 0,
-        "location": "L61"
-      }
-    ],
-    "depends_on": []
-  },
-  "Skill Workshop Skill Snapshot": {
-    "files": [
-      "core\\runtime\\types\\skill_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "SkillWorkshopSkillSnapshot",
-        "file_index": 0,
-        "location": "L16"
-      }
-    ],
-    "depends_on": []
-  },
-  "Skill Workshop Version Snapshot": {
-    "files": [
-      "core\\runtime\\types\\skill_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "SkillWorkshopVersionSnapshot",
-        "file_index": 0,
-        "location": "L31"
-      }
-    ],
-    "depends_on": []
-  },
-  "Skill Workshop Compare Request": {
-    "files": [
-      "core\\runtime\\types\\skill_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "SkillWorkshopCompareRequest",
-        "file_index": 0,
-        "location": "L43"
-      }
-    ],
-    "depends_on": []
-  },
-  "Skill Workshop Comparison": {
-    "files": [
-      "core\\runtime\\types\\skill_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "SkillWorkshopComparison",
-        "file_index": 0,
-        "location": "L50"
-      }
-    ],
-    "depends_on": []
-  },
-  "Skill Workshop Upsert Request": {
-    "files": [
-      "core\\runtime\\types\\skill_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "SkillWorkshopUpsertRequest",
-        "file_index": 0,
-        "location": "L61"
-      }
-    ],
-    "depends_on": []
-  },
-  "Skill Workshop Import Request": {
-    "files": [
-      "core\\runtime\\types\\skill_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "SkillWorkshopImportRequest",
-        "file_index": 0,
-        "location": "L79"
-      }
-    ],
-    "depends_on": []
-  },
-  "Skill Workshop Rollback Request": {
-    "files": [
-      "core\\runtime\\types\\skill_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "SkillWorkshopRollbackRequest",
-        "file_index": 0,
-        "location": "L94"
-      }
-    ],
-    "depends_on": []
-  },
-  "Skill Workshop Mutation Result": {
-    "files": [
-      "core\\runtime\\types\\skill_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "SkillWorkshopMutationResult",
-        "file_index": 0,
-        "location": "L103"
-      }
-    ],
-    "depends_on": []
-  },
-  "Skill Workshop Request": {
-    "files": [
-      "core\\runtime\\types\\skill_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "SkillWorkshopRequest",
-        "file_index": 0,
-        "location": "L113"
-      }
-    ],
-    "depends_on": []
-  },
-  "Skill Workshop Result": {
-    "files": [
-      "core\\runtime\\types\\skill_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "SkillWorkshopResult",
-        "file_index": 0,
-        "location": "L122"
-      }
-    ],
-    "depends_on": []
-  },
-  "Skill Execution Request": {
-    "files": [
-      "core\\runtime\\types\\skill_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "SkillExecutionRequest",
-        "file_index": 0,
-        "location": "L132"
-      }
-    ],
-    "depends_on": []
-  },
-  "Skill Execution Result": {
-    "files": [
-      "core\\runtime\\types\\skill_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "SkillExecutionResult",
-        "file_index": 0,
-        "location": "L141"
-      }
-    ],
-    "depends_on": []
-  },
-  "Outline To Plot Workbench Request": {
-    "files": [
-      "core\\runtime\\types\\workbench_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "OutlineToPlotWorkbenchRequest",
-        "file_index": 0,
-        "location": "L16"
-      }
-    ],
-    "depends_on": []
-  },
-  "Outline To Plot Workbench Result": {
-    "files": [
-      "core\\runtime\\types\\workbench_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "OutlineToPlotWorkbenchResult",
-        "file_index": 0,
-        "location": "L41"
-      }
-    ],
-    "depends_on": []
-  },
-  "Plot To Event Workbench Request": {
-    "files": [
-      "core\\runtime\\types\\workbench_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "PlotToEventWorkbenchRequest",
-        "file_index": 0,
-        "location": "L65"
-      }
-    ],
-    "depends_on": []
-  },
-  "Plot To Event Workbench Result": {
-    "files": [
-      "core\\runtime\\types\\workbench_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "PlotToEventWorkbenchResult",
-        "file_index": 0,
-        "location": "L90"
-      }
-    ],
-    "depends_on": []
-  },
-  "Event To Scene Workbench Request": {
-    "files": [
-      "core\\runtime\\types\\workbench_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "EventToSceneWorkbenchRequest",
-        "file_index": 0,
-        "location": "L114"
-      }
-    ],
-    "depends_on": []
-  },
-  "Event To Scene Workbench Result": {
-    "files": [
-      "core\\runtime\\types\\workbench_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "EventToSceneWorkbenchResult",
-        "file_index": 0,
-        "location": "L139"
-      }
-    ],
-    "depends_on": []
-  },
-  "Scene To Chapter Workbench Request": {
-    "files": [
-      "core\\runtime\\types\\workbench_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "SceneToChapterWorkbenchRequest",
-        "file_index": 0,
-        "location": "L163"
-      }
-    ],
-    "depends_on": []
-  },
-  "Scene To Chapter Workbench Result": {
-    "files": [
-      "core\\runtime\\types\\workbench_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "SceneToChapterWorkbenchResult",
-        "file_index": 0,
-        "location": "L178"
-      }
-    ],
-    "depends_on": []
-  },
-  "Review Proposal Snapshot": {
-    "files": [
-      "core\\runtime\\types\\workspace_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "ReviewProposalSnapshot",
-        "file_index": 0,
-        "location": "L22"
-      }
-    ],
-    "depends_on": []
-  },
-  "Workspace Object Summary": {
-    "files": [
-      "core\\runtime\\types\\workspace_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "WorkspaceObjectSummary",
-        "file_index": 0,
-        "location": "L30"
-      }
-    ],
-    "depends_on": []
-  },
-  "Workspace Context Snapshot": {
-    "files": [
-      "core\\runtime\\types\\workspace_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "WorkspaceContextSnapshot",
-        "file_index": 0,
-        "location": "L39"
-      }
-    ],
-    "depends_on": []
-  },
-  "Workspace Snapshot Request": {
-    "files": [
-      "core\\runtime\\types\\workspace_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "WorkspaceSnapshotRequest",
-        "file_index": 0,
-        "location": "L47"
-      }
-    ],
-    "depends_on": []
-  },
-  "Workspace Snapshot Result": {
-    "files": [
-      "core\\runtime\\types\\workspace_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "WorkspaceSnapshotResult",
-        "file_index": 0,
-        "location": "L53"
-      }
-    ],
-    "depends_on": []
-  },
-  "Workspace Request": {
-    "files": [
-      "core\\runtime\\types\\workspace_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "CreateWorkspaceRequest",
-        "file_index": 0,
-        "location": "L62"
-      }
-    ],
-    "depends_on": []
-  },
-  "Workspace Result": {
-    "files": [
-      "core\\runtime\\types\\workspace_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "CreateWorkspaceResult",
-        "file_index": 0,
-        "location": "L71"
-      }
-    ],
-    "depends_on": []
-  },
-  "Import Outline Request": {
-    "files": [
-      "core\\runtime\\types\\workspace_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "ImportOutlineRequest",
-        "file_index": 0,
-        "location": "L77"
-      }
-    ],
-    "depends_on": []
-  },
-  "Import Outline Result": {
-    "files": [
-      "core\\runtime\\types\\workspace_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "ImportOutlineResult",
-        "file_index": 0,
-        "location": "L87"
-      }
-    ],
-    "depends_on": []
-  },
-  "Read Object Request": {
-    "files": [
-      "core\\runtime\\types\\workspace_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "ReadObjectRequest",
-        "file_index": 0,
-        "location": "L94"
-      }
-    ],
-    "depends_on": []
-  },
-  "Read Object Result": {
-    "files": [
-      "core\\runtime\\types\\workspace_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "ReadObjectResult",
-        "file_index": 0,
-        "location": "L102"
-      }
-    ],
-    "depends_on": []
-  },
-  "Service Mutation Request": {
-    "files": [
-      "core\\runtime\\types\\workspace_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "ServiceMutationRequest",
-        "file_index": 0,
-        "location": "L109"
-      }
-    ],
-    "depends_on": []
-  },
-  "To Policy Request": {
-    "files": [
-      "core\\runtime\\types\\workspace_types.py"
-    ],
-    "functions": [
-      {
-        "name": ".to_policy_request",
-        "file_index": 0,
-        "location": "L125"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Skill Type": {
-    "files": [
-      "core\\skills\\workshop.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "SkillType",
-        "file_index": 0,
-        "location": "L31"
-      }
-    ],
-    "depends_on": []
-  },
-  "Validate Skill Payload": {
-    "files": [
-      "core\\skills\\workshop.py"
-    ],
-    "functions": [
-      {
-        "name": "validate_skill_payload",
-        "file_index": 0,
-        "location": "L116"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Skill Adapter Request": {
-    "files": [
-      "core\\skills\\workshop.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "SkillAdapterRequest",
-        "file_index": 0,
-        "location": "L223"
-      }
-    ],
-    "depends_on": []
-  },
-  "Adapted Skill Payload": {
-    "files": [
-      "core\\skills\\workshop.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "AdaptedSkillPayload",
-        "file_index": 0,
-        "location": "L236"
-      }
-    ],
-    "depends_on": []
-  },
-  "Adapt Donor Payload": {
-    "files": [
-      "core\\skills\\workshop.py"
-    ],
-    "functions": [
-      {
-        "name": "adapt_donor_payload",
-        "file_index": 0,
-        "location": "L242"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Diff Skill Payloads": {
-    "files": [
-      "core\\skills\\workshop.py"
-    ],
-    "functions": [
-      {
-        "name": "diff_skill_payloads",
-        "file_index": 0,
-        "location": "L327"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Render Skill Diff": {
-    "files": [
-      "core\\skills\\workshop.py"
-    ],
-    "functions": [
-      {
-        "name": "render_skill_diff",
-        "file_index": 0,
-        "location": "L343"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Write Canonical Object": {
-    "files": [
-      "core\\storage\\_canonical.py"
-    ],
-    "functions": [
-      {
-        "name": ".write_canonical_object",
-        "file_index": 0,
-        "location": "L23"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Fetch Canonical Head": {
-    "files": [
-      "core\\storage\\_canonical.py"
-    ],
-    "functions": [
-      {
-        "name": ".fetch_canonical_head",
-        "file_index": 0,
-        "location": "L132"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Fetch Canonical Revisions": {
-    "files": [
-      "core\\storage\\_canonical.py"
-    ],
-    "functions": [
-      {
-        "name": ".fetch_canonical_revisions",
-        "file_index": 0,
-        "location": "L153"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Fetch Mutation Records": {
-    "files": [
-      "core\\storage\\_canonical.py"
-    ],
-    "functions": [
-      {
-        "name": ".fetch_mutation_records",
-        "file_index": 0,
-        "location": "L175"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Delete Canonical Object": {
-    "files": [
-      "core\\storage\\_canonical.py"
-    ],
-    "functions": [
-      {
-        "name": ".delete_canonical_object",
-        "file_index": 0,
-        "location": "L206"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Fetch Workspace Canonical Rows": {
-    "files": [
-      "core\\storage\\_canonical.py"
-    ],
-    "functions": [
-      {
-        "name": ".fetch_workspace_canonical_rows",
-        "file_index": 0,
-        "location": "L234"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Fetch All Canonical Rows": {
-    "files": [
-      "core\\storage\\_canonical.py"
-    ],
-    "functions": [
-      {
-        "name": ".fetch_all_canonical_rows",
-        "file_index": 0,
-        "location": "L265"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Chat Message Link": {
-    "files": [
-      "core\\storage\\_chat.py"
-    ],
-    "functions": [
-      {
-        "name": ".create_chat_message_link",
-        "file_index": 0,
-        "location": "L40"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Fetch Chat Session Row": {
-    "files": [
-      "core\\storage\\_chat.py"
-    ],
-    "functions": [
-      {
-        "name": ".fetch_chat_session_row",
-        "file_index": 0,
-        "location": "L64"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Fetch Chat Message Link Rows": {
-    "files": [
-      "core\\storage\\_chat.py"
-    ],
-    "functions": [
-      {
-        "name": ".fetch_chat_message_link_rows",
-        "file_index": 0,
-        "location": "L82"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Derived Record": {
-    "files": [
-      "core\\storage\\_derived.py"
-    ],
-    "functions": [
-      {
-        "name": ".create_derived_record",
-        "file_index": 0,
-        "location": "L19"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Fetch Derived Records": {
-    "files": [
-      "core\\storage\\_derived.py"
-    ],
-    "functions": [
-      {
-        "name": ".fetch_derived_records",
-        "file_index": 0,
-        "location": "L47"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Delete Derived Object": {
-    "files": [
-      "core\\storage\\_derived.py"
-    ],
-    "functions": [
-      {
-        "name": ".delete_derived_object",
-        "file_index": 0,
-        "location": "L72"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Import Record": {
-    "files": [
-      "core\\storage\\_imports.py"
-    ],
-    "functions": [
-      {
-        "name": ".create_import_record",
-        "file_index": 0,
-        "location": "L16"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Fetch Import Records": {
-    "files": [
-      "core\\storage\\_imports.py"
-    ],
-    "functions": [
-      {
-        "name": ".fetch_import_records",
-        "file_index": 0,
-        "location": "L37"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Metadata Marker": {
-    "files": [
-      "core\\storage\\_metadata.py"
-    ],
-    "functions": [
-      {
-        "name": ".create_metadata_marker",
-        "file_index": 0,
-        "location": "L18"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Fetch Metadata Markers": {
-    "files": [
-      "core\\storage\\_metadata.py"
-    ],
-    "functions": [
-      {
-        "name": ".fetch_metadata_markers",
-        "file_index": 0,
-        "location": "L40"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Delete Metadata Markers": {
-    "files": [
-      "core\\storage\\_metadata.py"
-    ],
-    "functions": [
-      {
-        "name": ".delete_metadata_markers",
-        "file_index": 0,
-        "location": "L90"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Active Provider Config": {
-    "files": [
-      "core\\storage\\_providers.py"
-    ],
-    "functions": [
-      {
-        "name": ".get_active_provider_config",
-        "file_index": 0,
-        "location": "L121"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Chat Session Input": {
-    "files": [
-      "core\\storage\\_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "ChatSessionInput",
-        "file_index": 0,
-        "location": "L15"
-      }
-    ],
-    "depends_on": []
-  },
-  "Chat Message Link Input": {
-    "files": [
-      "core\\storage\\_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "ChatMessageLinkInput",
-        "file_index": 0,
-        "location": "L25"
-      }
-    ],
-    "depends_on": []
-  },
-  "Chat Session Row": {
-    "files": [
-      "core\\storage\\_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "ChatSessionRow",
-        "file_index": 0,
-        "location": "L37"
-      }
-    ],
-    "depends_on": []
-  },
-  "Chat Message Link Row": {
-    "files": [
-      "core\\storage\\_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "ChatMessageLinkRow",
-        "file_index": 0,
-        "location": "L47"
-      }
-    ],
-    "depends_on": []
-  },
-  "Metadata Marker Input": {
-    "files": [
-      "core\\storage\\_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "MetadataMarkerInput",
-        "file_index": 0,
-        "location": "L57"
-      }
-    ],
-    "depends_on": []
-  },
-  "Metadata Marker Snapshot": {
-    "files": [
-      "core\\storage\\_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "MetadataMarkerSnapshot",
-        "file_index": 0,
-        "location": "L67"
-      }
-    ],
-    "depends_on": []
-  },
-  "Utc Now Iso": {
-    "files": [
-      "core\\storage\\_utils.py"
-    ],
-    "functions": [
-      {
-        "name": "utc_now_iso",
-        "file_index": 0,
-        "location": "L68"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Workbench Session": {
-    "files": [
-      "core\\storage\\_workbench.py"
-    ],
-    "functions": [
-      {
-        "name": ".create_workbench_session",
-        "file_index": 0,
-        "location": "L19"
-      },
-      {
-        "name": ".get_workbench_session",
-        "file_index": 0,
-        "location": "L48"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "List Workbench Sessions": {
-    "files": [
-      "core\\storage\\_workbench.py"
-    ],
-    "functions": [
-      {
-        "name": ".list_workbench_sessions",
-        "file_index": 0,
-        "location": "L78"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Update Workbench Session Status": {
-    "files": [
-      "core\\storage\\_workbench.py"
-    ],
-    "functions": [
-      {
-        "name": ".update_workbench_session_status",
-        "file_index": 0,
-        "location": "L127"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Increment Workbench Iteration": {
-    "files": [
-      "core\\storage\\_workbench.py"
-    ],
-    "functions": [
-      {
-        "name": ".increment_workbench_iteration",
-        "file_index": 0,
-        "location": "L148"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Candidate Draft": {
-    "files": [
-      "core\\storage\\_workbench.py"
-    ],
-    "functions": [
-      {
-        "name": ".create_candidate_draft",
-        "file_index": 0,
-        "location": "L166"
-      },
-      {
-        "name": ".get_candidate_draft",
-        "file_index": 0,
-        "location": "L192"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "List Candidate Drafts": {
-    "files": [
-      "core\\storage\\_workbench.py"
-    ],
-    "functions": [
-      {
-        "name": ".list_candidate_drafts",
-        "file_index": 0,
-        "location": "L216"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Select Candidate Draft": {
-    "files": [
-      "core\\storage\\_workbench.py"
-    ],
-    "functions": [
-      {
-        "name": ".select_candidate_draft",
-        "file_index": 0,
-        "location": "L253"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Workbench Feedback": {
-    "files": [
-      "core\\storage\\_workbench.py"
-    ],
-    "functions": [
-      {
-        "name": ".create_workbench_feedback",
-        "file_index": 0,
-        "location": "L279"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "List Workbench Feedback": {
-    "files": [
-      "core\\storage\\_workbench.py"
-    ],
-    "functions": [
-      {
-        "name": ".list_workbench_feedback",
-        "file_index": 0,
-        "location": "L306"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Canonical Storage": {
-    "files": [
-      "core\\storage\\engine.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "CanonicalStorage",
-        "file_index": 0,
-        "location": "L15"
-      }
-    ],
-    "depends_on": []
-  },
-  "Initialize": {
-    "files": [
-      "core\\storage\\engine.py"
-    ],
-    "functions": [
-      {
-        "name": ".initialize",
-        "file_index": 0,
-        "location": "L23"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Connect": {
-    "files": [
-      "core\\storage\\engine.py"
-    ],
-    "functions": [
-      {
-        "name": ".connect",
-        "file_index": 0,
-        "location": "L28"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "List Tables": {
-    "files": [
-      "core\\storage\\engine.py"
-    ],
-    "functions": [
-      {
-        "name": ".list_tables",
-        "file_index": 0,
-        "location": "L45"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "File Name": {
-    "files": [
-      "core\\storage\\file_store.py"
-    ],
-    "functions": [
-      {
-        "name": "file_name",
-        "file_index": 0,
-        "location": "L30"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Parent Coords": {
-    "files": [
-      "core\\storage\\file_store.py",
-      "core\\storage\\unified_file_store.py"
-    ],
-    "functions": [
-      {
-        "name": "parent_coords",
-        "file_index": 0,
-        "location": "L36"
-      },
-      {
-        "name": "parent_coords",
-        "file_index": 1,
-        "location": "L31"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "From File Name": {
-    "files": [
-      "core\\storage\\file_store.py"
-    ],
-    "functions": [
-      {
-        "name": "from_file_name",
-        "file_index": 0,
-        "location": "L40"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Rag Sources": {
-    "files": [
-      "core\\storage\\file_store.py",
-      "core\\storage\\unified_file_store.py"
-    ],
-    "functions": [
-      {
-        "name": ".rag_sources",
-        "file_index": 0,
-        "location": "L134"
-      },
-      {
-        "name": ".rag_sources",
-        "file_index": 1,
-        "location": "L226"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Metadata Store": {
-    "files": [
-      "core\\storage\\metadata_store.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "MetadataStore",
-        "file_index": 0,
-        "location": "L16"
-      }
-    ],
-    "depends_on": []
-  },
-  "List Family": {
-    "files": [
-      "core\\storage\\metadata_store.py"
-    ],
-    "functions": [
-      {
-        "name": ".list_family",
-        "file_index": 0,
-        "location": "L67"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Unified File Store": {
-    "files": [
-      "core\\storage\\unified_file_store.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "UnifiedFileStore",
-        "file_index": 0,
-        "location": "L49"
-      }
-    ],
-    "depends_on": []
-  },
-  "Node Dir": {
-    "files": [
-      "core\\storage\\unified_file_store.py"
-    ],
-    "functions": [
-      {
-        "name": ".node_dir",
-        "file_index": 0,
-        "location": "L81"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "List Revisions": {
-    "files": [
-      "core\\storage\\unified_file_store.py",
-      "core\\storage\\version_store.py"
-    ],
-    "functions": [
-      {
-        "name": ".list_revisions",
-        "file_index": 0,
-        "location": "L198"
-      },
-      {
-        "name": ".list_revisions",
-        "file_index": 1,
-        "location": "L40"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Read Revision": {
-    "files": [
-      "core\\storage\\unified_file_store.py",
-      "core\\storage\\version_store.py"
-    ],
-    "functions": [
-      {
-        "name": ".read_revision",
-        "file_index": 0,
-        "location": "L202"
-      },
-      {
-        "name": ".read_revision",
-        "file_index": 1,
-        "location": "L56"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Restore Revision": {
-    "files": [
-      "core\\storage\\unified_file_store.py",
-      "core\\storage\\version_store.py"
-    ],
-    "functions": [
-      {
-        "name": ".restore_revision",
-        "file_index": 0,
-        "location": "L206"
-      },
-      {
-        "name": ".restore_revision",
-        "file_index": 1,
         "location": "L63"
       }
     ],
     "classes": [],
     "depends_on": []
   },
-  "Version Store": {
+  "Ensure Manifest Dir": {
     "files": [
-      "core\\storage\\version_store.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "VersionStore",
-        "file_index": 0,
-        "location": "L11"
-      }
-    ],
-    "depends_on": []
-  },
-  "Save Revision": {
-    "files": [
-      "core\\storage\\version_store.py"
+      "apps\\server\\src\\repositories\\manifest-repository.ts"
     ],
     "functions": [
       {
-        "name": ".save_revision",
+        "name": "ensureManifestDir",
         "file_index": 0,
-        "location": "L21"
+        "location": "L67"
       }
     ],
     "classes": [],
     "depends_on": []
   },
-  "Provider Config Validation": {
+  "Load Manifest": {
     "files": [
-      "tests\\test_ai_provider.py"
+      "apps\\server\\src\\repositories\\manifest-repository.ts"
     ],
     "functions": [
       {
-        "name": "test_provider_config_validation",
-        "file_index": 0,
-        "location": "L17"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Provider Config Storage Roundtrip": {
-    "files": [
-      "tests\\test_ai_provider.py"
-    ],
-    "functions": [
-      {
-        "name": "test_provider_config_storage_roundtrip",
-        "file_index": 0,
-        "location": "L57"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Active Provider Selection": {
-    "files": [
-      "tests\\test_ai_provider.py"
-    ],
-    "functions": [
-      {
-        "name": "test_active_provider_selection",
-        "file_index": 0,
-        "location": "L121"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Ai Provider Client Initialization": {
-    "files": [
-      "tests\\test_ai_provider.py"
-    ],
-    "functions": [
-      {
-        "name": "test_ai_provider_client_initialization",
-        "file_index": 0,
-        "location": "L161"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Ai Provider Client Mock Generation": {
-    "files": [
-      "tests\\test_ai_provider.py"
-    ],
-    "functions": [
-      {
-        "name": "test_ai_provider_client_mock_generation",
-        "file_index": 0,
-        "location": "L176"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Prompt Template Structure": {
-    "files": [
-      "tests\\test_ai_provider.py"
-    ],
-    "functions": [
-      {
-        "name": "test_prompt_template_structure",
-        "file_index": 0,
-        "location": "L202"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Dialogue Intent Classification": {
-    "files": [
-      "tests\\test_ai_provider.py"
-    ],
-    "functions": [
-      {
-        "name": "test_dialogue_intent_classification",
-        "file_index": 0,
-        "location": "L247"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Diagnosis Basic Analysis": {
-    "files": [
-      "tests\\test_ai_provider.py"
-    ],
-    "functions": [
-      {
-        "name": "test_diagnosis_basic_analysis",
-        "file_index": 0,
-        "location": "L278"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Retrieval Rebuild Stays Support Only And Replaces Current Scope Markers": {
-    "files": [
-      "tests\\test_retrieval_support_only.py"
-    ],
-    "functions": [
-      {
-        "name": "test_retrieval_rebuild_stays_support_only_and_replaces_current_scope_markers",
-        "file_index": 0,
-        "location": "L23"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Retrieval Conflicts Become Warnings And Review Hints Not Canonical Writes": {
-    "files": [
-      "tests\\test_retrieval_support_only.py"
-    ],
-    "functions": [
-      {
-        "name": "test_retrieval_conflicts_become_warnings_and_review_hints_not_canonical_writes",
-        "file_index": 0,
-        "location": "L80"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Retrieval Degradation Warns But Does Not Block Authoring Flows": {
-    "files": [
-      "tests\\test_retrieval_support_only.py"
-    ],
-    "functions": [
-      {
-        "name": "test_retrieval_degradation_warns_but_does_not_block_authoring_flows",
-        "file_index": 0,
-        "location": "L103"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Skill Type Enum": {
-    "files": [
-      "tests\\test_skill_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "TestSkillTypeEnum",
-        "file_index": 0,
-        "location": "L33"
-      }
-    ],
-    "depends_on": []
-  },
-  "All Skill Types Defined": {
-    "files": [
-      "tests\\test_skill_types.py"
-    ],
-    "functions": [
-      {
-        "name": ".test_all_skill_types_defined",
-        "file_index": 0,
-        "location": "L34"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Valid Skill Types Matches Enum": {
-    "files": [
-      "tests\\test_skill_types.py"
-    ],
-    "functions": [
-      {
-        "name": ".test_valid_skill_types_matches_enum",
-        "file_index": 0,
-        "location": "L38"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Style Rule Validation": {
-    "files": [
-      "tests\\test_skill_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "TestStyleRuleValidation",
-        "file_index": 0,
-        "location": "L43"
-      }
-    ],
-    "depends_on": []
-  },
-  "Valid Style Rule": {
-    "files": [
-      "tests\\test_skill_types.py"
-    ],
-    "functions": [
-      {
-        "name": ".test_valid_style_rule",
-        "file_index": 0,
-        "location": "L44"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Style Rule Requires Style Scope": {
-    "files": [
-      "tests\\test_skill_types.py"
-    ],
-    "functions": [
-      {
-        "name": ".test_style_rule_requires_style_scope",
-        "file_index": 0,
-        "location": "L49"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Style Rule Rejects Invalid Scope": {
-    "files": [
-      "tests\\test_skill_types.py"
-    ],
-    "functions": [
-      {
-        "name": ".test_style_rule_rejects_invalid_scope",
-        "file_index": 0,
-        "location": "L55"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Character Voice Validation": {
-    "files": [
-      "tests\\test_skill_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "TestCharacterVoiceValidation",
-        "file_index": 0,
-        "location": "L61"
-      }
-    ],
-    "depends_on": []
-  },
-  "Valid Character Voice": {
-    "files": [
-      "tests\\test_skill_types.py"
-    ],
-    "functions": [
-      {
-        "name": ".test_valid_character_voice",
-        "file_index": 0,
-        "location": "L62"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Character Voice Without Character Id": {
-    "files": [
-      "tests\\test_skill_types.py"
-    ],
-    "functions": [
-      {
-        "name": ".test_character_voice_without_character_id",
+        "name": "loadManifest",
         "file_index": 0,
         "location": "L72"
       }
@@ -5055,167 +339,83 @@
     "classes": [],
     "depends_on": []
   },
-  "Narrative Mode Validation": {
+  "Save Manifest": {
     "files": [
-      "tests\\test_skill_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "TestNarrativeModeValidation",
-        "file_index": 0,
-        "location": "L80"
-      }
-    ],
-    "depends_on": []
-  },
-  "Valid Narrative Mode": {
-    "files": [
-      "tests\\test_skill_types.py"
+      "apps\\server\\src\\repositories\\manifest-repository.ts"
     ],
     "functions": [
       {
-        "name": ".test_valid_narrative_mode",
+        "name": "saveManifest",
         "file_index": 0,
-        "location": "L81"
+        "location": "L85"
       }
     ],
     "classes": [],
     "depends_on": []
   },
-  "Narrative Mode Rejects Invalid Perspective": {
+  "Add Character": {
     "files": [
-      "tests\\test_skill_types.py"
+      "apps\\server\\src\\repositories\\manifest-repository.ts"
     ],
     "functions": [
       {
-        "name": ".test_narrative_mode_rejects_invalid_perspective",
+        "name": "addCharacter",
         "file_index": 0,
-        "location": "L91"
+        "location": "L101"
       }
     ],
     "classes": [],
     "depends_on": []
   },
-  "All Valid Perspectives": {
+  "Update Character": {
     "files": [
-      "tests\\test_skill_types.py"
+      "apps\\server\\src\\repositories\\manifest-repository.ts"
     ],
     "functions": [
       {
-        "name": ".test_all_valid_perspectives",
+        "name": "updateCharacter",
         "file_index": 0,
-        "location": "L100"
+        "location": "L115"
       }
     ],
     "classes": [],
     "depends_on": []
   },
-  "Pacing Rule Validation": {
+  "Delete Character": {
     "files": [
-      "tests\\test_skill_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "TestPacingRuleValidation",
-        "file_index": 0,
-        "location": "L108"
-      }
-    ],
-    "depends_on": []
-  },
-  "Valid Pacing Rule": {
-    "files": [
-      "tests\\test_skill_types.py"
+      "apps\\server\\src\\repositories\\manifest-repository.ts"
     ],
     "functions": [
       {
-        "name": ".test_valid_pacing_rule",
+        "name": "deleteCharacter",
         "file_index": 0,
-        "location": "L109"
+        "location": "L130"
       }
     ],
     "classes": [],
     "depends_on": []
   },
-  "Pacing Rule Rejects Invalid Tempo": {
+  "Add Location": {
     "files": [
-      "tests\\test_skill_types.py"
+      "apps\\server\\src\\repositories\\manifest-repository.ts"
     ],
     "functions": [
       {
-        "name": ".test_pacing_rule_rejects_invalid_tempo",
+        "name": "addLocation",
         "file_index": 0,
-        "location": "L119"
+        "location": "L145"
       }
     ],
     "classes": [],
     "depends_on": []
   },
-  "All Valid Tempos": {
+  "Update Location": {
     "files": [
-      "tests\\test_skill_types.py"
+      "apps\\server\\src\\repositories\\manifest-repository.ts"
     ],
     "functions": [
       {
-        "name": ".test_all_valid_tempos",
-        "file_index": 0,
-        "location": "L128"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Dialogue Style Validation": {
-    "files": [
-      "tests\\test_skill_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "TestDialogueStyleValidation",
-        "file_index": 0,
-        "location": "L136"
-      }
-    ],
-    "depends_on": []
-  },
-  "Valid Dialogue Style": {
-    "files": [
-      "tests\\test_skill_types.py"
-    ],
-    "functions": [
-      {
-        "name": ".test_valid_dialogue_style",
-        "file_index": 0,
-        "location": "L137"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Dialogue Style Rejects Invalid Formality": {
-    "files": [
-      "tests\\test_skill_types.py"
-    ],
-    "functions": [
-      {
-        "name": ".test_dialogue_style_rejects_invalid_formality",
-        "file_index": 0,
-        "location": "L147"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "All Valid Formalities": {
-    "files": [
-      "tests\\test_skill_types.py"
-    ],
-    "functions": [
-      {
-        "name": ".test_all_valid_formalities",
+        "name": "updateLocation",
         "file_index": 0,
         "location": "L156"
       }
@@ -5223,83 +423,167 @@
     "classes": [],
     "depends_on": []
   },
-  "Unknown Skill Type": {
+  "Delete Location": {
     "files": [
-      "tests\\test_skill_types.py"
+      "apps\\server\\src\\repositories\\manifest-repository.ts"
+    ],
+    "functions": [
+      {
+        "name": "deleteLocation",
+        "file_index": 0,
+        "location": "L170"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Add Timeline Event": {
+    "files": [
+      "apps\\server\\src\\repositories\\manifest-repository.ts"
+    ],
+    "functions": [
+      {
+        "name": "addTimelineEvent",
+        "file_index": 0,
+        "location": "L179"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Update Timeline Event": {
+    "files": [
+      "apps\\server\\src\\repositories\\manifest-repository.ts"
+    ],
+    "functions": [
+      {
+        "name": "updateTimelineEvent",
+        "file_index": 0,
+        "location": "L190"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Delete Timeline Event": {
+    "files": [
+      "apps\\server\\src\\repositories\\manifest-repository.ts"
+    ],
+    "functions": [
+      {
+        "name": "deleteTimelineEvent",
+        "file_index": 0,
+        "location": "L204"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Track Object": {
+    "files": [
+      "apps\\server\\src\\repositories\\manifest-repository.ts"
+    ],
+    "functions": [
+      {
+        "name": "trackObject",
+        "file_index": 0,
+        "location": "L213"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Update Tracked Object": {
+    "files": [
+      "apps\\server\\src\\repositories\\manifest-repository.ts"
+    ],
+    "functions": [
+      {
+        "name": "updateTrackedObject",
+        "file_index": 0,
+        "location": "L224"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Delete Tracked Object": {
+    "files": [
+      "apps\\server\\src\\repositories\\manifest-repository.ts"
+    ],
+    "functions": [
+      {
+        "name": "deleteTrackedObject",
+        "file_index": 0,
+        "location": "L238"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Snapshots Dir": {
+    "files": [
+      "apps\\server\\src\\repositories\\snapshot-repository.ts"
+    ],
+    "functions": [
+      {
+        "name": "getSnapshotsDir",
+        "file_index": 0,
+        "location": "L34"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Snapshot File Path": {
+    "files": [
+      "apps\\server\\src\\repositories\\snapshot-repository.ts"
+    ],
+    "functions": [
+      {
+        "name": "getSnapshotFilePath",
+        "file_index": 0,
+        "location": "L38"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Snapshot Repository": {
+    "files": [
+      "apps\\server\\src\\repositories\\snapshot-repository.ts"
     ],
     "functions": [],
     "classes": [
       {
-        "name": "TestUnknownSkillType",
+        "name": "SnapshotRepository",
         "file_index": 0,
-        "location": "L164"
+        "location": "L42"
       }
     ],
     "depends_on": []
   },
-  "Unknown Skill Type Raises": {
+  "Latest": {
     "files": [
-      "tests\\test_skill_types.py"
+      "apps\\server\\src\\repositories\\snapshot-repository.ts"
     ],
     "functions": [
       {
-        "name": ".test_unknown_skill_type_raises",
+        "name": ".getLatest",
         "file_index": 0,
-        "location": "L165"
+        "location": "L75"
       }
     ],
     "classes": [],
     "depends_on": []
   },
-  "Backward Compatibility": {
+  "All": {
     "files": [
-      "tests\\test_skill_types.py"
-    ],
-    "functions": [],
-    "classes": [
-      {
-        "name": "TestBackwardCompatibility",
-        "file_index": 0,
-        "location": "L172"
-      }
-    ],
-    "depends_on": []
-  },
-  "Existing Style Rule Payload Still Works": {
-    "files": [
-      "tests\\test_skill_types.py"
+      "apps\\server\\src\\repositories\\snapshot-repository.ts"
     ],
     "functions": [
       {
-        "name": ".test_existing_style_rule_payload_still_works",
-        "file_index": 0,
-        "location": "L173"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Skill Workshop Versions Compare And Rollback Stay In One Unified Skill Model": {
-    "files": [
-      "tests\\test_skill_workshop.py"
-    ],
-    "functions": [
-      {
-        "name": "test_skill_workshop_versions_compare_and_rollback_stay_in_one_unified_skill_model",
-        "file_index": 0,
-        "location": "L27"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Skill Workshop Rejects Forbidden Fields Explicitly": {
-    "files": [
-      "tests\\test_skill_workshop.py"
-    ],
-    "functions": [
-      {
-        "name": "test_skill_workshop_rejects_forbidden_fields_explicitly",
+        "name": ".getAll",
         "file_index": 0,
         "location": "L111"
       }
@@ -5307,15 +591,99 @@
     "classes": [],
     "depends_on": []
   },
-  "Skill Workshop Imports Prompt Templates Custom Agents And Ai Roles Through Adapters": {
+  "Extract Characters": {
     "files": [
-      "tests\\test_skill_workshop.py"
+      "apps\\server\\src\\services\\content-extractor.ts"
     ],
     "functions": [
       {
-        "name": "test_skill_workshop_imports_prompt_templates_custom_agents_and_ai_roles_through_adapters",
+        "name": "extractCharacters",
+        "file_index": 0,
+        "location": "L54"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Extract Locations": {
+    "files": [
+      "apps\\server\\src\\services\\content-extractor.ts"
+    ],
+    "functions": [
+      {
+        "name": "extractLocations",
+        "file_index": 0,
+        "location": "L87"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Extract Time Markers": {
+    "files": [
+      "apps\\server\\src\\services\\content-extractor.ts"
+    ],
+    "functions": [
+      {
+        "name": "extractTimeMarkers",
+        "file_index": 0,
+        "location": "L114"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Extract Object Mentions": {
+    "files": [
+      "apps\\server\\src\\services\\content-extractor.ts"
+    ],
+    "functions": [
+      {
+        "name": "extractObjectMentions",
         "file_index": 0,
         "location": "L138"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Extract Content": {
+    "files": [
+      "apps\\server\\src\\services\\content-extractor.ts"
+    ],
+    "functions": [
+      {
+        "name": "extractContent",
+        "file_index": 0,
+        "location": "L162"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Api Ok": {
+    "files": [
+      "packages\\shared\\src\\api-contract.ts"
+    ],
+    "functions": [
+      {
+        "name": "apiOk",
+        "file_index": 0,
+        "location": "L21"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Api Err": {
+    "files": [
+      "packages\\shared\\src\\api-contract.ts"
+    ],
+    "functions": [
+      {
+        "name": "apiErr",
+        "file_index": 0,
+        "location": "L25"
       }
     ],
     "classes": [],

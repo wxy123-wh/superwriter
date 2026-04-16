@@ -7,7 +7,7 @@
       {
         "name": "readRouteSearch",
         "file_index": 0,
-        "location": "L43"
+        "location": "L18"
       }
     ],
     "classes": [],
@@ -21,7 +21,35 @@
       {
         "name": "buildProductRouteHref",
         "file_index": 0,
-        "location": "L51"
+        "location": "L26"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Update Tree Nodes": {
+    "files": [
+      "apps\\frontend\\src\\app\\AppShell.tsx"
+    ],
+    "functions": [
+      {
+        "name": "updateTreeNodes",
+        "file_index": 0,
+        "location": "L34"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "File Language": {
+    "files": [
+      "apps\\frontend\\src\\app\\AppShell.tsx"
+    ],
+    "functions": [
+      {
+        "name": "getFileLanguage",
+        "file_index": 0,
+        "location": "L73"
       }
     ],
     "classes": [],
@@ -41,104 +69,6 @@
     "classes": [],
     "depends_on": []
   },
-  "Require Project Id": {
-    "files": [
-      "apps\\frontend\\src\\app\\router.tsx"
-    ],
-    "functions": [
-      {
-        "name": "requireProjectId",
-        "file_index": 0,
-        "location": "L13"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Require Novel Id": {
-    "files": [
-      "apps\\frontend\\src\\app\\router.tsx"
-    ],
-    "functions": [
-      {
-        "name": "requireNovelId",
-        "file_index": 0,
-        "location": "L20"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Context From Url": {
-    "files": [
-      "apps\\frontend\\src\\app\\router.tsx"
-    ],
-    "functions": [
-      {
-        "name": "contextFromUrl",
-        "file_index": 0,
-        "location": "L27"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Skills Options": {
-    "files": [
-      "apps\\frontend\\src\\app\\router.tsx"
-    ],
-    "functions": [
-      {
-        "name": "skillsOptions",
-        "file_index": 0,
-        "location": "L31"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Settings Options": {
-    "files": [
-      "apps\\frontend\\src\\app\\router.tsx"
-    ],
-    "functions": [
-      {
-        "name": "settingsOptions",
-        "file_index": 0,
-        "location": "L41"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Startup Options": {
-    "files": [
-      "apps\\frontend\\src\\app\\router.tsx"
-    ],
-    "functions": [
-      {
-        "name": "startupOptions",
-        "file_index": 0,
-        "location": "L47"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
-  "Scoped Loader": {
-    "files": [
-      "apps\\frontend\\src\\app\\router.tsx"
-    ],
-    "functions": [
-      {
-        "name": "scopedLoader",
-        "file_index": 0,
-        "location": "L53"
-      }
-    ],
-    "classes": [],
-    "depends_on": []
-  },
   "App Routes": {
     "files": [
       "apps\\frontend\\src\\app\\router.tsx"
@@ -147,7 +77,35 @@
       {
         "name": "appRoutes",
         "file_index": 0,
-        "location": "L60"
+        "location": "L12"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Activity Bar": {
+    "files": [
+      "apps\\frontend\\src\\components\\ActivityBar.tsx"
+    ],
+    "functions": [
+      {
+        "name": "ActivityBar",
+        "file_index": 0,
+        "location": "L6"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Scroll To Bottom": {
+    "files": [
+      "apps\\frontend\\src\\components\\ChatPanel.tsx"
+    ],
+    "functions": [
+      {
+        "name": "scrollToBottom",
+        "file_index": 0,
+        "location": "L25"
       }
     ],
     "classes": [],
@@ -161,7 +119,7 @@
       {
         "name": "FileTree",
         "file_index": 0,
-        "location": "L12"
+        "location": "L13"
       }
     ],
     "classes": [],
@@ -175,19 +133,103 @@
       {
         "name": "handleClick",
         "file_index": 0,
-        "location": "L13"
+        "location": "L14"
       }
     ],
     "classes": [],
     "depends_on": []
   },
-  "Handle Mount": {
+  "Monaco Editor": {
     "files": [
       "apps\\frontend\\src\\components\\MonacoEditor.tsx"
     ],
     "functions": [
       {
-        "name": "handleMount",
+        "name": "MonacoEditor",
+        "file_index": 0,
+        "location": "L14"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Status Bar": {
+    "files": [
+      "apps\\frontend\\src\\components\\StatusBar.tsx"
+    ],
+    "functions": [
+      {
+        "name": "StatusBar",
+        "file_index": 0,
+        "location": "L8"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Title Bar": {
+    "files": [
+      "apps\\frontend\\src\\components\\TitleBar.tsx"
+    ],
+    "functions": [
+      {
+        "name": "TitleBar",
+        "file_index": 0,
+        "location": "L7"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Novel Manifest Provider": {
+    "files": [
+      "apps\\frontend\\src\\contexts\\NovelManifestContext.tsx"
+    ],
+    "functions": [
+      {
+        "name": "NovelManifestProvider",
+        "file_index": 0,
+        "location": "L44"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Use Novel Manifest": {
+    "files": [
+      "apps\\frontend\\src\\contexts\\NovelManifestContext.tsx"
+    ],
+    "functions": [
+      {
+        "name": "useNovelManifest",
+        "file_index": 0,
+        "location": "L234"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Use Chapter Snapshot": {
+    "files": [
+      "apps\\frontend\\src\\hooks\\useChapterSnapshot.ts"
+    ],
+    "functions": [
+      {
+        "name": "useChapterSnapshot",
+        "file_index": 0,
+        "location": "L24"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Use Foreshadows": {
+    "files": [
+      "apps\\frontend\\src\\hooks\\useForeshadows.ts"
+    ],
+    "functions": [
+      {
+        "name": "useForeshadows",
         "file_index": 0,
         "location": "L22"
       }
@@ -195,15 +237,15 @@
     "classes": [],
     "depends_on": []
   },
-  "Handle Change": {
+  "Mock Response": {
     "files": [
-      "apps\\frontend\\src\\components\\MonacoEditor.tsx"
+      "apps\\frontend\\src\\lib\\api\\client.test.ts"
     ],
     "functions": [
       {
-        "name": "handleChange",
+        "name": "mockResponse",
         "file_index": 0,
-        "location": "L27"
+        "location": "L8"
       }
     ],
     "classes": [],
@@ -530,7 +572,7 @@
       {
         "name": "parseFileTreeNode",
         "file_index": 0,
-        "location": "L635"
+        "location": "L601"
       }
     ],
     "classes": [],
@@ -559,6 +601,20 @@
         "name": "createUnifiedClient",
         "file_index": 0,
         "location": "L14"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Wrapper": {
+    "files": [
+      "apps\\frontend\\src\\lib\\api\\mutations.test.tsx"
+    ],
+    "functions": [
+      {
+        "name": "createWrapper",
+        "file_index": 0,
+        "location": "L22"
       }
     ],
     "classes": [],
@@ -662,6 +718,34 @@
     "classes": [],
     "depends_on": []
   },
+  "Check Consistency": {
+    "files": [
+      "apps\\frontend\\src\\lib\\consistency-checker.ts"
+    ],
+    "functions": [
+      {
+        "name": "checkConsistency",
+        "file_index": 0,
+        "location": "L8"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Compare With Previous": {
+    "files": [
+      "apps\\frontend\\src\\lib\\consistency-checker.ts"
+    ],
+    "functions": [
+      {
+        "name": "compareWithPrevious",
+        "file_index": 0,
+        "location": "L77"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
   "App Providers": {
     "files": [
       "apps\\frontend\\src\\providers\\AppProviders.tsx"
@@ -676,85 +760,231 @@
     "classes": [],
     "depends_on": []
   },
-  "Clear Status": {
+  "Empty Manifest": {
     "files": [
-      "apps\\frontend\\src\\views\\SettingsView.tsx"
+      "apps\\frontend\\src\\types\\novel-manifest.ts",
+      "apps\\server\\src\\repositories\\manifest-repository.ts"
     ],
     "functions": [
       {
-        "name": "clearStatus",
+        "name": "createEmptyManifest",
         "file_index": 0,
-        "location": "L26"
+        "location": "L51"
+      },
+      {
+        "name": "createEmptyManifest",
+        "file_index": 1,
+        "location": "L91"
       }
     ],
     "classes": [],
     "depends_on": []
   },
-  "Handle Delete Provider": {
+  "Handle Extract And Save": {
     "files": [
-      "apps\\frontend\\src\\views\\SettingsView.tsx"
+      "apps\\frontend\\src\\views\\ConsistencyView.tsx"
     ],
     "functions": [
       {
-        "name": "handleDeleteProvider",
+        "name": "handleExtractAndSave",
         "file_index": 0,
-        "location": "L31"
+        "location": "L39"
       }
     ],
     "classes": [],
     "depends_on": []
   },
-  "Skills View": {
+  "Handle Save Snapshot": {
+    "files": [
+      "apps\\frontend\\src\\views\\ConsistencyView.tsx"
+    ],
+    "functions": [
+      {
+        "name": "handleSaveSnapshot",
+        "file_index": 0,
+        "location": "L46"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Severity Badge": {
+    "files": [
+      "apps\\frontend\\src\\views\\ConsistencyView.tsx"
+    ],
+    "functions": [
+      {
+        "name": "getSeverityBadge",
+        "file_index": 0,
+        "location": "L51"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Issue Type Label": {
+    "files": [
+      "apps\\frontend\\src\\views\\ConsistencyView.tsx"
+    ],
+    "functions": [
+      {
+        "name": "getIssueTypeLabel",
+        "file_index": 0,
+        "location": "L59"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Foreshadow View": {
+    "files": [
+      "apps\\frontend\\src\\views\\ForeshadowView.tsx"
+    ],
+    "functions": [
+      {
+        "name": "ForeshadowView",
+        "file_index": 0,
+        "location": "L25"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Handle Add Character": {
+    "files": [
+      "apps\\frontend\\src\\views\\ManifestView.tsx"
+    ],
+    "functions": [
+      {
+        "name": "handleAddCharacter",
+        "file_index": 0,
+        "location": "L97"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Handle Update Character": {
+    "files": [
+      "apps\\frontend\\src\\views\\ManifestView.tsx"
+    ],
+    "functions": [
+      {
+        "name": "handleUpdateCharacter",
+        "file_index": 0,
+        "location": "L113"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Handle Edit Character": {
+    "files": [
+      "apps\\frontend\\src\\views\\ManifestView.tsx"
+    ],
+    "functions": [
+      {
+        "name": "handleEditCharacter",
+        "file_index": 0,
+        "location": "L127"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Handle Add Location": {
+    "files": [
+      "apps\\frontend\\src\\views\\ManifestView.tsx"
+    ],
+    "functions": [
+      {
+        "name": "handleAddLocation",
+        "file_index": 0,
+        "location": "L141"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Handle Add Timeline Event": {
+    "files": [
+      "apps\\frontend\\src\\views\\ManifestView.tsx"
+    ],
+    "functions": [
+      {
+        "name": "handleAddTimelineEvent",
+        "file_index": 0,
+        "location": "L152"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Handle Track Object": {
+    "files": [
+      "apps\\frontend\\src\\views\\ManifestView.tsx"
+    ],
+    "functions": [
+      {
+        "name": "handleTrackObject",
+        "file_index": 0,
+        "location": "L163"
+      }
+    ],
+    "classes": [],
+    "depends_on": []
+  },
+  "Parse Skill Content": {
     "files": [
       "apps\\frontend\\src\\views\\SkillsView.tsx"
     ],
     "functions": [
       {
-        "name": "SkillsView",
+        "name": "parseSkillContent",
         "file_index": 0,
-        "location": "L9"
+        "location": "L60"
       }
     ],
     "classes": [],
     "depends_on": []
   },
-  "Startup View": {
+  "Handle Select": {
     "files": [
-      "apps\\frontend\\src\\views\\StartupView.tsx"
+      "apps\\frontend\\src\\views\\SkillsView.tsx"
     ],
     "functions": [
       {
-        "name": "StartupView",
+        "name": "handleSelect",
         "file_index": 0,
-        "location": "L1"
+        "location": "L82"
       }
     ],
     "classes": [],
     "depends_on": []
   },
-  "Pipeline Snapshot": {
+  "Handle Save": {
     "files": [
-      "apps\\frontend\\tests\\e2e\\delete-node.spec.ts"
+      "apps\\frontend\\src\\views\\SkillsView.tsx"
     ],
     "functions": [
       {
-        "name": "pipelineSnapshot",
+        "name": "handleSave",
         "file_index": 0,
-        "location": "L30"
+        "location": "L90"
       }
     ],
     "classes": [],
     "depends_on": []
   },
-  "Setup Api Mocks": {
+  "Handle": {
     "files": [
-      "apps\\frontend\\tests\\e2e\\delete-node.spec.ts"
+      "apps\\frontend\\src\\views\\SkillsView.tsx"
     ],
     "functions": [
       {
-        "name": "setupApiMocks",
+        "name": "handleCreate",
         "file_index": 0,
-        "location": "L52"
+        "location": "L103"
       }
     ],
     "classes": [],

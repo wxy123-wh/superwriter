@@ -1,90 +1,12 @@
 {
-  "feature_count": 405,
+  "feature_count": 118,
   "layer_distribution": {
-    "frontend": 54,
-    "backend": 351,
+    "frontend": 70,
+    "backend": 48,
     "data": 0,
     "infra": 0
   },
   "top_features": [
-    {
-      "name": "Read",
-      "function_count": 5,
-      "class_count": 0,
-      "file_count": 5
-    },
-    {
-      "name": "Write",
-      "function_count": 4,
-      "class_count": 0,
-      "file_count": 4
-    },
-    {
-      "name": "Exists",
-      "function_count": 4,
-      "class_count": 0,
-      "file_count": 4
-    },
-    {
-      "name": "Delete",
-      "function_count": 4,
-      "class_count": 0,
-      "file_count": 4
-    },
-    {
-      "name": "List Children",
-      "function_count": 3,
-      "class_count": 0,
-      "file_count": 3
-    },
-    {
-      "name": "List Layer",
-      "function_count": 3,
-      "class_count": 0,
-      "file_count": 3
-    },
-    {
-      "name": "Next Coord",
-      "function_count": 3,
-      "class_count": 0,
-      "file_count": 3
-    },
-    {
-      "name": "List Provider Configs",
-      "function_count": 3,
-      "class_count": 0,
-      "file_count": 3
-    },
-    {
-      "name": "Save Provider Config",
-      "function_count": 3,
-      "class_count": 0,
-      "file_count": 3
-    },
-    {
-      "name": "Active Provider",
-      "function_count": 3,
-      "class_count": 0,
-      "file_count": 3
-    },
-    {
-      "name": "Delete Provider Config",
-      "function_count": 3,
-      "class_count": 0,
-      "file_count": 3
-    },
-    {
-      "name": "Provider Config",
-      "function_count": 3,
-      "class_count": 0,
-      "file_count": 3
-    },
-    {
-      "name": "Chat Session",
-      "function_count": 3,
-      "class_count": 0,
-      "file_count": 3
-    },
     {
       "name": "Constructor",
       "function_count": 2,
@@ -92,41 +14,119 @@
       "file_count": 1
     },
     {
-      "name": "Parse",
+      "name": "Empty Manifest",
       "function_count": 2,
       "class_count": 0,
       "file_count": 2
     },
     {
-      "name": "Diagnose Project",
+      "name": "Load",
       "function_count": 2,
       "class_count": 0,
       "file_count": 2
     },
     {
-      "name": "Retrieval Status",
+      "name": "Save",
       "function_count": 2,
       "class_count": 0,
       "file_count": 2
     },
     {
-      "name": "Rebuild Retrieval Support",
+      "name": "Delete",
       "function_count": 2,
       "class_count": 0,
       "file_count": 2
     },
     {
-      "name": "Search Retrieval Support",
-      "function_count": 2,
+      "name": "Read Route Search",
+      "function_count": 1,
       "class_count": 0,
-      "file_count": 2
+      "file_count": 1
     },
     {
-      "name": "Skill Workshop",
-      "function_count": 2,
+      "name": "Build Product Route Href",
+      "function_count": 1,
       "class_count": 0,
-      "file_count": 2
+      "file_count": 1
+    },
+    {
+      "name": "Update Tree Nodes",
+      "function_count": 1,
+      "class_count": 0,
+      "file_count": 1
+    },
+    {
+      "name": "File Language",
+      "function_count": 1,
+      "class_count": 0,
+      "file_count": 1
+    },
+    {
+      "name": "App Query Client",
+      "function_count": 1,
+      "class_count": 0,
+      "file_count": 1
+    },
+    {
+      "name": "App Routes",
+      "function_count": 1,
+      "class_count": 0,
+      "file_count": 1
+    },
+    {
+      "name": "Activity Bar",
+      "function_count": 1,
+      "class_count": 0,
+      "file_count": 1
+    },
+    {
+      "name": "Scroll To Bottom",
+      "function_count": 1,
+      "class_count": 0,
+      "file_count": 1
+    },
+    {
+      "name": "File Tree",
+      "function_count": 1,
+      "class_count": 0,
+      "file_count": 1
+    },
+    {
+      "name": "Handle Click",
+      "function_count": 1,
+      "class_count": 0,
+      "file_count": 1
+    },
+    {
+      "name": "Monaco Editor",
+      "function_count": 1,
+      "class_count": 0,
+      "file_count": 1
+    },
+    {
+      "name": "Status Bar",
+      "function_count": 1,
+      "class_count": 0,
+      "file_count": 1
+    },
+    {
+      "name": "Title Bar",
+      "function_count": 1,
+      "class_count": 0,
+      "file_count": 1
+    },
+    {
+      "name": "Novel Manifest Provider",
+      "function_count": 1,
+      "class_count": 0,
+      "file_count": 1
+    },
+    {
+      "name": "Use Novel Manifest",
+      "function_count": 1,
+      "class_count": 0,
+      "file_count": 1
     }
   ],
-  "generated_at": "2026-04-15T01:00:23.654055"
+  "generated_at": "2026-04-16T01:01:43.555006"
 }

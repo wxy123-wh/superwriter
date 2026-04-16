@@ -1,0 +1,107 @@
+@import "./vscode-common.css";
+
+/* VSCode Light Theme CSS Variables */
+:root {
+  /* Activity Bar */
+  --vscode-activityBar-background: #f3f3f3;
+  --vscode-activityBar-inactiveForeground: #616161;
+  --vscode-activityBar-activeForeground: #616161;
+  --vscode-activityBar-activeBorder: #007acc;
+
+  /* Sidebar */
+  --vscode-sideBar-background: #f3f3f3;
+  --vscode-sideBarSectionHeader-background: #e8e8e8;
+  --vscode-sideBarTitle-foreground: #616161;
+  --vscode-sideBar-dropBackground: #e4e6f1;
+
+  /* Editor */
+  --vscode-editor-background: #ffffff;
+  --vscode-editor-foreground: #333333;
+  --vscode-editorLineNumber-foreground: #237893;
+  --vscode-editorLineNumber-activeForeground: #0b216f;
+  --vscode-editor-selectionBackground: #add6ff;
+  --vscode-editor-inactiveSelectionBackground: #e5ebf1;
+
+  /* Tab */
+  --vscode-tab-activeBackground: #ffffff;
+  --vscode-tab-inactiveBackground: #f3f3f3;
+  --vscode-tab-border: #e8e8e8;
+  --vscode-tab-activeBorder: #ffffff;
+  --vscode-tab-activeForeground: #333333;
+  --vscode-tab-inactiveForeground: #616161;
+  --vscode-tab-lastPinnedBorder: #e8e8e8;
+
+  /* Status Bar */
+  --vscode-statusBar-background: #007acc;
+  --vscode-statusBar-foreground: #ffffff;
+  --vscode-statusBar-debuggingBackground: #cc6633;
+  --vscode-statusBar-noFolderBackground: #68217a;
+
+  /* Panel */
+  --vscode-panel-background: #f3f3f3;
+  --vscode-panel-border: #e8e8e8;
+  --vscode-panelTitle-activeForeground: #333333;
+  --vscode-panelTitle-inactiveForeground: #616161;
+  --vscode-panelTitle-activeBorder: #007acc;
+  --vscode-input-background: #ffffff;
+  --vscode-input-foreground: #333333;
+  --vscode-input-border: #e8e8e8;
+  --vscode-inputOption-activeBorder: #007acc;
+
+  /* Title Bar */
+  --vscode-titleBar-background: #f3f3f3;
+  --vscode-titleBar-foreground: #333333;
+  --vscode-titleBar-activeBackground: #f3f3f3;
+  --vscode-titleBar-activeForeground: #333333;
+  --vscode-titleBar-inactiveBackground: #f3f3f3;
+  --vscode-titleBar-inactiveForeground: #616161;
+
+  /* Button */
+  --vscode-button-background: #007acc;
+  --vscode-button-foreground: #ffffff;
+  --vscode-button-hoverBackground: #005a9e;
+  --vscode-button-secondaryBackground: #e8e8e8;
+  --vscode-button-secondaryForeground: #333333;
+  --vscode-button-secondaryHoverBackground: #d4d4d4;
+
+  /* Scrollbar */
+  --vscode-scrollbar-background: #f3f3f3;
+  --vscode-scrollbarSlider-background: rgba(0, 0, 0, 0.15);
+  --vscode-scrollbarSlider-hoverBackground: rgba(0, 0, 0, 0.3);
+  --vscode-scrollbarSlider-activeBackground: rgba(0, 0, 0, 0.45);
+
+  /* Tree */
+  --vscode-tree-selectionBackground: #add6ff;
+  --vscode-tree-selectionHighlightBackground: #add6ff50;
+  --vscode-tree-hoverBackground: #e8e8e8;
+  --vscode-tree-indentGuidesStroke: #e8e8e8;
+
+  /* List */
+  --vscode-list-activeSelectionBackground: #007acc;
+  --vscode-list-activeSelectionForeground: #ffffff;
+  --vscode-list-hoverBackground: #e8e8e8;
+  --vscode-list-inactiveSelectionBackground: #f3f3f3;
+  --vscode-list-inactiveFocusBackground: #ffffff;
+
+  /* Focus */
+  --vscode-focusBorder: #007acc;
+  --vscode-contrastBorder: #6fc3ff;
+
+  /* Widget */
+  --vscode-widget-shadow: #00000020;
+  --vscode-editorWidget-background: #f3f3f3;
+  --vscode-editorWidget-foreground: #333333;
+  --vscode-editorWidget-border: #c8c8c8;
+
+  /* Badge */
+  --vscode-badge-background: #c4c4c4;
+  --vscode-badge-foreground: #333333;
+
+  /* Layout tokens */
+  --sw-titlebar-height: 22px;
+  --sw-activitybar-width: 48px;
+  --sw-sidebar-width: 240px;
+  --sw-statusbar-height: 22px;
+  --sw-tabbar-height: 35px;
+  --sw-panel-height: 250px;
+}

@@ -27,20 +27,30 @@ export interface WorkspaceObjectSummary {
   payload: JsonObject;
 }
 
-export type PipelineStage = 'outline_to_plot' | 'plot_to_event' | 'event_to_scene' | 'scene_to_chapter';
-
-export const PIPELINE_META: Record<PipelineStage, { label: string; sourceLabel: string; targetLabel: string; linkType: string }> = {
-  outline_to_plot: { label: '大纲→剧情工作台', sourceLabel: '大纲节点', targetLabel: '剧情节点', linkType: 'outline_to_plot' },
-  plot_to_event:    { label: '剧情→事件工作台', sourceLabel: '剧情节点', targetLabel: '事件', linkType: 'plot_to_event' },
-  event_to_scene:   { label: '事件→场景工作台', sourceLabel: '事件', targetLabel: '场景', linkType: 'event_to_scene' },
-  scene_to_chapter: { label: '场景→章节工作台', sourceLabel: '场景', targetLabel: '章节制品', linkType: 'scene_to_chapter' },
-};
-
 export interface ChatResponse {
   session_id: string;
   user_message_state_id: string;
   assistant_message_state_id: string;
   assistant_content: string;
+}
+
+export interface SendChatParams {
+  session_id?: string;
+  project_id: string;
+  novel_id: string;
+  workbench_type: string;
+  user_message: string;
+  source_object_id?: string;
+  source_revision_id?: string;
+}
+
+export interface ImportSkillParams {
+  name: string;
+  instruction: string;
+  description?: string;
+  style_scope?: string;
+  is_active?: boolean;
+  donor_kind?: string;
 }
 
 export interface SkillWorkshopSkillSnapshot {
@@ -421,15 +431,7 @@ export const apiClient = {
   }: {
     projectId: string;
     novelId: string;
-    params: {
-      session_id?: string;
-      project_id: string;
-      novel_id: string;
-      workbench_type: string;
-      user_message: string;
-      source_object_id?: string;
-      source_revision_id?: string;
-    };
+    params: SendChatParams;
   }) {
     if (isElectron()) {
       return electronClient.sendChat({ projectId, novelId, params });
@@ -524,40 +526,6 @@ export const apiClient = {
       return payload as Record<string, unknown>;
     });
   },
-  getRetrievalStatus({ projectId, novelId }: { projectId: string; novelId: string }) {
-    return request(
-      '/api/retrieval',
-      (payload) => {
-        assertRecord(payload, 'retrieval status');
-        return { status: expectJsonObject(payload.status, 'retrieval.status') };
-      },
-      { project_id: projectId, novel_id: novelId },
-    );
-  },
-  rebuildRetrieval({ projectId, novelId }: { projectId: string; novelId: string }) {
-    return mutate(
-      '/api/retrieval',
-      { action: 'rebuild' },
-      (payload) => {
-        assertRecord(payload, 'retrieval rebuild result');
-        return { result: expectJsonObject(payload.result, 'retrieval.result') };
-      },
-      undefined,
-      { project_id: projectId, novel_id: novelId },
-    );
-  },
-  searchRetrieval({ projectId, novelId, query }: { projectId: string; novelId: string; query: string }) {
-    return mutate(
-      '/api/retrieval',
-      { action: 'search', query },
-      (payload) => {
-        assertRecord(payload, 'retrieval search result');
-        return { result: expectJsonObject(payload.result, 'retrieval.result') };
-      },
-      undefined,
-      { project_id: projectId, novel_id: novelId },
-    );
-  },
   importSkill({
     projectId,
     novelId,
@@ -565,14 +533,7 @@ export const apiClient = {
   }: {
     projectId: string;
     novelId: string;
-    params: {
-      name: string;
-      instruction: string;
-      description?: string;
-      style_scope?: string;
-      is_active?: boolean;
-      donor_kind?: string;
-    };
+    params: ImportSkillParams;
   }) {
     return mutate('/api/skills', { action: 'import', ...params }, (payload) => {
       assertRecord(payload, 'result');

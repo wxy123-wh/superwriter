@@ -1,0 +1,54 @@
+/* Activity Bar */
+.activity-bar {
+  width: var(--sw-activitybar-width);
+  background: var(--vscode-activityBar-background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 4px;
+  flex-shrink: 0;
+}
+
+.activity-bar-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 100%;
+}
+
+.activity-bar-icon {
+  width: 100%;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--vscode-activityBar-inactiveForeground);
+  transition: color 0.1s;
+}
+
+.activity-bar-icon:hover {
+  color: var(--vscode-activityBar-activeForeground);
+}
+
+.activity-bar-icon.active {
+  color: var(--vscode-activityBar-activeForeground);
+  position: relative;
+}
+
+.activity-bar-icon.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--vscode-activityBar-activeBorder);
+}
+
+.activity-bar-icon svg {
+  width: 24px;
+  height: 24px;
+}

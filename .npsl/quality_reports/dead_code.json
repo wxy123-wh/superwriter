@@ -1,0 +1,115 @@
+{
+  "available": true,
+  "total_files_analyzed": 13,
+  "unused_exports": [
+    {
+      "file": "apps/frontend/src/lib/api/client.ts",
+      "symbol": "PIPELINE_META",
+      "line": 32
+    },
+    {
+      "file": "apps/server/src/services/content-extractor.ts",
+      "symbol": "extractCharacters",
+      "line": 54
+    },
+    {
+      "file": "apps/server/src/services/content-extractor.ts",
+      "symbol": "extractLocations",
+      "line": 87
+    },
+    {
+      "file": "apps/server/src/services/content-extractor.ts",
+      "symbol": "extractTimeMarkers",
+      "line": 114
+    },
+    {
+      "file": "apps/server/src/services/content-extractor.ts",
+      "symbol": "extractObjectMentions",
+      "line": 138
+    },
+    {
+      "file": "apps/server/src/repositories/manifest-repository.ts",
+      "symbol": "addCharacter",
+      "line": 101
+    },
+    {
+      "file": "apps/server/src/repositories/manifest-repository.ts",
+      "symbol": "updateCharacter",
+      "line": 115
+    },
+    {
+      "file": "apps/server/src/repositories/manifest-repository.ts",
+      "symbol": "deleteCharacter",
+      "line": 130
+    },
+    {
+      "file": "apps/server/src/repositories/manifest-repository.ts",
+      "symbol": "addLocation",
+      "line": 145
+    },
+    {
+      "file": "apps/server/src/repositories/manifest-repository.ts",
+      "symbol": "updateLocation",
+      "line": 156
+    },
+    {
+      "file": "apps/server/src/repositories/manifest-repository.ts",
+      "symbol": "deleteLocation",
+      "line": 170
+    },
+    {
+      "file": "apps/server/src/repositories/manifest-repository.ts",
+      "symbol": "addTimelineEvent",
+      "line": 179
+    },
+    {
+      "file": "apps/server/src/repositories/manifest-repository.ts",
+      "symbol": "updateTimelineEvent",
+      "line": 190
+    },
+    {
+      "file": "apps/server/src/repositories/manifest-repository.ts",
+      "symbol": "deleteTimelineEvent",
+      "line": 204
+    },
+    {
+      "file": "apps/server/src/repositories/manifest-repository.ts",
+      "symbol": "trackObject",
+      "line": 213
+    },
+    {
+      "file": "apps/server/src/repositories/manifest-repository.ts",
+      "symbol": "updateTrackedObject",
+      "line": 224
+    },
+    {
+      "file": "apps/server/src/repositories/manifest-repository.ts",
+      "symbol": "deleteTrackedObject",
+      "line": 238
+    },
+    {
+      "file": "apps/frontend/src/app/AppShell.tsx",
+      "symbol": "buildProductRouteHref",
+      "line": 26
+    }
+  ],
+  "unused_exports_count": 18,
+  "unused_dependencies": [
+    "electron",
+    "react-router-dom",
+    "@testing-library/user-event"
+  ],
+  "unused_dependencies_count": 3,
+  "unlisted_dependencies": [
+    "monaco-editor"
+  ],
+  "unlisted_dependencies_count": 1,
+  "dead_files": [
+    "apps/frontend/src/components/SkillVersionList.tsx",
+    "apps/frontend/src/lib/api/index.ts",
+    "apps/server/src/preload.ts"
+  ],
+  "dead_files_count": 3,
+  "duplicates": [],
+  "duplicates_count": 0
+}

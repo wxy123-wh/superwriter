@@ -1,0 +1,35 @@
+/* Status Bar */
+.status-bar {
+  height: var(--sw-statusbar-height);
+  background: var(--vscode-statusBar-background);
+  color: var(--vscode-statusBar-foreground);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  user-select: none;
+  padding: 0 8px;
+}
+
+.status-bar-left,
+.status-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.status-bar-item {
+  padding: 0 6px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.status-bar-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.status-bar-item .codicon {
+  font-size: 14px;
+}

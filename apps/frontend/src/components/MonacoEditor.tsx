@@ -9,6 +9,7 @@ export interface MonacoEditorProps {
   onChange: (value: string) => void;
   language?: string;
   readOnly?: boolean;
+  onCursorChange?: (line: number, column: number) => void;
 }
 
 export function MonacoEditor({
@@ -16,12 +17,16 @@ export function MonacoEditor({
   onChange,
   language = 'markdown',
   readOnly = false,
+  onCursorChange,
 }: MonacoEditorProps) {
   const editorRef = useRef<editor.IStandaloneCodeEditor | null>(null);
 
   const handleMount: OnMount = (editor) => {
     editorRef.current = editor;
     editor.focus();
+    editor.onDidChangeCursorPosition((e) => {
+      onCursorChange?.(e.position.lineNumber, e.position.column);
+    });
   };
 
   const handleChange: OnChange = (newValue) => {
@@ -47,7 +52,7 @@ export function MonacoEditor({
           automaticLayout: true,
           tabSize: 2,
         }}
-        theme="vs"
+        theme="vs-dark"
         loading={<div className="monaco-loading">加载编辑器…</div>}
       />
     </div>

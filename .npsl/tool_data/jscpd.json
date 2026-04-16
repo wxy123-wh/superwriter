@@ -1,0 +1,192 @@
+{
+  "available": true,
+  "clones": [
+    {
+      "file1": "apps\\frontend\\src\\styles\\vscode-light-theme.css",
+      "file2": "apps\\frontend\\src\\styles\\vscode-theme.css",
+      "lines": 52,
+      "tokens": 0,
+      "file1_start": 96,
+      "file1_end": 147,
+      "file2_start": 130,
+      "file2_end": 181
+    },
+    {
+      "file1": "apps\\frontend\\src\\types\\chapter-snapshot.ts",
+      "file2": "apps\\server\\src\\repositories\\snapshot-repository.ts",
+      "lines": 26,
+      "tokens": 0,
+      "file1_start": 1,
+      "file1_end": 26,
+      "file2_start": 9,
+      "file2_end": 34
+    },
+    {
+      "file1": "apps\\frontend\\src\\lib\\api\\client.ts",
+      "file2": "apps\\frontend\\src\\lib\\api\\electron-client.ts",
+      "lines": 16,
+      "tokens": 0,
+      "file1_start": 419,
+      "file1_end": 434,
+      "file2_start": 45,
+      "file2_end": 60
+    },
+    {
+      "file1": "apps\\frontend\\src\\types\\novel-manifest.ts",
+      "file2": "apps\\server\\src\\repositories\\manifest-repository.ts",
+      "lines": 16,
+      "tokens": 0,
+      "file1_start": 36,
+      "file1_end": 51,
+      "file2_start": 41,
+      "file2_end": 56
+    },
+    {
+      "file1": "apps\\frontend\\src\\lib\\api\\client.ts",
+      "file2": "apps\\frontend\\src\\lib\\api\\electron-client.ts",
+      "lines": 15,
+      "tokens": 0,
+      "file1_start": 529,
+      "file1_end": 543,
+      "file2_start": 142,
+      "file2_end": 156
+    },
+    {
+      "file1": "apps\\frontend\\src\\types\\novel-manifest.ts",
+      "file2": "apps\\server\\src\\repositories\\manifest-repository.ts",
+      "lines": 15,
+      "tokens": 0,
+      "file1_start": 8,
+      "file1_end": 22,
+      "file2_start": 13,
+      "file2_end": 27
+    },
+    {
+      "file1": "apps\\frontend\\src\\types\\foreshadow.ts",
+      "file2": "apps\\server\\src\\repositories\\foreshadow-repository.ts",
+      "lines": 14,
+      "tokens": 0,
+      "file1_start": 1,
+      "file1_end": 14,
+      "file2_start": 5,
+      "file2_end": 18
+    },
+    {
+      "file1": "apps\\server\\src\\main.ts",
+      "file2": "apps\\server\\src\\main.ts",
+      "lines": 13,
+      "tokens": 0,
+      "file1_start": 545,
+      "file1_end": 557,
+      "file2_start": 131,
+      "file2_end": 143
+    },
+    {
+      "file1": "apps\\frontend\\src\\lib\\api\\mutations.ts",
+      "file2": "apps\\frontend\\src\\lib\\api\\mutations.ts",
+      "lines": 12,
+      "tokens": 0,
+      "file1_start": 36,
+      "file1_end": 47,
+      "file2_start": 9,
+      "file2_end": 20
+    },
+    {
+      "file1": "apps\\frontend\\src\\views\\ManifestView.tsx",
+      "file2": "apps\\frontend\\src\\views\\ManifestView.tsx",
+      "lines": 12,
+      "tokens": 0,
+      "file1_start": 473,
+      "file1_end": 484,
+      "file2_start": 398,
+      "file2_end": 409
+    },
+    {
+      "file1": "apps\\frontend\\src\\views\\ManifestView.tsx",
+      "file2": "apps\\frontend\\src\\views\\ManifestView.tsx",
+      "lines": 12,
+      "tokens": 0,
+      "file1_start": 538,
+      "file1_end": 549,
+      "file2_start": 398,
+      "file2_end": 409
+    },
+    {
+      "file1": "apps\\frontend\\src\\lib\\api\\mutations.test.tsx",
+      "file2": "apps\\frontend\\src\\lib\\api\\mutations.test.tsx",
+      "lines": 11,
+      "tokens": 0,
+      "file1_start": 108,
+      "file1_end": 118,
+      "file2_start": 94,
+      "file2_end": 104
+    },
+    {
+      "file1": "apps\\server\\src\\main.ts",
+      "file2": "apps\\server\\src\\main.ts",
+      "lines": 11,
+      "tokens": 0,
+      "file1_start": 560,
+      "file1_end": 570,
+      "file2_start": 145,
+      "file2_end": 155
+    },
+    {
+      "file1": "apps\\frontend\\src\\views\\ManifestView.tsx",
+      "file2": "apps\\frontend\\src\\views\\ManifestView.tsx",
+      "lines": 9,
+      "tokens": 0,
+      "file1_start": 114,
+      "file1_end": 122,
+      "file2_start": 99,
+      "file2_end": 107
+    },
+    {
+      "file1": "apps\\frontend\\src\\views\\ForeshadowView.tsx",
+      "file2": "apps\\frontend\\src\\views\\ForeshadowView.tsx",
+      "lines": 9,
+      "tokens": 0,
+      "file1_start": 288,
+      "file1_end": 296,
+      "file2_start": 259,
+      "file2_end": 267
+    },
+    {
+      "file1": "apps\\server\\src\\main.ts",
+      "file2": "apps\\server\\src\\main.ts",
+      "lines": 9,
+      "tokens": 0,
+      "file1_start": 536,
+      "file1_end": 544,
+      "file2_start": 123,
+      "file2_end": 131
+    },
+    {
+      "file1": "apps\\server\\src\\main.ts",
+      "file2": "apps\\server\\src\\main.ts",
+      "lines": 8,
+      "tokens": 0,
+      "file1_start": 516,
+      "file1_end": 523,
+      "file2_start": 380,
+      "file2_end": 387
+    },
+    {
+      "file1": "apps\\server\\src\\main.ts",
+      "file2": "apps\\server\\src\\main.ts",
+      "lines": 7,
+      "tokens": 0,
+      "file1_start": 529,
+      "file1_end": 535,
+      "file2_start": 116,
+      "file2_end": 123
+    }
+  ],
+  "statistics": {
+    "total_clones": 0,
+    "duplicated_lines": 0,
+    "total_files": 0,
+    "percentage": "0%"
+  },
+  "error": null
+}

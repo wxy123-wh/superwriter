@@ -1,0 +1,141 @@
+@import "./vscode-common.css";
+
+/* App Shell Layout */
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.app-workbench {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.app-sidebar {
+  width: 260px;
+  min-width: 160px;
+  max-width: 400px;
+  background: var(--vscode-sideBar-background);
+  border-right: 1px solid var(--vscode-panel-border);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.app-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* VSCode Dark Theme CSS Variables */
+:root {
+  /* Activity Bar */
+  --vscode-activityBar-background: #1e1e1e;
+  --vscode-activityBar-inactiveForeground: #6e6e6e;
+  --vscode-activityBar-activeForeground: #ffffff;
+  --vscode-activityBar-activeBorder: #007acc;
+
+  /* Sidebar */
+  --vscode-sideBar-background: #252526;
+  --vscode-sideBarSectionHeader-background: #2d2d2d;
+  --vscode-sideBarTitle-foreground: #cccccc;
+  --vscode-sideBar-dropBackground: #2a2d2e;
+
+  /* Editor */
+  --vscode-editor-background: #1e1e1e;
+  --vscode-editor-foreground: #d4d4d4;
+  --vscode-editorLineNumber-foreground: #858585;
+  --vscode-editorLineNumber-activeForeground: #c6c6c6;
+  --vscode-editor-selectionBackground: #264f78;
+  --vscode-editor-inactiveSelectionBackground: #3a3d41;
+
+  /* Tab */
+  --vscode-tab-activeBackground: #1e1e1e;
+  --vscode-tab-inactiveBackground: #2d2d2d;
+  --vscode-tab-border: #252526;
+  --vscode-tab-activeBorder: #007acc;
+  --vscode-tab-activeForeground: #ffffff;
+  --vscode-tab-inactiveForeground: #969696;
+  --vscode-tab-lastPinnedBorder: #e8e8e8;
+
+  /* Status Bar */
+  --vscode-statusBar-background: #007acc;
+  --vscode-statusBar-foreground: #ffffff;
+  --vscode-statusBar-debuggingBackground: #cc6633;
+  --vscode-statusBar-noFolderBackground: #68217a;
+
+  /* Panel */
+  --vscode-panel-background: #1e1e1e;
+  --vscode-panel-border: #3c3c3c;
+  --vscode-panelTitle-activeForeground: #ffffff;
+  --vscode-panelTitle-inactiveForeground: #969696;
+  --vscode-panelTitle-activeBorder: #007acc;
+  --vscode-input-background: #3c3c3c;
+  --vscode-input-foreground: #cccccc;
+  --vscode-input-border: #3c3c3c;
+  --vscode-inputOption-activeBorder: #007acc;
+
+  /* Title Bar */
+  --vscode-titleBar-background: #3c3c3c;
+  --vscode-titleBar-foreground: #cccccc;
+  --vscode-titleBar-activeBackground: #3c3c3c;
+  --vscode-titleBar-activeForeground: #ffffff;
+  --vscode-titleBar-inactiveBackground: #2d2d2d;
+  --vscode-titleBar-inactiveForeground: #969696;
+
+  /* Button */
+  --vscode-button-background: #0e639c;
+  --vscode-button-foreground: #ffffff;
+  --vscode-button-hoverBackground: #1177bb;
+  --vscode-button-secondaryBackground: #3c3c3c;
+  --vscode-button-secondaryForeground: #cccccc;
+  --vscode-button-secondaryHoverBackground: #505050;
+
+  /* Scrollbar */
+  --vscode-scrollbar-background: #1e1e1e;
+  --vscode-scrollbarSlider-background: rgba(121, 121, 121, 0.4);
+  --vscode-scrollbarSlider-hoverBackground: rgba(121, 121, 121, 0.7);
+  --vscode-scrollbarSlider-activeBackground: rgba(121, 121, 121, 0.8);
+
+  /* Tree */
+  --vscode-tree-selectionBackground: #094771;
+  --vscode-tree-selectionHighlightBackground: #09477150;
+  --vscode-tree-hoverBackground: #2a2d2e;
+  --vscode-tree-indentGuidesStroke: #6e6e6e;
+
+  /* List */
+  --vscode-list-activeSelectionBackground: #094771;
+  --vscode-list-activeSelectionForeground: #ffffff;
+  --vscode-list-hoverBackground: #2a2d2e;
+  --vscode-list-inactiveSelectionBackground: #37373d;
+  --vscode-list-inactiveFocusBackground: #1e1e1e;
+
+  /* Focus */
+  --vscode-focusBorder: #007acc;
+  --vscode-contrastBorder: #6fc3ff;
+
+  /* Widget */
+  --vscode-widget-shadow: #00000066;
+  --vscode-editorWidget-background: #252526;
+  --vscode-editorWidget-foreground: #cccccc;
+  --vscode-editorWidget-border: #454545;
+
+  /* Badge */
+  --vscode-badge-background: #4d4d4d;
+  --vscode-badge-foreground: #ffffff;
+
+  /* Layout tokens */
+  --sw-titlebar-height: 22px;
+  --sw-activitybar-width: 48px;
+  --sw-sidebar-width: 240px;
+  --sw-statusbar-height: 22px;
+  --sw-tabbar-height: 35px;
+  --sw-panel-height: 250px;
+}

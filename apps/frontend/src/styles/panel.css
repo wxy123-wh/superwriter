@@ -1,0 +1,141 @@
+/* Panel (ChatPanel) */
+.panel {
+  background: var(--vscode-panel-background);
+  border-top: 1px solid var(--vscode-panel-border);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.panel-header {
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--vscode-panel-border);
+  background: var(--vscode-sideBarSectionHeader-background);
+}
+
+.panel-header h3 {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--vscode-panelTitle-activeForeground);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.panel-actions {
+  display: flex;
+  gap: 4px;
+}
+
+.panel-action {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--vscode-panelTitle-inactiveForeground);
+  border-radius: 4px;
+}
+
+.panel-action:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--vscode-panelTitle-activeForeground);
+}
+
+.panel-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.panel-input {
+  padding: 12px;
+  border-top: 1px solid var(--vscode-panel-border);
+  display: flex;
+  gap: 8px;
+}
+
+.panel-input textarea {
+  flex: 1;
+  resize: none;
+  min-height: 36px;
+  max-height: 120px;
+  padding: 8px 10px;
+  background: var(--vscode-input-background);
+  color: var(--vscode-input-foreground);
+  border: 1px solid var(--vscode-input-border);
+  border-radius: 4px;
+  font-size: 13px;
+  font-family: inherit;
+  line-height: 1.4;
+}
+
+.panel-input textarea:focus {
+  outline: none;
+  border-color: var(--vscode-inputOption-activeBorder);
+}
+
+/* Chat messages */
+.chat-message {
+  padding: 8px 12px;
+  border-radius: 6px;
+  max-width: 85%;
+  font-size: 13px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.chat-message.user {
+  background: var(--vscode-editor-selectionBackground);
+  color: var(--vscode-editor-foreground);
+  align-self: flex-end;
+}
+
+.chat-message.assistant {
+  background: var(--vscode-sideBar-background);
+  color: var(--vscode-editor-foreground);
+  align-self: flex-start;
+}
+
+.chat-message.error {
+  background: rgba(255, 0, 0, 0.1);
+  color: #f48771;
+}
+
+/* Empty state */
+.panel-empty {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--vscode-activityBar-inactiveForeground);
+  font-size: 13px;
+  text-align: center;
+  padding: 1rem;
+}
+
+.explorer-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  gap: 0;
+  color: var(--vscode-activityBar-inactiveForeground);
+  font-size: 13px;
+  text-align: center;
+}
+
+.explorer-empty p {
+  margin: 0 0 12px;
+}
